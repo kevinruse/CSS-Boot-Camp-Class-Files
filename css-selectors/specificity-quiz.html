@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Specificity Quiz</title>
+    <style>
+        /* Solve the specificity issues using the suggested methods */
+        h1 {
+            color: red;
+        }
+
+        /* make this selector more specific with an additional tag */
+        h1 {
+            color: orange
+        }
+
+        /* choose the right selector type */
+        SELECTOR {
+            color: purple
+        }
+
+        /* why does the 2nd selector (red) win here? Find a solution to apply the brown color*/
+        body>div>section>h2 {
+            color: brown;
+        }
+
+        #special h2 {
+            color: red;
+        }
+
+        /* without moving this style rule, ensure that it always applies */
+        blockquote {
+            color: violet;
+        }
+
+        blockquote {
+            color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1>First Example Heading One (red)</h1>
+<p>Subtext for the Example Heading (black)</p>
+<h1>Second Example Heading One (red)</h1>
+<p>Subtext for the Example Heading</p>
+<h2>Example Heading Two (blue)</h2>
+<p>Subtext for the Example Heading Two</p>
+<ul>
+    <li>List Item #1</li>
+    <li>List Item #2 (purple)</li>
+    <li>List Item #3</li>
+</ul>
+<h3>Heading Three Example (green)</h3>
+<p>Additional text content paragraph here with a quote <blockquote>Quote goes here. (blockquotes should always be violet, no matter where they appear)</blockquote></p>
+<div>
+<section id="special">
+<h2>Heading Two (brown)</h2>
+<header>
+    <h1>Header Text Here (orange)</h1>
+    <nav>
+        <ul>
+            <li>Link #1</li>
+            <li>Link #2</li>
+            <li>Link #3 (purple)</li>
+            <li>Link #4</li>
+        </ul></nav>
+</header>
+</section>
+</div>
+</body>
+</html>

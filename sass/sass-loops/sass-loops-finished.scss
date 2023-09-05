@@ -1,0 +1,88 @@
+:root {
+  font-family: "Arial", sans-serif;
+}
+
+.stock-bond-list {
+  display: flex;
+  width: 635px;
+  justify-content: space-around;
+}
+
+.security {
+  border-radius: 1em;
+  border: 1px solid darkgrey;
+  padding: 1em;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & :not(last-child) {
+    margin-bottom: 1em;
+  }
+}
+
+// map section
+// TODO extract the map to a file called colors.scss
+$rating-colors: (
+        safe: #28a745,
+        moderateRisk: #ffff00,
+        risky: #dc3545
+);
+
+.bond-list {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border-radius: 1em;
+
+  .asset {
+    padding: 1em;
+    border-radius: 1em;
+    outline: 1px solid darkgrey;
+
+    &.safe {
+      background-color: map-get($rating-colors, safe);
+      color: white;
+    }
+
+    &.moderateRisk {
+      background-color: map-get($rating-colors, moderateRisk);
+      color: black;
+    }
+
+
+    &.risky {
+      background-color: map-get($rating-colors, risky);
+      color: white;
+    }
+  }
+}
+
+// loop section
+$ratings: (
+        buy: 'BUY',
+        hold: "HOLD",
+        sell: "SELL"
+);
+
+@each $rating, $action in $ratings {
+  .#{$rating} {
+    @if $rating == 'buy' {
+      color: #00A000;
+    }
+    @if $rating == 'hold' {
+      color: #ffff00;
+      -webkit-text-stroke: .5px black;
+    }
+    @if $rating == 'sell' {
+      color: #ff0000;
+    }
+    font-weight: 900;
+
+    &::after {
+      content: $action;
+    }
+  }
+}
+

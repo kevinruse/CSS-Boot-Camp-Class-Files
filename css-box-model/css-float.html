@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Float</title>
+    <style>
+        div {
+            border: 2px solid #f00;
+            background-color: #ccc;
+            padding: 5px;
+            /*overflow:hidden;*/
+        }
+
+        section {
+            outline: 1px solid #000;
+            height: 50px;
+            padding:6px;
+        }
+
+        #section1 {
+            background-color: #00b3ee;
+        }
+        #section2 {
+            background-color: #df8505;
+
+        }
+        #section3 {
+            background-color: #00CC00;
+        }
+        .addFloat {
+            float: left;
+        }
+        footer {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div>
+<!--step 1 add a float class to all three divs-->
+<section id="section1" class="addFloat">Add a float to this section.</section>
+<section id="section2" class="addFloat">Add a float to this section.</section>
+<section id="section3" class="addFloat">Add a float to this section.</section>
+<!-- the container of the floated elements (the body tag will  lose height, because floated elements do not cause containers to stretch -->
+<footer id="footer">This is the footer.</footer>
+</div>
+</body>
+</html>

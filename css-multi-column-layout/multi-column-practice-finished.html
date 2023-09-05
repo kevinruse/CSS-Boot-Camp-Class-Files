@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multi-Column Practice - starter</title>
+	<style>
+		@font-face {
+			font-family: "Libre Baskerville";
+			font-style: normal;
+			font-weight: 400;
+			src: url("../assets/fonts/LibreBaskerville-Regular.ttf");
+		}
+		@font-face {
+			font-family: "Libre Baskerville";
+			font-style: italic;
+			font-weight: 400;
+			src: url("../assets/fonts/LibreBaskerville-Regular.ttf");
+		}
+		@font-face {
+			font-family: "Libre Franklin";
+			font-style: normal;
+			font-weight: 700;
+			src: url("../assets/fonts/LibreFranklin-VariableFont_wght.ttf");
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-family: 'Libre Franklin', sans-serif;
+		}
+		article p:first-of-type {
+			margin-top: 0;
+		}
+		article p {
+			font-family: 'Libre Baskerville', serif;
+			font-size: .80em;
+			line-height: 1.70em;
+			margin-bottom: 1.5em;
+			text-align: justify;
+		}
+		section>p:not(:first-of-type) {
+			text-indent: 1em;
+		}
+
+		article h3 {
+			margin-top: 0;
+			margin-bottom: .5em;
+		}
+
+		article h3:not(:nth-child(3)) {
+			break-before:column;
+		}
+		#intro {
+			column-count: 3;
+			column-gap: 2em;
+			column-rule: 1px dotted #c8cbcf;
+		}
+
+		figure {
+			float: left;
+			padding-right: 1em;
+			margin-bottom: 0;
+			/*break-inside: avoid;*/
+		}
+
+		figcaption {
+			font-style: italic;
+			margin-bottom: .75em;
+		}
+	</style>
+</head>
+<body>
+<article>
+	<h1>Creating Multi-Columns with CSS</h1>
+	<section id="intro">
+		<p>The multi-column specification defines content that can be laid out in columns. Multi-column layout is defined in a CSS Module specification. The editor’s draft may be found at http://dev.w3.org/csswg/css-multicol/. The specification is a Level 1 module.
+		<p>The main benefit of multi-column layout is the autoflow of text from one column to another. The size of the
+			viewport (device screen size) can affect the number of columns to display, making it an ideal choice for the
+			responsive design of long text blocks. Multi-column layout is designed for the display of text like a magazine
+			or newspaper typography and is not the correct choice for laying out columns of content such as images or
+			tables.</p>
+		<p>The specification, while widely supported by modern browsers, contains a lot of properties, and many browsers do
+			not have 100% support, particularly from Firefox and Chrome versions prior to 61. See caniuse.com for the current
+			state of browser support for columns.</p>
+		<figure>
+			<img src="../assets/images/CSS3_logo_and_wordmark.svg.png" alt="CSS logo">
+			<figcaption>CSS Logo</figcaption>
+		</figure>
+		<section id="creating-multi-columns">
+			<h3>Creating multi-column layout</h3>
+			<p>Columns are created by setting either column widths or the desired number of columns as shown in the two
+				examples below.</p>
+			<p>The div element below will display columns that are at least ‘10em’ wide. The exact number of columns
+				will depend on the available space in the div element.</p>
+			<code>
+				<pre>
+	div { column-width: 10em }</pre>
+			</code>
+
+			<p>In the div element below, the number of columns is fixed at three and the column widths will vary depending on
+				the available space in the div element.</p>
+			<code>
+				<pre>
+	div { column-count: 3 }</pre>
+			</code>
+
+			<p>A shorthand technique looks like this:</p>
+			<code><pre>
+	div { columns: 3 }
+	div { columns: 10em }
+	div { columns: 3 10em }</pre></code>
+		</section>
+		<section id="columnProperties">
+			<h3>Column properties</h3>
+			<p>The multi-column specification defines several other properties that control the look of the multi-column content. Excerpts from the specification follow below. The entire Multi-Column Specification can be found at: http://dev.w3.org/csswg/css-multicol/.
+			</p>
+			<h3>Column related design issues</h3>
+			<p>Since the specification was first released, the main issue facing developers was the lack of support for the
+				entire set of column-related properties, namely those in the column-fill and column-breaks. As of this writing,
+				browser support has improved significantly. See caniuse.com for the latest information. Additional areas of
+				concern are padding, and margins set on element within columns. The break properties behavior is inconsistent
+				among browsers and until it has full implementation, it leaves much to be desired in terms of professional
+				looking typography.</p>
+			<p>When it comes to columns of long flowing text, extra attention must be paid to general typographic features such
+				as widows and hyphenation, particularly on responsive columns as the designer cannot predict where words and
+				lines will break. You may need to brush up on your text-related CSS properties such as hyphens and
+				word-wrap.</p>
+		</section>
+	</section>
+</article>
+
+</body>
+</html>

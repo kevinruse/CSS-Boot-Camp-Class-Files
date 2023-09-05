@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Z-Index Challenge</title>
+    <style>
+        html {
+            font-family: "Arial", sans-serif;
+        }
+
+        div {
+            width: 900px;
+        }
+
+        p {
+            font-family: "Arial", sans-serif;
+            font-size: 1em;
+            font-weight: 200;
+            line-height: 1.35em;
+            width: 300px;
+        }
+
+        section {
+            width: 600px;
+            height: 200px;
+            padding: 2em;
+            margin-bottom: 10px;
+            border: 4px solid black;
+            border-radius: 1em;
+            background-color: white;
+            position: absolute;
+            left: 30px;
+            top: 150px;
+        }
+
+        #dinnerPlate {
+            margin: 10px;
+            position: relative;
+            top: -250px;
+            left: 320px;
+            width: 60%;
+        }
+
+        #carrots {
+            position: relative;
+            top: -375px;
+            left: 55px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="../../../../new-class-files/images/romaine.png">
+    <section id="vegetables">
+        <h1>Eat Your Vegetables! </h1>
+        <p>Any vegetable or 100% vegetable juice counts as a member of the Vegetable Group. Vegetables may be raw or
+            cooked; fresh, frozen, canned, or dried/dehydrated; and may be whole, cut-up, or mashed.
+        </p>
+        <img id="dinnerPlate" src="../../../assets/images/dinnerplate.png" alt="">
+        <img id="carrots" src="../../../assets/images/carrots.png" alt="">
+    </section>
+    <img src="../../../assets/images/romaine.png">
+    <img src="" alt="">
+</div>
+</body>
+</html>

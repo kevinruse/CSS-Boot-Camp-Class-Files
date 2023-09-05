@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 Cross-Fade</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+	p#controls {
+		margin-top: 48px;
+		text-align:center;
+	}
+	#controls span {
+		padding-right:2em;
+		cursor:pointer;
+	}
+	#crossFade {
+		position:relative;
+		height:281px;
+		width:450px;
+		margin:0 auto;
+	}
+	#crossFade img {
+		position:absolute;
+		left:0;
+/*		-webkit-transition: opacity 1.5s ease-in-out;
+		-moz-transition: opacity 1.5s ease-in-out;
+		-o-transition: opacity 1.5s ease-in-out;*/
+		transition: opacity 1.5s ease-in-out;
+		opacity:0;
+		/*-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";*/
+		/*filter: alpha(opacity=0);*/
+	}
+
+	#crossFade img.opaque {
+		opacity:1;
+		/*-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		filter: alpha(opacity=1);*/
+	}
+</style>
+	<script src="../libs/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function() {
+    let $crossFadeImg = $('#crossFade img');
+	$("#controls span").click(function() {
+        $crossFadeImg.removeClass("opaque");
+
+		let imageToShow = $(this).attr("id").replace("for-", "");
+		$("#crossFade #"+imageToShow).addClass("opaque");
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="crossFade">
+	<img id="img1" src="../images/sweet_potato.gif" class="opaque"/>
+	<img id="img2" src="../images/spinach.gif"/>
+	<img id="img3" src="../images/kidney_beans.gif" />
+	<img id="img4" src="../images/corn.gif" />
+    <img id="img5" src="../images/black_beans.gif" />
+</div>
+<p id="controls">
+	<span id="for-img1">Choice 1</span>
+	<span id="for-img2">Choice 2</span>
+	<span id="for-img3">Choice 3</span>
+	<span id="for-img4">Choice 4</span>
+    <span id="for-img5">Choice 5</span>
+</p>
+
+</body>
+</html>

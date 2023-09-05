@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product List</title>
+    <style>
+        <!--
+        create variables for the root node called product-color and primary-font
+
+        -->
+        :root {
+
+        }
+
+        /* assign the product-color variable as the value of the color property of the li element */
+        /* assign the primary-font variable as the value of the font-family property of the li element */
+        #productList li {
+
+            font-size: 1em;
+            line-height: 1.5em;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Product List</h1>
+<input type="checkbox" id="inStock"/>
+<label for="inStock">In Stock at my store?</label>
+<ul id="productList"></ul>
+
+<script>
+    // get DOM Nodes
+    const productList = document.getElementById("productList");
+    const inStockCheckbox = document.getElementById("inStock");
+    // create product array
+    let products = [];
+    // add event listener
+    inStockCheckbox.addEventListener("change", toggleProductColor);
+
+    function createProductList() {
+        productList.innerHTML = "";
+        products.forEach(item => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${item.size}, ${item.color}, ${item.price}`;
+            productList.appendChild(listItem);
+        });
+    }
+
+    // change the value of the variable when the inStockCheckbox is checked and the item is not in stock
+    function toggleProductColor() {
+        products.forEach((item, index) => {
+            const listItem = productList.childNodes[index];
+            if (inStockCheckbox.checked) {
+                if (item.instock === "no") {
+                    // add code here
+                }
+                // otherwise, set the product-color variable to black
+            } else if (inStockCheckbox.checked === false) {
+                // add code here
+            }
+        });
+    }
+
+    // fetch products
+    fetch("../data/products.json")
+        .then(response => response.json())
+        .then(data => {
+            products = data;
+            createProductList();
+        })
+        .catch(error => console.log(error));
+</script>
+</body>
+
+</html>

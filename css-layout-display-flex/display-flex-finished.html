@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>display flex - finished</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #flexContainer {
+            display: flex;
+            background-color: #FF9;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: flex-end;
+            height: 150px;
+	        column-gap: 1em;
+        }
+
+        #flexContainer>* {
+            padding: 10px;
+    /*        flex-grow: 1;
+            flex-shrink: 1;*/
+        }
+
+        #flexItem1 {
+            background-color: #9F3;
+            flex-basis: 125px;
+            align-self: stretch;
+        }
+
+        #flexItem2 {
+            background-color: #99F;
+            align-self: flex-end;
+            /*flex: 2;*/
+        }
+
+        #flexItem3 {
+            background-color: #F96;
+            align-self: flex-start;
+        }
+
+        div p {
+            margin: 0;
+            padding: 0;
+            background-color: #993;
+        }
+
+        .tall {
+            height: 75px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="flexContainer">
+    <div id="flexItem1" class="tall">Div: Flex Item 1</div>
+    <div id="flexItem2" class="tall">Div: Flex Item 2</div>
+    <div id="flexItem3" class="tall">Div: Flex Item 3</div>
+    <p class="tall">Paragraph: Flex Item</p>
+</div>
+</body>
+</html>

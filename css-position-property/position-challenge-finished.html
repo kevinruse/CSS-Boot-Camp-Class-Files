@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Position Challenge - finished</title>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		#wrapper {
+			width: 90%;
+			margin: 0 auto;
+		}
+		#wrapper>header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: #00b6f1;
+			color: #fff;
+			height: 70px;
+			width: 100%;
+		}
+
+		#wrapper>header>h1 {
+			padding: 0 1rem;
+		}
+		sup {
+			padding-right: 0.5em;
+		}
+		sup+span {
+			border-top: 1px solid #8699a4;
+			font-size: .65rem;
+		}
+		nav {
+			position: fixed;
+			right: 2%;
+			top: 75px;
+		}
+		main {
+			width: 60%;
+			margin-top: 100px;
+			margin-bottom: 1rem;
+		}
+		#glossary {
+			width: 60%;
+			border: 1px solid #000;
+			height: 300px;
+			overflow: scroll;
+		}
+		#glossary > section > h3 {
+			position: sticky;
+			top: 0;
+			margin-top: 0;
+			background-color: #fff;
+			border-bottom: 2px solid #000;
+		}
+		#glossary > section> p {
+			font-size: .75em;
+			line-height: 1.45em;
+			margin-top: 16px;
+		}
+
+	</style>
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		<h1>CSS Position Property</h1>
+	</header>
+	<nav>
+		<header>
+			<h3>Table of Contents</h3>
+		</header>
+		<ul>
+			<li>Section 1: The position Property</li>
+			<ul>
+				<li>Position: Relative</li>
+				<li>Position: Static</li>
+				<li>Position: Absolute</li>
+				<li>Position: Fixed</li>
+				<li>Position: Sticky</li>
+			</ul>
+		</ul>
+	</nav>
+	<main>
+		<header>
+			<h2>The CSS Position Property</h2>
+		</header>
+		<p>The CSS layout algorithms, by default, size and position boxes in relation to each other so that nothing overlaps.</p>
+
+		<p>This specification defines several ways to violate these assumptions when needed, moving elements around in ways that can make them overlap other content:</p>
+	<ul>
+		<li>Relative positioning, which visually shifts a box relative to its laid-out location.</li>
+
+		<li>Sticky positioning, which visually shifts a box relative to its laid-out location in order to keep it visible when a scrollable ancestor would otherwise scroll it out of sight.</li>
+
+		<li>Absolute positioning, which ignores normal layout entirely, pulling the element out of flow and positioning it relative to its containing block with no regard for other content.</li>
+
+		<li>Fixed positioning, which absolutely positions the box and affixes it to the viewport or page frame so that it is always visible.</li>
+	</ul>
+		<p>These positioning schemes, controlled by the position property and the inset properties, are powerful but easy to misuse. With appropriate care, they allow many interesting and useful layouts that couldn’t otherwise be achieved with standard layout rules; without, they allow a page to be laid out in an unusable overlapping jumble of content. <sup>1</sup></p>
+		<sup>1</sup><span><a href="https://www.w3.org/TR/css-position-3/#intro">https://www.w3.org/TR/css-position-3/#intro</a></span>
+	</main>
+	<section id="glossary">
+		<section>
+		<h3>Position: static</h3>
+		<p>The order an element appears in the source code determines where it appears on the rendered page in the browser, resulting in what is known as “normal flow” in the web browser.</p>
+		<p>Static is the default position value for all elements, unless it is overwritten by the developer.</p></section>
+		<section id="relative">
+			<h3>Position: relative</h3>
+			<p>Relatively positioned elements are positioned the same as statically positioned elements, unless the top, bottom, left or right properties are added.</p>
+			<p>Elements positioned with the additional properties (top, bottom, left, right) leave the normal document flow, but the space they take up in the document isn’t collapsed. The space stays open and in the same spot the element originally occupied (prior to applying the left, right, top, bottom properties), regardless of where the element moves via the additional CSS properties. Thus, the surrounding elements will not be adjusted to fit into any gap left by the relatively positioned element.</p>
+		</section>
+		<section id="absolute">
+			<h3>Position: absolute</h3>
+			<p>Absolutely positioned elements are positioned relative to the nearest positioned ancestor using the top, bottom, left and right properties. If the element has no ancestors the body element is used to determine the relative position.</p>
+			<p>An absolutely positioned element leaves the normal document flow and sit on top of the normal document. The space that would have been occupied by the absolute positioned element in the normal document flow is collapsed. Absolutely positioned elements will scroll with the page content when the page is scrolled.</p></section>
+		<section id="fixed">
+			<h3>Position: fixed</h3>
+			<p>A element with a position of fixed is positioned relative to the viewport using the top, bottom, left and right properties.</p>
+			<p>A fixed positioned element leaves the normal document flow and sit on top of the normal document. The space that would have been occupied by the absolute positioned element in the normal document flow is collapsed. Fixed positioned elements will not scroll with the page content when the page is scrolled.</p></section>
+		<section id="sticky">
+			<h3>Position: sticky</h3>
+			<p>A element with a position of sticky combines relative and fixed values to create an element that is positioned relatively until it crosses a threshold where it becomes fixed.</p></section>
+	</section>
+	<section>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur, consequuntur cumque deserunt dolorem error labore, laudantium nam natus rerum tempora ullam. Adipisci atque facere laborum modi molestias nam temporibus?</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consectetur dolores eos laudantium minus odio, porro! Adipisci aperiam assumenda culpa delectus dolore, dolores eaque, ex expedita impedit nemo nostrum quidem.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquid culpa deserunt doloribus est eveniet excepturi hic, illo, iusto magni molestiae non numquam obcaecati omnis quasi quod, temporibus voluptatibus.</p>
+	</section>
+</div>
+</body>
+</html>

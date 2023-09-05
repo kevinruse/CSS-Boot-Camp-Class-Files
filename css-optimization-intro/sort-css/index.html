@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <title>Daily Food Plate</title>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0, width=device-width">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/images/icons/icons-29.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../assets/images/icons/icons-57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../assets/images/icons/icons-114.png">
+    <link rel="icon" type="image/png" href="../../assets/images/icons/favicon.png">
+
+    <!-- jquery UI styles -->
+    <link rel="stylesheet" href="../assets/styles/jquery-ui.min.css" >
+    <link rel="stylesheet" href="../assets/styles/jquery-ui-1.11.1-themes.css">
+
+    <!-- jquery MOBILE styles -->
+    <link rel="stylesheet" href="../assets/styles/jquery.mobile-1.4.3.css" />
+
+    <!-- FOODPLATE styles -->
+    <link rel="stylesheet" href="../../assets/styles/normalize.css">
+    <link rel="stylesheet" href="foodPlate-sort.css">
+
+</head>
+<body>
+<!--Splash Page-->
+<div data-role="page" id="splashPage">
+    <div data-role="header">
+        <h1 id="welcomeHeader">Food Plate</h1>
+    </div>
+    <div id="splashContent" data-role="content">
+        <div id="initScreen">
+            <img src="../../assets/images/backgroundImages/myplate_green.png" alt="Food Plate">
+            <form id="initRegisterForm">
+                <div id="formArea">
+                    <input type="button" name="initRegister_btn" id="initRegister_btn" value="Register" class="fpButton" aria-required="true" required role="button">
+                    <!--</a>-->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--Register Form Page-->
+<div data-role="page" id="registerFormPage">
+    <div data-role="header" data-add-back-btn="false">
+        <h1 id="registerHeader">Food Plate</h1>
+    </div>
+
+<!--Register Confirmation Page-->
+    <div data-role="content">
+        <div id="registerConfirm"></div>
+        <div id="registerForm">
+            <form name="register_frm" id="register_frm">
+                <input type="text" name="firstName" id="firstName" autofocus aria-required="true" required placeholder="Type your first name here."/>
+
+                <fieldset data-role="controlgroup" data-type="horizontal" aria-required="true">
+                    <input type="radio" name="gender" id="sexF" value="F" />
+                    <label for="sexF">Female</label>
+                    <input type="radio" name="gender" id="sexM" value="M" />
+                    <label for="sexM">Male</label>
+                </fieldset>
+
+                <fieldset id="ageSet" data-role="controlgroup" data-type="horizontal" aria-required="true">
+                    <input type="radio" id="ageGroupC" value="C" name="ageGroup"/>
+                    <label for="ageGroupC">Child</label>
+                    <input type="radio" id="ageGroupA" value="A" name="ageGroup"/>
+                    <label for="ageGroupA">Adult</label>
+                </fieldset>
+
+                <div id="adultAgeGroups" style="display:none;">
+                    <label class="visually-hidden" for="adultAge">Adult</label>
+                    <select name="adultAgeGroup" id="adultAge" size="1">
+                        <option value="">Your age</option>
+                        <option value="19-30">19-30</option>
+                        <option value="31-50">31-50</option>
+                        <option value="51+">51+</option>
+                    </select>
+
+                </div>
+                <div id="childAgeGroups" style="display: none;">
+                    <label class="visually-hidden" for="childAge">Child</label>
+                    <select name="childAgeGroup" id="childAge" size="1">
+                        <option value="">Your age</option>
+                        <option value="2-30">2-3</option>
+                        <option value="4-8">4-8</option>
+                        <option value="9-13">9-13</option>
+                        <option value="14-18">14-18</option>
+                    </select>
+
+                </div>
+                <div>
+                    <button name="register_user" id="register_user" role="button" value="Register" class="fpButton">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div data-role="footer" id="registerFooter" data-theme="b" data-add-back-btn="true">
+        <h4>Your Daily Food Plate</h4>
+    </div>
+</div>
+<!--Add Food Page-->
+<div data-role="page" id="addFoodPage">
+    <div data-role="header" data-theme="b">
+        <h1 id="addFoodHeader">Daily Food Plate</h1>
+    </div>
+    <div data-role="content" id="addFoodContent">
+        <div id="foodPlateWrapper" class="plateWrapper">
+            <div id="colwrap1">
+                <img src="../../assets/images/plateImages/emptyPlate/fruitempty.png" id="fruitempty" alt="" />
+                <img src="../../assets/images/plateImages/emptyPlate/vegempty.png" id="vegempty" alt="" /> </div>
+            <div id="colwrap2">
+                <img src="../../assets/images/plateImages/emptyPlate/graindairyempty.png" id="graindairyempty" alt="" />
+                <div id="logoContainer" class="clearFloat"></div>
+                <img src="../../assets/images/plateImages/emptyPlate/proteinempty.png" id="proteinempty" alt="" />
+                <div class="clearFloat"></div>
+            </div>
+            <img src="../../assets/images/plateImages/text.png" id="text" alt="" />
+            <div class="foodIcons">
+                <img src="../../assets/images/foodImages/apple.png" alt="apple" name="fruitIcon" id="fruitIcon">
+                <img src="../../assets/images/foodImages/onion.png" alt="veg" id="vegIcon">
+                <img src="../../assets/images/foodImages/chicken.png" alt="protein" id="proteinIcon">
+                <img src="../../assets/images/foodImages/bread.png" alt="grain" id="grainIcon">
+                <img src="../../assets/images/foodImages/dairy.png" alt="dairy" id="dairyIcon">
+                <button name="status_btn" id="status_btn" class="fpButton" data-role="none">Status</button>
+                <button name="messages_btn" id="messages_btn" class="fpButton" data-role="none">Messages</button>
+                <div id="status" class="message">
+                    <p>This is where the messages will appear.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer" id="addFoodFooter" data-theme="b" data-back-btn-text="">
+        <h4>Your Daily Food Plate</h4>
+    </div>
+</div>
+
+<!-- JavaScript Libraries -->
+
+<!-- jQuery JavaScript Library v1.10.2 LOCAL -->
+<script src="../libs/jquery.js"></script>
+
+<!-- jQuery Mobile 1.4.3 LOCAL -->
+<script src="../libs/jquery.mobile-1.4.3/jquery.mobile-1.4.3.js"></script>
+
+<!-- jQuery UI - v1.11.1 - 2014-08-13-->
+<script src="../libs/jquery-ui.min.js"></script>
+
+<!-- jQuery UI Touch Punch 0.2.3 -->
+<script src="../libs/jquery.ui.touch-punch.min.js"></script>
+
+<!-- FoodPlate -->
+<script src="../scripts/user.js"></script>
+<script src="../scripts/main.js"></script>
+
+
+
+
+
+</body>
+</html>

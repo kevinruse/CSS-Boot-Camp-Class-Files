@@ -1,0 +1,53 @@
+@layer baseStyles, framework, utilities;
+
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css') layer(framework);
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+    /* Utility Classes */
+    .mAll {
+        margin: 2.5em;
+    }
+}
+
+@layer baseStyles {
+        q.noteStyle {
+            display: block;
+            margin-left: 2em;
+            padding: .5em;
+            padding-left: 3.5em;
+            border: 1px solid #456f9a;
+            border-right: 0.5em solid #1A5E9A;
+            position: relative;
+            box-shadow: 1em 0 0 #1A5E9A inset;
+            background-image: url("../assets/images/icons/w3c-logo.png");
+            background-position: 1em;
+            background-repeat: no-repeat;
+        }
+
+        .infoButton {
+            background-color: #ffec64;
+            border-radius: 6px;
+            border: 1px solid #ffaa22;
+            cursor: pointer;
+            color: #333333;
+            margin: 1em;
+        }
+
+        .infoButton:hover {
+            background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+            background-color: #ffab23;
+        }
+
+        .infoButton:active {
+            position: relative;
+            top: 1px;
+        }
+    }
+}
+
+
+

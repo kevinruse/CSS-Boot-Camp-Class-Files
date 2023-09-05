@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo Selectors</title>
+    <style>
+        html {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        div {
+            margin: 1em;
+            width: 1200px;
+        }
+        li {
+            display: inline;
+            padding-right: 1em;
+        }
+        /* :target */
+        :target {
+            background-color: #abdde5;
+            outline: 1px solid #000;
+            padding: 1em;
+            margin-top: 1em;
+        }
+        /* :default */
+        input:default+label {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form>
+        <input id="a" type="radio" name="groupOne" checked>
+        <label for="a">Label A</label>
+        <input id="b" type="radio" name="groupOne">
+        <label for="b">Label B</label>
+    </form>
+<nav id="nav">
+<ul>
+    <li><a href="#one">Topic One</a></li>
+    <li><a href="#two">Topic Two</a></li>
+    <li><a href="#three">Topic Three</a></li>
+    <li><a href="#four">Topic Four</a></li>
+    <li><a href="#five">Topic Five</a></li>
+    <li><a href="#six">Topic Six</a></li>
+    <li><a href="#seven">Topic Seven</a></li>
+    <li><a href="#eight">Topic Eight</a></li>
+    <li><a href="#nine">Topic Nine</a></li>
+    <li><a href="#ten">Topic Ten</a></li>
+</ul>
+</nav>
+<h1 id="one">Topic One</h1>
+<p><a href="#nav">back</a></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cum doloremque ea eaque esse hic id magnam minus natus non, optio pariatur perspiciatis quasi quos suscipit! Atque fugit rerum saepe?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores commodi culpa dicta eos est ex exercitationem libero officiis, pariatur qui repellat sunt tempore unde ut velit voluptas voluptate voluptatibus.</p>
+<h1 id="two">Topic Two</h1>
+    <p><a href="#nav">back</a></p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cum doloremque ea eaque esse hic id magnam minus natus non, optio pariatur perspiciatis quasi quos suscipit! Atque fugit rerum saepe?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores commodi culpa dicta eos est ex exercitationem libero officiis, pariatur qui repellat sunt tempore unde ut velit voluptas voluptate voluptatibus.</p>
+<h1 id="three">Topic Three</h1>
+    <p><a href="#nav">back</a></p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cum doloremque ea eaque esse hic id magnam minus natus non, optio pariatur perspiciatis quasi quos suscipit! Atque fugit rerum saepe?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores commodi culpa dicta eos est ex exercitationem libero officiis, pariatur qui repellat sunt tempore unde ut velit voluptas voluptate voluptatibus.</p>
+<h1 id="four">Topic Four</h1>
+    <p><a href="#nav">back</a></p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cum doloremque ea eaque esse hic id magnam minus natus non, optio pariatur perspiciatis quasi quos suscipit! Atque fugit rerum saepe?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores commodi culpa dicta eos est ex exercitationem libero officiis, pariatur qui repellat sunt tempore unde ut velit voluptas voluptate voluptatibus.</p>
+<h1 id="five">Topic Five</h1>
+    <p><a href="#nav">back</a></p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cum doloremque ea eaque esse hic id magnam minus natus non, optio pariatur perspiciatis quasi quos suscipit! Atque fugit rerum saepe?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores commodi culpa dicta eos est ex exercitationem libero officiis, pariatur qui repellat sunt tempore unde ut velit voluptas voluptate voluptatibus.</p>
+<h1 id="six">Topic Six</h1>
+    <p><a href="#nav">back</a></p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cum doloremque ea eaque esse hic id magnam minus natus non, optio pariatur perspiciatis quasi quos suscipit! Atque fugit rerum saepe?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores commodi culpa dicta eos est ex exercitationem libero officiis, pariatur qui repellat sunt tempore unde ut velit voluptas voluptate voluptatibus.</p>
+<h1 id="seven">Topic Seven</h1>
+    <p><a href="#nav">back</a></p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cum doloremque ea eaque esse hic id magnam minus natus non, optio pariatur perspiciatis quasi quos suscipit! Atque fugit rerum saepe?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores commodi culpa dicta eos est ex exercitationem libero officiis, pariatur qui repellat sunt tempore unde ut velit voluptas voluptate voluptatibus.</p>
+<h1 id="eight">Topic Eight</h1>
+    <p><a href="#nav">back</a></p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cum doloremque ea eaque esse hic id magnam minus natus non, optio pariatur perspiciatis quasi quos suscipit! Atque fugit rerum saepe?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores commodi culpa dicta eos est ex exercitationem libero officiis, pariatur qui repellat sunt tempore unde ut velit voluptas voluptate voluptatibus.</p>
+<h1 id="nine">Topic Nine</h1>
+    <p><a href="#nav">back</a></p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cum doloremque ea eaque esse hic id magnam minus natus non, optio pariatur perspiciatis quasi quos suscipit! Atque fugit rerum saepe?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores commodi culpa dicta eos est ex exercitationem libero officiis, pariatur qui repellat sunt tempore unde ut velit voluptas voluptate voluptatibus.</p>
+<h1 id="ten">Topic Ten</h1>
+    <p><a href="#nav">back</a></p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cum doloremque ea eaque esse hic id magnam minus natus non, optio pariatur perspiciatis quasi quos suscipit! Atque fugit rerum saepe?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores commodi culpa dicta eos est ex exercitationem libero officiis, pariatur qui repellat sunt tempore unde ut velit voluptas voluptate voluptatibus.</p>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Custom Properties Quiz</title>
+    <style>
+        div {
+            border: 1px solid black;
+            width: 300px;
+        }
+        .notification {
+            --box-shadow-color: green;
+            box-shadow: 0 0 10px var(--box-shadow-color);
+        }
+        .notification:hover {
+            --box-shadow-color: red;
+        }
+
+    </style>
+</head>
+<body>
+<div class="notification">
+    <p>Warning: Drag your mouse over this box.</p>
+</div>
+</body>
+</html>

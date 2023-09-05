@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>sizingEms - starter</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+		html {
+			font-size: 16px;
+		}
+		#box1 {
+			font-size: 3em;
+			border: 1px solid #000;
+		}
+		.em1 {
+			font-size: 1em;
+		}
+		.percent {
+			font-size: 100%;
+		}
+		.em2 {
+			font-size: 2em;
+		}
+		/* add media query here */
+	</style>
+</head>
+<body>
+<p>This is sized via the html style at 16px</p>
+<div id="box1">
+	<p>I inherit box1 size: 3ems (3 x my parent &lt;body&gt;: 16px)</p>
+	<p class="em1">I am sized at 1em; relative to my parent &lt;div&gt; box1</p>
+	<p class="percent">I inherit 100% of my parent &lt;div&gt;: 3ems</p>
+	<p class="em2">This p is sized as 2em</p>
+</div>
+<p>Everything is sized relative to its parent!</p>
+</body>
+</html>

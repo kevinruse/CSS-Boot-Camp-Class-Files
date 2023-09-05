@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid Demo 1 - finished</title>
+    <style>
+        #wrapper {
+            width: 100%;
+            margin: 3em;
+            display: grid;
+            grid-template-columns: 300px 100px minmax(100px, 200px);
+            grid-template-rows: 50px 25px;
+            grid-template-areas: "top-left top-middle top-right"
+                                 "bottom-left bottom-middle bottom-right";
+            grid-gap: 10px;
+            /*grid-template-columns: [A] 300px [B] 150px [C] 150px;*/
+            /*grid-template-rows: 25px 25px;*/
+            /*grid-template-rows:3fr 1fr;*/
+            /*grid-gap: 10px;*/
+        }
+        div {
+            /*outline: 1px solid black;*/
+        }
+        section {
+            /*display: inline;*/
+            outline: 1px solid black;
+        }
+        #A {
+            background-color: pink;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        #B {
+            background-color: antiquewhite;
+        }
+        #C {
+            background-color: greenyellow;
+            grid-column: bottom-middle;
+            grid-row: 2/4;
+        }
+        #D {
+            background-color: goldenrod;
+        }
+        #E {
+            background-color: lavender;
+        }
+        #F {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="A">Div A</div>
+    <div id="B">Div B</div>
+    <div id="C">Div C</div>
+    <div id="D">Div D</div>
+    <div id="E">Div E</div>
+    <div id="F">Div F</div>
+
+</div>
+<section><span>This text is inside of a section element.</span></section>
+<h1>Grid Basics</h1>
+<ul>
+    <li>Grid lines - horizontal and vertical lines begin at line one and delimit rows and columns</li>
+    <li>Grid tracks - rows and columns defined in the grid</li>
+    <li>Grid cells - the intersection of the rows and columns</li>
+    <li>Grid area - the rows and columns that define the rectangular grid</li>
+</ul>
+<figure>
+    <img src="../assets/images/grid-firefox.PNG" alt="Grid in Firefox">
+    <figcaption>Grid shown in Firefox with grid lines.</figcaption>
+</figure>
+</body>
+</html>

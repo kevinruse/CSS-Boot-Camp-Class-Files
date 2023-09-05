@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS4 Selectors - starter</title>
+	<style>
+		html {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		body {
+			width: 60%;
+		}
+		ul>* {
+			line-height: 2em;
+			padding-left: 1ch;      /* 1ch is relative to the width of the "0" */
+		}
+		li[class=yes]::marker {
+			content: '👍';
+		}
+		li.no::marker {
+			content: '👎';
+		}
+
+		.ltr {
+			direction: ltr;
+		}
+
+		.rtl {
+			direction: rtl;
+		}
+
+		/* supported only by firefox */
+		:dir(rtl) {
+			background-color: #d1ecf1;
+		}
+
+		:dir(ltr) {
+			background-color: #e4b9b9;
+		}
+
+		:is(h1, h2, h3) {
+			color: red;
+		}
+
+	</style>
+</head>
+<body>
+<h1>CSS ::marker pseudo-element</h1>
+<ul>
+	<li class="yes">Item One</li>
+	<li class="yes">Item Two</li>
+	<li class="no">Item Four</li>
+	<li class="yes">Item Five</li>
+</ul>
+<h2>Text Direction</h2>
+<p class="ltr" dir="ltr">CSS selectors are now at version 4 and include many pseudo classes.</p>
+<p class="rtl" dir="rtl">בוחרי CSS נמצאים כעת בגרסה 4 וכוללים שיעורי פסאודו רבים.</p>
+<h3>Spelling Errors</h3>
+<p>There is currently no support for <code>::spelling-errors</code>.</p>
+</body>
+</html>

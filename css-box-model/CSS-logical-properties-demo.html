@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Logical Properties Demo</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap" rel="stylesheet">
+	<style>
+		html {
+			/*writing-mode: horizontal-tb;*/
+			/*writing-mode: vertical-rl;*/
+			/*writing-mode: sideways-lr;*/
+		}
+
+		#wrapper {
+			display: flex;
+		}
+
+		section {
+			width: 75%;
+			margin-top: 6em;
+			margin-left: 4em;
+			padding: 1em;
+		}
+
+		#english {
+			align-self: flex-end;
+		}
+
+		#english>p {
+			text-align: left;
+		}
+
+		h1 {
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 800;
+			writing-mode: vertical-lr;
+			font-size: 60px;
+			float: left;
+		}
+		/*h2 {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 54px;
+			font-weight: 600;
+			writing-mode: sideways-rl;
+			margin-inline-end: 6em;
+		}*/
+
+		p {
+			width: 400px;
+			font-family: 'Cairo', sans-serif;
+			writing-mode: horizontal-tb;
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+<div id="wrapper">
+<section>
+	<h1>CSS Writing Modes</h1>
+	<img src="../assets/images/cairo-typeface.PNG" alt="Cairo Typeface from Google Fonts">
+	<img src="../assets/images/cairo-designer.PNG" alt="Cairo Typeface designer: Mohamed Gaber">
+	<p>مرحبًا بك في الخصائص المنطقية ، حيث يتم استبدال الأبعاد المادية العادية بأبعاد منطقية مشتقة من وضع كتابة
+	اللغة مثل من اليسار إلى اليمين أو من اليمين إلى اليسار.
+</p>
+	<p>يمكننا استخدام خاصية وضع الكتابة للتأكد من عرض هذا النص بطريقة قابلة للقراءة ومناسبة للغة المكتوبة بها.
+	</p>
+</section>
+<!--<h2>English Example</h2>-->
+<section id="english">
+	<p>Welcome to logical properties, where regular physical dimensions are replaced by logical dimensions derived from language writing mode such as left-to-right or right-to-left.</p>
+	<p>We can use the write mode feature to ensure that this text is displayed in a readable and appropriate way for the language it is written in.</p>
+</section>
+</div>
+</body>
+</html>

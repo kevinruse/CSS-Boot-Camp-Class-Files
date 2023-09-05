@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<title>CSS Contains</title>
+	<style>
+       html {
+		   font-family: "Arial, Helvetica Neue", Helvetica, sans-serif;
+	   }
+       img {
+           float: left;
+           border: 3px solid black;
+       }
+
+       article {
+           border: 1px solid black;
+           contain: content;
+       }
+	</style>
+</head>
+<body>
+<h1>CSS contain property</h1>
+<article>
+	<h2>Removing an element from the CSS content tree</h2>
+	<p>Per: https://developer.mozilla.org/en-US/docs/Web/CSS/contain</p>
+	<p>The contain CSS property allows an author to indicate that an element and its contents are, as much as possible,
+		independent of the rest of the document tree. This allows the browser to recalculate layout, style, paint, size,
+		or any combination of them for a limited area of the DOM and not the entire page, leading to obvious performance
+		benefits.</p>
+
+	<p>This property is useful on pages that contain a lot of widgets that are all independent, as it can be used to
+		prevent each widget's internals from having side effects outside of the widget's bounding-box.</p>
+	<img src='../../../assets/images/yogurt.jpg' alt='photo'>
+</article>
+<article>
+	<h2>Another heading of another article</h2>
+	<img src='../../../assets/images/pizza.jpg' alt='photo'>
+	<p>More content here.</p>
+</article>
+</body>
+</html>

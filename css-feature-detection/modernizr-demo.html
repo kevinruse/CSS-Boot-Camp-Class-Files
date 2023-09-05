@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modernizr-demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" href="../assets/styles/libs/bootstrap.css">
+    <style>
+        header {
+            margin: 0;
+            background: linear-gradient(#1c2a16, #993,#1c2a16);
+            background: -webkit-linear-gradient(top, #1c2a16 0%,#999933 50%,#1c2a16 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #1c2a16 0%,#999933 50%,#1c2a16 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            background-color: #1c2a16;
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c2a16', endColorstr='#1c2a16',GradientType=1 ); /* IE6-9 */
+            height: 110px;
+            padding: 24px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .svgLogo {
+            background-image: url(svg/choosemyplate_logo.svg), linear-gradient(#1c2a16, #993,#1c2a16);
+            background-repeat:  no-repeat;
+        }
+
+        .imgLogo {
+            background-image: url(../assets/images/choosemyplate_logo.png), linear-gradient(#1c2a16, #993,#1c2a16);
+            background-repeat:  no-repeat;
+            background-position: top left;
+        }
+
+        #helpSearch ul li a {
+            padding-right: 1em;
+            border-right: 1px solid #fff;
+            color: #fff;
+        }
+
+        #helpSearch ul li:last-child a {
+            border-right: none;
+        }
+
+        .glyph-icon-size-lg {
+            font-size: 1.5em;
+            color: #BED732;
+        }
+    </style>
+</head>
+<body>
+<header id="mainHeader" class="imgLogo">
+    <nav id="helpSearch" class="pull-right marg-top-1 hidden-xs">
+        <ul class="list-inline">
+            <li><a href="#" class="text-white">Help</a></li>
+            <li><a href="#" class="text-white">Search Tips</a></li>
+        </ul>
+        <form id="searchForm" class="hidden-xs pull-right">
+            <input type="text" class="form-control" placeholder="Search">
+        </form>
+    </nav>
+</header>
+<script src="libs/modernizr-svg.js"></script>
+<script>
+    if(Modernizr.svg) {
+        document.getElementById('mainHeader').className = "svgLogo";
+    }
+</script>
+</body>
+</html>

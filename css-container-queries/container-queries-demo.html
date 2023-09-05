@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Container Query Demo</title>
+    <style>
+        * {
+            outline: 1px solid darkgrey
+        }
+
+        .post {
+            container-type: size;
+        }
+
+        /* If the container is between 600px and 800px*/
+        @container (min-width: 600px) and (max-width: 800px) {
+            .card {
+                background-color: #00CCFF;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+<div class="post">
+    <div class="card">
+        <h2>Card title</h2>
+        <p>Card content</p>
+    </div>
+</div>
+
+<script>
+    let postContainer = document.querySelector('.post');
+    console.log(postContainer.offsetWidth);
+</script>
+</body>
+</html>

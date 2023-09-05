@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dataset API getdata - finished</title>
+	<style>
+		html {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		ul {
+			width: 100px;
+		}
+		li {
+			line-height: 1.5em;
+		}
+		li[data-grain='whole grain'], .whole {
+				 background: linear-gradient(transparent, #00ff00);
+			 }
+		li[data-grain='refined grain'], .refined {
+			background: linear-gradient(transparent, yellow);
+		}
+		#key {
+			width: 150px;
+		}
+	</style>
+</head>
+<body>
+<h2>Grains</h2>
+<ul>
+		<li data-grain="whole grain">Amaranth</li>
+		<li data-grain="refined grain">Cornbread</li>
+		<li data-grain="whole grain">Millet</li>
+		<li data-grain="refined grain">Noodles</li>
+		<li data-grain="refined grain">Pasta</li>
+		<li data-grain="whole grain">Popcorn</li>
+</ul>
+<section id="key">
+	<h3>Key</h3>
+	<p class="whole">Whole Grain</p>
+	<p class="refined">Refined Grain</p>
+</section>
+</body>
+</html>

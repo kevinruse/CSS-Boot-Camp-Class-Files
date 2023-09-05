@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Variables</title>
+    <style>
+        /* set custom properties on the root node here */
+
+
+        input[type=number] {
+            width: 50px;
+            display: block;
+        }
+
+        /* assign the custom property to the width of the apple here */
+
+
+
+
+        /* assign the custom property to the width of the bread here */
+        #bread {
+
+            height: 40px;
+            background-color: #ec971f;
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <label for="fruit">Fruits:</label>
+    <input type="number" id="fruit" value="1">
+
+    <label for="grain">Grains:</label>
+    <input type="number" id="grain" value="1">
+
+    <label for="veg">Vegetables</label>
+    <input type="number" id="veg" value="1">
+
+    <label for="protein">Protein:</label>
+    <input type="number" id="protein" value="1">
+
+</section>
+<img src="../assets/images/apple.gif" id="apple">
+<!--<img src="../../css/assets/images/foodImages/bread.png" id="bread">-->
+<img src="../assets/images/foodImages/broccoli.png" id="broccoli">
+<img src="../assets/images/foodImages/chicken.png" id="chicken">
+<div id="bread"></div>
+
+
+<script>
+    // reference to the :root style
+    const style = document.documentElement.style;
+    // reference to the apple
+    const apple = document.getElementById('apple');
+    // reference to the fruit count
+    const fruitCounter = document.getElementById('fruit');
+    // reference to the grain counter
+    const grainCounter = document.getElementById('grain');
+    // event handler for the click of the fruitCounter
+    fruitCounter.addEventListener('click', function (evt) {
+        style.setProperty('--fruitSize', (57 + (parseInt(evt.target.value)*10)) + 'px');
+    });
+    grainCounter.addEventListener('click', function (evt) {
+        console.log(evt.target.value);
+        style.setProperty('--grainSize', (68 + (parseInt(evt.target.value)*10)) + 'px');
+    });
+</script>
+</body>
+</html>

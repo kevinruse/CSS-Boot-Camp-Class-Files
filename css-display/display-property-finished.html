@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Display Property</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        li {
+            outline:1px solid #000;
+            width: 100px;
+            /* add a display property set to "inline" */
+            display: inline;
+        }
+
+        div {
+            width: 100px;
+            height: 50px;
+            outline: 1px solid #000;
+            /* add a display property set to "inline" */
+            display: inline-block;
+        }
+
+        span {
+            /* step 2 add a display property set to "block" */
+            display: block;
+        }
+
+        .collapseSpace {
+           /* add a display property set to "none" */
+            display: none;
+        }
+
+        .hideElement {
+            /* add a visibility property set to "hidden" */
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<h1>CSS Display Property</h1>
+<h2>Display: block</h2>
+<div>Div 1</div>
+<div>Div 2</div>
+<div>Div 3</div>
+<p>List Item elements have a default display property of "block"</p>
+<ul>
+    <li>List Item One</li>
+    <li>List Item Two</li>
+    <li>List Item Three</li>
+    <li>List Item Four</li>
+</ul>
+<h2>Display: inline</h2>
+<p>Span elements have a default display property of "inline"</p>
+<p>This is a paragraph with a <span>span element</span>inside of it.</p>
+<h2>Display: none</h2>
+<p>Hiding content</p>
+<p class="collapseSpace">You can hide me and collapse the space that I occupy.</p>
+<p class="hideElement">You can hide me, but keep the space I occupy.</p>
+<p>I'm just here to take up space.</p>
+
+<h1>Display Table Example</h1>
+<div style="display: table; width: 600px">
+    <section style="display: table-row;">
+        <article style="display: table-cell;">
+           Article One goes here
+        </article>
+        <article style="display: table-cell;">
+            Article Two goes here
+        </article>
+    </section>
+</div>
+</body>
+</html>

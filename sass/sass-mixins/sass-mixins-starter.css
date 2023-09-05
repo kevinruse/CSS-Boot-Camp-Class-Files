@@ -1,0 +1,49 @@
+@charset "UTF-8";
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ul li {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+li {
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 250px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+p {
+  font-family: sans-serif;
+}
+
+ul ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+ul ul li {
+  margin-bottom: 10px;
+}
+
+ul ul li:before {
+  content: "•"; /* Adding bullet point */
+  margin-right: 5px;
+}
+
+p.price {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=sass-mixins-starter.css.map */

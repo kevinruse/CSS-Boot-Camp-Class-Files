@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Center Content with Box Model</title>
+    <style>
+        .smallBox {
+            width: 6rem;
+            aspect-ratio: 1 / 1;
+            outline: 1px solid black;
+        }
+
+        .halfWidth {
+            width: 50%;
+            height: 8rem;
+            outline: 1px solid black;
+        }
+
+        .centerBox {
+            background-color: #0e90d2;
+            border: 2px solid black;
+            /* center trick */
+            position: fixed;
+            inset: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<section class="centerBox smallBox"></section>
+</body>
+</html>

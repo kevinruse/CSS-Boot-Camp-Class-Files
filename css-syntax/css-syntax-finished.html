@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>CSS Fundamentals - finished</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- write an embedded style sheet here that makes all paragraphs blue -->
+	<style>
+		p {
+			color:#0000ff;
+		}
+	</style>
+	<!-- Link to a stylesheet that makes all paragraphs green -->
+	<link href="styles-finished.css" rel="preload" type="text/css">
+</head>
+<body>
+<h1>The Cascade</h1>
+<p>Web designers can define style rules in three different places.</p>
+<p><strong>Where are CSS styles defined?</strong></p>
+<ol>
+	<li>Inline in an element</li>
+	<li>In an embedded style sheet</li>
+	<li>In an external style sheet</li>
+</ol>
+<h2>Embedded Style Sheets</h2>
+<!-- Step #3 -->
+<!-- write inline css in the first paragraph that makes the text red -->
+<p style="color:red">These style sheets are written in the head section of an HTML page.</p>
+<h2>External Style Sheets</h2>
+<p>These style sheets are created in separate documents with a .css extension and it is simply a listing of css rules. It does not contain any HTML</p>
+<h2>Inline Styles</h2>
+<p>Inline styles are created by adding a style attribute to an html tag. The value of the style element is one or more property/value pairs separated by semi-colons.</p>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS Grid Lines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        section {
+            display: grid;
+            grid-template-rows: repeat(4, auto);
+            grid-template-columns: repeat(4, 120px);
+        }
+        #swirls {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column: span 4;
+            text-align: center;
+        }
+        #globes {
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column: span 4;
+            text-align: center;
+        }
+        #clusters {
+            grid-row-start: 7;
+            grid-row-end: 8;
+            grid-column: span 4;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<!--Step 1: create a grid container-->
+<section>
+    <h1 id="swirls">Chocolate Swirls</h1>
+    <img src="assets/candy1.png"/>
+    <img src="assets/candy1.png"/>
+    <img src="assets/candy1.png"/>
+    <img src="assets/candy1.png"/>
+    <img src="assets/candy1.png"/>
+    <img src="assets/candy1.png"/>
+    <img src="assets/candy1.png"/>
+    <img src="assets/candy1.png"/>
+    <h1 id="globes">Chocolate Globes</h1>
+    <img src="assets/candy2.png"/>
+    <img src="assets/candy2.png"/>
+    <img src="assets/candy2.png"/>
+    <img src="assets/candy2.png"/>
+    <img src="assets/candy2.png"/>
+    <img src="assets/candy2.png"/>
+    <img src="assets/candy2.png"/>
+    <img src="assets/candy2.png"/>
+    <h1 id="clusters">Chocolate Clusters</h1>
+    <img src="assets/candy3.png"/>
+    <img src="assets/candy3.png"/>
+    <img src="assets/candy3.png"/>
+    <img src="assets/candy3.png"/>
+    <img src="assets/candy3.png"/>
+    <img src="assets/candy3.png"/>
+    <img src="assets/candy3.png"/>
+    <img src="assets/candy3.png"/>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Place Items - starter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+	    html {
+		    font-family: Arial, Helvetica, sans-serif;
+	    }
+
+        #wrapper {
+            display: grid;
+            grid-gap: 10px 20px;
+            grid-template-rows: 100px 1fr auto;
+            grid-template-columns: 1fr 200px;
+            grid-template-areas: ""
+                                 ""
+                                 "";
+        }
+
+        header {
+	        background-color: #8699a4;
+
+        }
+
+        main {
+	        background-color: #d1ecf1;
+        }
+
+        aside {
+	        background-color: #98da31;
+        }
+
+        footer {
+	       background-color: #e4b9b9;
+        }
+
+        header, footer, aside, main {
+           outline: 1px solid #eee;
+	       padding: .5em;
+        }
+
+        @media (max-width: 600px) {
+          /*  #wrapper {
+                        grid-gap: ;
+                        grid-template-rows: ;
+                        grid-template-columns: ;
+                        grid-template-areas: ;
+                        } */
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <h1>This is the web page's header element.</h1>
+    </header>
+    <aside>
+        <h3>Aside</h3>
+        <nav>
+            <ul>
+                <li>About Us</li>
+                <li>Contact Us</li>
+            </ul></nav>
+    </aside>
+    <main>
+        <h2>This is main content header</h2>
+        <p>This is the main content.</p>
+    </main>
+    <footer>
+        <p>This is the footer.</p>
+    </footer>
+</div>
+
+</body>
+</html>

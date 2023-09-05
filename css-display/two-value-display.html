@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two Value Display</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            outline: 1px solid black;
+        }
+
+        em {
+            /* display: flex; */
+        }
+
+        #twoValueDisplay {
+            border: 2px solid blue;
+            display: block flex;
+        }
+    </style>
+</head>
+<body>
+<p>This is a paragraph with an <em>emphasis</em> element inside.</p>
+<section>
+    <p>outer display (inline vs. block) vs. inner display (display of the children)</p>
+    <p>display: value1 value2</p>
+    <p>value1 is the outer display. value2 is the children.</p>
+</section>
+
+    <span id="twoValueDisplay">
+        <span>Item One</span>
+        <span>Item Two</span>
+        <span>Item Three</span>
+    </span>
+</body>
+</html>

@@ -1,0 +1,53 @@
+/* Smartphones min-device-width: 320px and max-device-width: 480px */
+
+    #container {
+
+    }
+
+    header {
+
+    }
+
+    .subject {
+
+    }
+
+
+
+/* tablets max-width: 980px  and min-width: 768px */
+    #container {
+
+    }
+
+    .subject {
+
+    }
+
+    header {
+
+    }
+
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 980px) {
+    #container {
+        width: 960px;
+        margin: 12px;
+    }
+
+    .subject {
+        width: 25%;
+        height: 200px;
+        display: inline;
+        float: left;
+        margin-left: 2%;
+        margin-bottom: 6%;
+    }
+
+    header {
+        background-color: #999;
+        display: block;
+        border: 1px solid #333;
+        width: 100%;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Layout - starter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../bootstrap-4.0.0-dist/css/bootstrap.css">
+
+    <style>
+        .brandBanner {
+            border: 1px solid #666;
+            background: linear-gradient(#1c2a16, #993,#1c2a16 );
+        }
+        #footerTitle {
+            background-color: #5B6224;
+            color: #fff;
+        }
+        .bgGradient {
+            background-image: linear-gradient(to right, rgba(125,185,232,0) 0%,rgba(95,154,207,0.7) 62%,rgba(89,148,202,1) 100%);
+        }
+      
+    </style>
+</head>
+<body>
+<div id="wrapper" class="container-fluid">
+    <header id="brand" class="brandBanner row justify-content-between p-3 pb-4">
+        <img id="logo" src="../../assets/images/MyFoodPlate_logo.png" alt="Food Plate Logo" />
+        <nav id="help-search" class="d-none d-sm-block">
+            <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Search Tips</a></li>
+            </ul>
+            <form id="search-form">
+                <input id="search" type="search" placeholder="search" />
+            </form>
+    </nav>
+    </header>
+
+    <div class="bgGradient row pt-3">
+        <section id="mainContentGraphic" class="col-sm-2 d-none d-md-block">
+         <img src="../../assets/images/backgroundImages/mainContentGraphic-transparent.png" class="img-fluid">
+        </section>
+        <main class="col-sm-10 p-lg-3">
+            <h2>My Food Plate</h2>
+            <p>MyPlate is a reminder to find your healthy eating style and build it throughout your lifetime. Everything you eat and drink matters. The right mix can help you be healthier now and in the future. This means:</p>
+            <ul>
+                <li>Focus on variety, amount, and nutrition.</li>
+                <li>Choose foods and beverages with less saturated fat, sodium, and added sugars.</li>
+                <li>Start with small changes to build healthier eating styles.</li>
+                <li>Support healthy eating for everyone.</li>
+            </ul>
+            <p>  Eating healthy is a journey shaped by many factors, including our stage of life, situations, preferences, access to food, culture, traditions, and the personal decisions we make over time. All your food and beverage choices count. MyPlate offers ideas and tips to help you create a healthier eating style that meets your individual needs and improves your health.</p>
+            <a href="http://www.choosemyplate.gov/MyPlate#sthash.TOpnkyE4.dpuf">Read More at ChooseMyPlate.gov</a>
+        </main>
+    </div>
+
+            <footer class="row justify-content-around">
+                <h2 id="footerTitle" class="col-sm-12 border-top border-bottom text-center p-2">Resources for Nutrition &amp; Health</h2>
+
+            <section id="foodGroups" class="col-xs-12 p-4">
+                <h5><strong>Food Groups</strong></h5>
+                <ul>
+                    <li>Fruits</li>
+                    <li>Vegetables</li>
+                    <li>Grains</li>
+                    <li>Protein Foods</li>
+                    <li>Dairy</li>
+                    <li>Oils</li>
+                    <li>Empty Calories</li>
+                </ul>
+            </section>
+            <section id="printedMaterials" class="col-xs-12 p-4">
+                <h5><strong>Printed Materials & Ordering</strong></h5>
+                <ul>
+                    <li>My Plate Mini Poster</li>
+                    <li>Coloring Sheets</li>
+                    <li>My Plate Images</li>
+                    <li>Printable Materials</li>
+                    <li>Ordering Materials</li>
+                </ul>
+            </section>
+            <section id="relatedResources" class="col-xs-12 p-4">
+                <h5><strong>Related Resources</strong></h5>
+                <ul>
+                    <li>Dietary Guidelines</li>
+                    <li>Food Safety</li>
+                    <li>Food and Nutrition Data</li>
+                    <li>The USDA</li>
+                    <li>Policy and Promotion</li>
+                </ul>
+            </section>
+            <section id="addlInfo" class="col-xs-12 p-4">
+                <h5><strong>Additional Information</strong></h5>
+                <ul>
+                    <li>Nutrition.gov</li>
+                    <li>Fruits & Veggies</li>
+                    <li>Weight Control</li>
+                    <li>Diabetes</li>
+                    <li>Heart Disease</li>
+                    <li>More Links</li>
+                </ul>
+            </section>
+     </footer>
+</div>
+
+<script src="bootstrap-dependencies/jquery-3.3.1.min.js"></script>
+<script src="../bootstrap-4.0.0-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

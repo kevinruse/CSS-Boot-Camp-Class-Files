@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contains Property-finished</title>
+	<style>
+		button {
+			display: block;
+		}
+		section {
+			outline: 1px solid black;
+			display: inline-block;
+		}
+		#firstSection {
+			height: auto;
+			width: 200px;
+			contain: layout;
+		}
+
+		/*#secondSection {
+			height: 100px;
+			width: 100px;
+			position: absolute;
+			left: 120px;
+
+		}*/
+	</style>
+</head>
+<body>
+<button id="changeFontSize">Change font size</button>
+
+<section id="firstSection">
+	<h4>First Section</h4>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem corporis dolor doloribus excepturi, iusto laboriosam, necessitatibus nihil nostrum obcaecati, optio quae recusandae reprehenderit sapiente sunt unde velit vero voluptas!</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cupiditate eligendi exercitationem harum, id ipsam minima molestias, numquam qui quibusdam quo voluptate. Corporis dolore ex maxime, praesentium ratione vitae voluptas!</p>
+</section>
+<!--
+<section id="secondSection">
+	<h4>Second Section</h4>
+</section>
+-->
+
+<script>
+	document.getElementById('changeFontSize').addEventListener('click', () => {
+		document.getElementById('firstSection').style.fontSize = '18px';
+	});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Variables</title>
+    <style>
+        body {
+
+        }
+        .face-button {
+            display: inline-block;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: none;
+            overflow: hidden;
+
+        }
+
+        .face-button .face-primary,
+        .face-button .face-secondary {
+            display: block;
+            padding: 0 32px;
+
+            transition: margin .4s;
+        }
+        .face-button .face-primary {
+
+            color: #fff;
+        }
+        .face-button:hover .face-primary {
+            margin-top: calc(var(--btn-height) - var(--btn-height) * 2);
+        }
+        @media (max-width: 650px) {
+            body {
+
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+<div>
+<a class="face-button" href="#">
+
+    <div class="face-primary">
+        Fruit Group
+    </div>
+
+    <div class="face-secondary">
+        <span>Apples, Oranges, Bananas</span>
+    </div>
+
+</a>
+</div>
+<input type="button" id="changeColor" value="Change Color"></input>
+<script>
+    document.getElementById('changeColor').addEventListener('click', () => document.body.style.setProperty('--btn-color', 'blue'));
+</script>
+</body>
+</html>

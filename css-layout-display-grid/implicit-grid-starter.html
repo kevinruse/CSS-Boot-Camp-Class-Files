@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Implicit Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    section  {
+      display: grid;
+      grid-template-rows: 200px 200px;
+      grid-template-columns: 75px 75px;
+      /* add grid-auto-rows */
+      /*grid-auto-rows: 100px;*/
+    }
+
+    div {
+      outline: 1px solid black;
+      background-color: #2b81af;
+    }
+
+    .implicit {
+        background-color: #4cae4c;
+    }
+  </style>
+</head>
+<body>
+<section>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div class="implicit">Five</div>
+  <div class="implicit">Six</div>
+</section>
+</body>
+</html>

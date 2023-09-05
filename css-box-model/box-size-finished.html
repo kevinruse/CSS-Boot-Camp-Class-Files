@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Size - finished</title>
+    <style>
+        div {
+            outline: 1px solid #000;
+            /*width: 500px;*/
+            /*width: 50%;*/
+            height: 75px;
+        }
+        section {
+            width: 500px;
+            outline: 1px solid #f00;
+        }
+
+        #clamp {
+            /*width: clamp(500px, 50vw, 700px);
+            height: clamp(250px, 50vh, 400px);*/
+            width: 50%;
+            min-width: 250px;
+            max-width: 500px;
+            outline: 1px solid darkgreen;
+        }
+
+        .square {
+            border: 1px solid black;
+            background-color: #0e90d2;
+            aspect-ratio: 1 /1;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div>
+
+    </div>
+</section>
+
+<div id="clamp">
+
+</div>
+<div class="square"></div>
+</body>
+</html>

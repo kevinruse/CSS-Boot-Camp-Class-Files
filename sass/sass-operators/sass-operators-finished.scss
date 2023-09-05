@@ -1,0 +1,67 @@
+// percent widths
+$totalColumns: 12; // Total number of columns in the grid
+$columnWidth: 10%; // Width of each column
+$gutterWidth: 20px; // Spacing between columns
+
+//pixel widths
+$totalColumns: 12; // Total number of columns in the grid
+$columnWidth: 100px; // Width of each column
+$gutterWidth: 20px; // Spacing between columns
+
+
+$navColumnWidth: calc($columnWidth * 1.5);
+$remainingColumns: $totalColumns - $navColumnWidth; // Subtracting the navigation column
+$availableSpace: calc(($columnWidth + $gutterWidth) * $remainingColumns);
+$subSectionWidth: $availableSpace / 2;
+
+// Calculate the width ratio between primary and secondary subsections
+$primarySubsectionRatio: 5;
+$secondarySubsectionRatio: 1;
+
+body, main, header, h1, div {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+}
+
+// this is not part of the layout and is provided as a visual aid for understanding the grid concept
+main {
+  position: absolute;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(12, calc(100%/12));
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+
+
+.grid-container {
+  min-width: 100vw;
+  min-height: 95vh;
+  display: grid;
+  grid-template-columns: minmax(220px, $navColumnWidth) (1fr * $primarySubsectionRatio) (1fr * $secondarySubsectionRatio);
+  grid-gap: $gutterWidth;
+  border-left: 1px solid black;
+
+  .navigation,
+  .primary-subsection,
+  .secondary-subsection {
+    border: 1px solid black;
+    padding: 10px;
+  }
+}
+
+.grid-item {
+  background-color: #ccc;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}

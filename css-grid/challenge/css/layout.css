@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ****************************************************************************************** CSS Resets */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+#container {
+	width:960px;
+	margin: 0 auto;
+}
+
+
+/* ****************************************************************************************** Header Banner */
+#brandBanner {
+	border: 1px solid #666;
+	border-bottom: 0;
+	background: linear-gradient(#1c2a16, #993,#1c2a16 );
+	background: -webkit-linear-gradient(top, #1c2a16 0%,#999933 50%,#1c2a16 100%);
+	background: linear-gradient(to bottom, #1c2a16 0%,#999933 50%,#1c2a16 100%);
+}
+
+#logo {
+		margin-top: -31px;
+}
+/* ************************************************** Search Box */
+#searchBox {
+	padding-right: 20px;
+	padding-top: 13px;
+	text-align:right;
+}
+
+#helpSearch ul li {
+	display:inline;
+	padding-right: 6px;
+}
+#helpSearch ul li:last-child {
+	border-right: none;
+}
+#searchForm {
+	float:right;
+}
+#searchForm input {
+	margin-top: 20px;
+}
+#brandBanner #search {
+	width: 212px;
+	float: left;
+}
+#searchIcon {
+	padding-left:6px;
+	padding-top:-20px;
+	display: inline;
+}
+
+/* ****************************************************************************************** Main Nav */
+#main {
+	text-align:right;
+	background-color: #1c2a16;
+}
+
+#main ul {
+	padding-top:1em;
+	padding-bottom: 1em;
+	padding-right: 20px;
+}
+#main ul li {
+	display:inline;
+	padding-right: 6px;
+	border-right: 1px solid #fff;
+}
+#main ul li:last-child {
+	border-right: none;
+}
+/* ****************************************************************************************** Main Graphic */
+#mainPageGraphic {
+	background-image: url(../../../assets/images/backgroundImages/mainPageGraphic_1200.jpg);
+	background-repeat: no-repeat;
+}
+/* ****************************************************************************************** Main Content */
+#mainContent {
+	width: 960px;
+}
+/* ************************************************** Main Content Graphic */
+#mainContentGraphic {
+	float:left;
+}
+/* ************************************************** Main Content Text */
+#mainTextContent {
+	width: 427px;
+	float: left;
+	margin-left: 2em;
+}
+
+#mainTextContent h2 {
+	margin-bottom: 16px;
+	padding-top: 28px;
+}
+
+/* ************************************************** Mobile App Download */
+#mobileApp {
+	text-align: center;
+}
+#mobileApp h3 {
+	margin-bottom: 12px;
+	padding-top: 18px;
+}
+#mobileAppGraphic {
+	margin-bottom: 8px;
+	text-align: center;
+}
+#downloadBtn {
+	display: block;
+	margin: 0 auto;
+}
+/* ****************************************************************************************** Footer */
+footer {
+	width: 960px;
+	height: 180px;
+	padding-top: 10px;
+	margin-bottom: 8px;
+}
+
+#resources section#foodGroups {
+	width: 115px;
+}
+
+#resources section#relatedResources {
+	width: 145px;	
+	margin-right: 18px;
+}
+#resources section#printedMaterials {
+	margin-right:32px;
+}
+#resources section {
+	width:188px;
+	float: left;
+	margin-right: 8px;
+	margin-left: 4px;
+}
+
+#foodGroups h4, #audiences h4, #printedMaterials h4, #relatedResources h4, #addlInfo h4{
+	padding-bottom:4px;
+}

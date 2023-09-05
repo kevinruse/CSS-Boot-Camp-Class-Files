@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ems-responsive - finished</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<style>
+			.note {
+				font-size: 18px;
+				border: 1px solid #000;	
+				font-family: "Gill Sans", "Myriad Pro", Helvetica, Arial, sans-serif;
+			}
+			.note .title {
+				border-bottom: 2px solid #FF0;
+				background-color: #000;
+				color: #fff;
+				text-align: center;
+				width: auto;
+				font-size: 1.25em;
+				font-weight: bold;
+				margin: 0;
+				padding: 0.25em;
+			}
+			.note h1 {
+				padding: 0.5em;
+			}
+			.note section {
+				padding-left: 1em;
+				padding-right: 1em;	
+				padding-bottom: 1em;
+				padding-top: 0;
+			}
+			.note h2 {
+				padding: 0;	
+			}
+			
+			.note .footnote {
+				font-size: 0.65em;
+				display: inline;
+				margin-bottom: 0.65em;	
+			}
+			.note dt {
+				padding-top: 0.1em;
+				padding-bottom: 0.25em;	
+			}
+			/*@media (min-width: 940px) {
+				.note {
+					font-size: 24px;
+				}
+				.note .title {
+					background-color: #00f;
+				}
+			}
+			@media (min-width: 640px) {
+				.note {
+					font-size: 14px;
+				}
+				.note .title {
+					background-color: #f00;
+				}
+			}*/
+
+			@media (min-width: 640px) and (max-width: 940px) {
+				.note {
+					font-size: 14px;
+				}
+				.note .title {
+					background-color: #f00;
+				}
+			}
+
+			@media (min-width: 940px) {
+				.note {
+					font-size: 24px;
+				}
+				.note .title {
+					background-color: #00f;
+				}
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="note">
+		<h1 class="title">Notes: August 15, 2013</h1>
+		<section>
+		<h2>em unit</h2>
+		<p>Equal to the computed value of the ‘font-size’ property of the element on which it is used. </p>
+		<dl>
+		<dt>The rule: </dt>
+		<dd>
+			<code>h1 { line-height: 1.2em }</code>
+		</dd>
+		<dt>means that the line height of h1 elements will be 20% greater than the font size of h1 element. On the other hand: </dt>
+		<dd><code>h1 { font-size: 1.2em }</code></dd>
+		<dt>means that the font size of h1 elements will be 20% greater than the computed font size inherited by h1 elements. <sup>1</sup></dt>
+		</dl>
+		<p class="footnote"><sup>1</sup> http://www.w3.org/TR/2013/CR-css3-values-20130730/#font-relative-lengths</p>
+		</section>
+		</div>
+	</body>
+</html>

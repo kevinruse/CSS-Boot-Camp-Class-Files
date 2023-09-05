@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>flexbox-demo - starter</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	html {
+		font-family:Arial, Helvetica, sans-serif;
+	}
+#flexContainer {
+	display: flex;
+	background-color: #FF9;
+	height: 150px;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+}
+#flexItem1 {
+	background-color: #9F3;
+	min-height: 50px;
+	align-self: stretch;
+}
+#flexItem2 {
+	background-color: #99F;
+	align-self: flex-end;
+}
+#flexItem3 {
+	background-color: #F96;
+	align-self: flex-start;
+}
+div p {
+	margin: 0;
+	padding: 0;
+	background-color: #993;	
+}
+
+</style>
+</head>
+
+<body>
+	<div id="flexContainer">
+		<div id="flexItem1" class="tall">Flex Item 1</div>
+		<div id="flexItem2" class="tall">Flex Item 2</div>
+		<div id="flexItem3" class="tall">Flex Item 3</div>
+		<p class="tall">I am text that automatically gets wrapped in an anonymous Flex Item</p>
+	</div>
+</body>
+</html>

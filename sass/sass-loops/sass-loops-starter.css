@@ -1,0 +1,48 @@
+:root {
+  font-family: "Arial", sans-serif;
+}
+
+.stock-bond-list {
+  display: flex;
+  width: 635px;
+  justify-content: space-around;
+}
+
+.security {
+  border-radius: 1em;
+  border: 1px solid darkgrey;
+  padding: 1em;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.security :not(last-child) {
+  margin-bottom: 1em;
+}
+
+.bond-list {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border-radius: 1em;
+}
+.bond-list .asset {
+  padding: 1em;
+  border-radius: 1em;
+  outline: 1px solid darkgrey;
+}
+.bond-list .asset.safe {
+  background-color: #28a745;
+  color: white;
+}
+.bond-list .asset.moderateRisk {
+  background-color: #ffff00;
+  color: black;
+}
+.bond-list .asset.risky {
+  background-color: #dc3545;
+  color: white;
+}
+
+/*# sourceMappingURL=sass-loops-starter.css.map */

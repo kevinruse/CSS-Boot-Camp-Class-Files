@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Relative Units Demo</title>
+	<style>
+
+		html {
+			font-size: 10px;
+		}
+		main {
+			font-size: 2em;
+			margin-left: 1em;
+			margin-right: 0.5em;
+		}
+		main {
+			width: 700px;
+		}
+		span {
+			color: #f00;
+		}
+		button {
+			outline: none;
+		}
+		ol {
+			margin-top: 30px;
+		}
+		li {
+			font-family: 'Arial', sans-serif;
+			font-size: 18px;
+			line-height: 145%;
+		}
+	</style>
+</head>
+<body>
+<main id="mainSection">
+	<p id="pElement">This paragraph's font-size is <span id="paragraphSize"></span></p>
+	<p id="marginLeft">The main element's margin-left is <span id="marginLeftSize"></span>
+	</p>
+	<p id="marginRight">The main element's margin-right is <span id="marginRightSize"></span>
+	</p>
+		<p>CSS:</p>
+	<code>main { <br>
+				&nbsp; &nbsp; &nbsp; &nbsp;font-size: 2em; <br>
+				&nbsp; &nbsp; &nbsp; &nbsp;margin-left: 1em; <br>
+				&nbsp; &nbsp; &nbsp; &nbsp;margin-right: 0.5em; <br>
+		}</code>
+</main>
+<br><br>
+<button onclick="showFontSize()">Paragraph fontSize</button>
+<button onclick="showMarginLeft()">Main marginLeft</button>
+<button onclick="showMarginRight()">Main marginRight</button>
+<ol>
+	<li>Change the default font size of the page to 10px</li>
+	<li>Change the margin-left value from 1em to 1rem</li>
+	<li>Comment the CSS from step 1 and return the margin-left value to 1em </li>
+</ol>
+<script>
+	function showFontSize() {
+		let computedFontSize = window.getComputedStyle(document.getElementById("pElement")).fontSize;
+		console.log(computedFontSize);
+		paragraphSize = document.getElementById('paragraphSize');
+		paragraphSize.innerText = computedFontSize;
+	}
+
+	function showMarginLeft() {
+		let computedMargin = window.getComputedStyle(document.getElementById('mainSection')).marginLeft;
+		document.getElementById('marginLeftSize').innerText = computedMargin;
+		console.log(computedMargin);
+	}
+
+	function showMarginRight() {
+		let computedMargin = window.getComputedStyle(document.getElementById('mainSection')).marginRight;
+		document.getElementById('marginRightSize').innerText = computedMargin;
+		console.log(computedMargin);
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* ----------- flexbox ----------- */
+.flex-container {
+  display: flex;
+  flex-flow: row wrap; }
+
+.header {
+  order: 1; }
+
+.content {
+  order: 2; }
+
+.primary {
+  order: 3; }
+
+.secondary {
+  order: 4; }
+
+.footer {
+  width: 100%;
+  order: 5;
+}
+
+/* ----------- media queries --------------------- */
+@media screen and (min-width: 48em) {
+  .content {
+    width: 67%;
+    order: 3;
+  }
+
+  .primary {
+    width: 33%;
+    padding: 1em 3%;
+    order: 2;
+  }
+}

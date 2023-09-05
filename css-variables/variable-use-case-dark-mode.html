@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Variable Use Cases</title>
+	<style>
+		/* TODO put prefers-color-scheme styles in color-scheme.css inside media query media="(prefers-color-scheme: dark) */
+		:root {
+			--color-text-day: #000;
+			--color-bg-day: #eee;
+			--color-text-night: #fff;
+			--color-bg-night: #333;
+			/*--color-bg-night: #f00;*/
+			--color-night-dark-scheme: #ddd;
+			--color-day-light-scheme: #000;
+			/*--main-card-border: 2px solid #000;*/
+			/*--edit-icon: url('../assets/images/edit-icon.png');*/
+			font-family: Arial, Helvetica, sans-serif;
+
+		}
+		.day {
+			background-color: var(--color-bg-day);
+			color: var(--color-text-day);
+		}
+		.night {
+			background-color: var(--color-bg-night);
+			color: var(--color-text-night);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			.day.dark-scheme {
+				color: var(--color-text-night);
+				background-color: var(--color-bg-night);
+			}
+			.night.dark-scheme {
+				color: var(--color-night-dark-scheme);
+				background-color: var(--color-text-day);
+			}
+		}
+		@media (prefers-color-scheme: light) {
+			.day.light-scheme {
+				color: var(--color-day-light-scheme);
+				background-color: var(--color-text-night);
+			}
+			.night.light-scheme {
+				color: var(--color-text-day);
+				background-color: var(--color-bg-day);
+			}
+		}
+
+		.day, .night {
+			display: inline-block;
+			padding: 1em;
+			width: 200px;
+			height: 100px;
+			vertical-align: middle;
+			/*border: var(--main-card-border);*/
+		}
+
+		/*div.night.light-scheme::before {
+			content: var(--edit-icon);
+		}*/
+
+
+	</style>
+</head>
+<body>
+
+<h1>
+	You are in mode: <span id="mode"></span>
+</h1>
+
+<div class="day">
+	<p>Day - primary theme</p>
+</div>
+<div class="day light-scheme">
+	<!--TODO replace all .png with .svg file here-->
+	<img src="../assets/images/edit-icon.png">
+	<p>Day - will change in light scheme</p>
+</div>
+<div class="day dark-scheme">
+	<img src="../assets/images/edit-icon.png">
+	<p>Day - will change in dark scheme</p>
+</div>
+<br>
+
+<div class="night">
+	<p>Night - preliminary theme</p>
+</div>
+<div class="night light-scheme">
+	<p>Night - will change in light scheme</p>
+</div>
+<div class="night dark-scheme">
+	<img src="../assets/images/edit-icon.png">
+	<p>Night - will change in dark scheme</p>
+</div>
+
+<script>
+	let mode;
+	window.matchMedia('(prefers-color-scheme: dark)').addListener(function (evt) {
+		mode = `${evt.matches ? "dark" : "light"}`;
+		document.getElementById('mode').innerText = mode;
+	});
+
+	function setColorScheme(scheme) {
+		console.log(`setColorScheme called ${scheme}`);
+		switch(scheme){
+			case 'dark':
+				break;
+			case 'light':
+				break;
+			default:
+				break;
+		}
+	}
+
+	function getPreferredColorScheme() {
+		console.log(`called getPreferredColorScheme`);
+		if (window.matchMedia) {
+			if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+				return 'dark';
+			} else {
+				return 'light';
+			}
+		}
+		return 'light';
+	}
+
+	if(window.matchMedia){
+		let colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+		colorSchemeQuery.addEventListener('change', setColorScheme(getPreferredColorScheme()));
+	}
+</script>
+</body>
+</html>

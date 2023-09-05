@@ -1,0 +1,19 @@
+ol {
+  border: 3px solid;
+  padding: 2em;
+  font-size: 1.5em;
+  line-height: 3em;
+}
+ol > li {
+  border-bottom: 1pt solid darkslategrey;
+  padding-left: 1em;
+}
+ol > li > span {
+  text-transform: capitalize;
+  color: red;
+}
+ol > li > span > em::before {
+  color: blue;
+}
+
+/*# sourceMappingURL=sass-nesting.css.map */

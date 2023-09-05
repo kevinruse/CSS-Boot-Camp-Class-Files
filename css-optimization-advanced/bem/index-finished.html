@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Plate</title>
+    <link rel="stylesheet" href="main-finished.css">
+</head>
+
+<body>
+<div id="wrapper">
+
+<header class="title-block title-block__header">
+    <img class="title-block__logo"  src="images/icons/icons-57.png" alt="Food Plate logo">
+    <h1 class="title-block__title">My Food Plate</h1>
+    <nav class="title-block__nav" >
+        <a href="#fruit">
+            <img src="images/foodImages/apple.png"
+                              id="fruitLink" alt=""
+                              data-selected="true"
+                              class="title-block__nav__img--unselected">
+        </a>
+        <a href="#grain">
+            <img src="images/foodImages/bread.png"
+                 id="grainLink" alt=""
+                 data-selected="false"
+                 class="title-block__nav__img--unselected">
+        </a>
+        <a href="#protein">
+            <img src="images/foodImages/chicken.png"
+                 id="proteinLink" alt=""
+                 data-selected="false"
+                 class="title-block__nav__img--unselected">
+        </a>
+        <a href="#dairy">
+            <img src="images/foodImages/dairy.png"
+                 id="dairyLink" alt=""
+                 data-selected="false"
+                 class="title-block__nav__img--unselected">
+        </a>
+        <a href="#vegetable">
+            <img src="images/foodImages/onion.png"
+                 id="vegetableLink" alt=""
+                 data-selected="false"
+                 class="title-block__nav__img">
+        </a>
+    </nav>
+</header>
+
+<section id="main">
+    <div class="card opaque" id="fruit">
+        <section class="card__title">
+            <div class="card__figure">
+                <img src="images/foodImages/apple.png" class="card__img" alt="apple">
+                <h1>Fruit</h1>
+            </div>
+        </section>
+        <section class="card__body">
+        <h2 class="card__header">What foods are in the Fruit Group?</h2>
+        <p class="card__text">Any fruit or 100% fruit juice counts as part of the Fruit Group. Fruits may be fresh, canned, frozen, or
+            dried, and may be whole, cut-up, or pureed.</p>
+        <table class="card__table">
+            <thead>
+            <tr>
+                <th colspan="3" scope="col" style="text-align: left;">Daily Recommendation*</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            </tr>
+            <tr>
+                <th rowspan="2" scope="row">Children</th>
+                <td>2-3 years old</td>
+                <td>1 cup</td>
+            </tr>
+            <tr>
+                <td>4-8 years old</td>
+                <td>1 to 1 ½ cups</td>
+            </tr>
+            <tr>
+                <th rowspan="2" scope="row">Girls</th>
+                <td>9-13 years old</td>
+                <td>1 ½ cups</td>
+            </tr>
+            <tr>
+                <td>14-18 years old</td>
+                <td>1 ½ cups</td>
+            </tr>
+            <tr>
+                <th rowspan="2" scope="row">Boys</th>
+                <td>9-13 years old</td>
+                <td>1 ½ cups</td>
+            </tr>
+            <tr>
+                <td>14-18 years old</td>
+                <td>2 cups</td>
+            </tr>
+            <tr>
+                <th rowspan="3" scope="row">Women</th>
+                <td>19-30 years old</td>
+                <td>2 cups</td>
+            </tr>
+            <tr><td>31-50 years old</td>
+                <td>1 ½ cups</td>
+            </tr>
+            <tr>
+                <td>51+ years old</td>
+                <td>1 ½ cups</td>
+            </tr>
+            <tr>
+                <th rowspan="3" scope="row">Men</th>
+                <td>19-30 years old</td>
+                <td>2 cups</td>
+            </tr>
+            <tr>
+                <td>31-50 years old</td>
+                <td>2 cups</td>
+            </tr>
+            <tr>
+                <td>51+ years old</td>
+                <td>2 cups</td>
+            </tr>
+            </tbody>
+        </table>
+        </section>
+    </div>
+
+    <div class="card" id="vegetable">
+        <section class="card__title">
+            <div class="card__figure">
+                <img src="images/foodImages/onion.png" class="card__img">
+                <h1>Vegetables</h1>
+            </div>
+        </section>
+        <section class="card__body">
+            <h2 class="card__header">What foods are in the Vegetable Group?</h2>
+            <p class="card__text">Any vegetable or 100% vegetable juice counts as a member of the Vegetable Group. Vegetables may be raw or cooked; fresh, frozen, canned, or dried/dehydrated; and may be whole, cut-up, or mashed.</p>
+            <table class="card__table">
+                <thead>
+                <tr>
+                    <th colspan="3" scope="col" style="text-align: justify;">Daily Recommendation*</th>
+            </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th rowspan="2" scope="row"><strong>Children</strong></th>
+                <td>2-3 years old</td>
+                <td>1 cup</td>
+            </tr>
+                <tr><td>4-8 years old</td>
+                <td>1 ½ cups</td>
+            </tr>
+                <tr><th rowspan="2" scope="row"><strong>Girls</strong></th>
+                <td>9-13 years old</td>
+                <td>2 cups</td>
+            </tr>
+                <tr><td>14-18 years old</td>
+                <td>2 ½ cups</td>
+            </tr>
+                <tr><th rowspan="2" scope="row"><strong>Boys</strong></th>
+                <td>9-13 years old</td>
+                <td>2 ½ cups</td>
+            </tr>
+                <tr><td>14-18 years old</td>
+                <td>3 cups</td>
+            </tr>
+                <tr><th rowspan="3" scope="row"><strong>Women</strong></th>
+                <td>19-30 years old</td>
+                <td>2 ½ cups</td>
+            </tr>
+                <tr><td>31-50 years old</td>
+                <td>2 ½ cups</td>
+            </tr>
+                <tr><td>51+ years old</td>
+                <td>2 cups</td>
+            </tr>
+                <tr><th rowspan="3" scope="row"><strong>Men</strong></th>
+                <td>19-30 years old</td>
+                <td>3 cups</td>
+            </tr>
+                <tr><td>31-50 years old</td>
+                <td>3 cups</td>
+            </tr>
+                <tr><td>51+ years old</td>
+                <td>2 ½ cups</td>
+            </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+</section>
+
+<input type="button" id="myPlate-btn" value="My Plate" class="btn" >
+
+<footer class="title-block title-block__footer">
+    <p class="title-block__text">&copy; 2019 Food Plate Inc.</p>
+</footer>
+
+</div>
+
+<script src="bem.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Animations - starter</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			background-color: #00b6f1;
+		}
+
+		#mainContent {
+			width: 320px;
+			margin: 0 auto;
+		}
+		#circles {
+			z-index: -999;
+			min-height: 100%;
+			width: 100%;
+			height: auto;
+			position: fixed;
+			top: 0;
+			left: 0;
+			margin: 0 auto;
+			background: url(images/circle1.png), url(images/circle2.png) -124px -124px, -182px -182px;
+			text-align: center;
+			box-shadow:inset 0 0 95px rgba(0,0,0,.70);
+			-webkit-box-shadow:inset 0 0 95px rgba(0,0,0,.70);
+			-moz-box-shadow:inset 0 0 95px rgba(0,0,0,.70);
+		}
+		#plateImage {
+			width: 320px;
+			background-color: #f6e6b4;
+			box-shadow:rgba(0,0,0,0.5) 6px 6px 24px;
+			border-radius:18px;
+			border: 2px #734ca7 solid;
+		}
+		#statusForm {
+			height: 75px;
+		}
+		#status_btn {
+			font-family: Arial, Helvetica, sans-serif;
+			color:#333;
+			font-size: 16px;
+			font-weight: bold;
+			margin-top:18px;
+			padding: 10px;
+			width: 135px;
+			height: 45px;
+			text-decoration: none;
+			border-radius: 10px;
+			box-shadow:rgba(0,0,0,0.5) 4px 4px 24px;
+			text-shadow: -1px -1px 1px #ccc;
+			border: solid #b8b8b8 2px;
+			background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff7fb), to(#d1cdcf));
+			background: -moz-linear-gradient(top, #fff7fb, #d1cdcf);
+		}
+
+		#status_btn:hover {
+			background-color: #fff;
+			box-shadow: 0 0 20px rgba(255,255,255,0.85);
+		}
+		#statusContainer {
+			background-color: #f6e6b4;
+			margin-left: 0;
+			margin-top: 0;
+		}
+		ul {
+			margin-left: -40px;
+		}
+		li {
+			list-style-type:none;
+			text-align: left;
+			background-position: left;
+			padding: 0;
+			margin: 0;
+			width: 100%;
+		}
+		/*li.grains {
+            height: 70px;
+            background: #ffaa00;
+            background: -moz-linear-gradient(left, #ffaa00 0%, #f4cb64 25%, #f2e1ba 50%, #f4cb64 75%, #ffaa00 100%);
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ffaa00), color-stop(25%, #f4cb64), color-stop(50%, #f2e1ba), color-stop(75%, #f4cb64), color-stop(100%, #ffaa00));
+            background: -webkit-linear-gradient(left, #ffaa00 0%, #f4cb64 25%, #f2e1ba 50%, #f4cb64 75%, #ffaa00 100%);
+            background: -o-linear-gradient(left, #ffaa00 0%, #f4cb64 25%, #f2e1ba 50%, #f4cb64 75%, #ffaa00 100%);
+            background: -ms-linear-gradient(left, #ffaa00 0%, #f4cb64 25%, #f2e1ba 50%, #f4cb64 75%, #ffaa00 100%);
+            background: linear-gradient(to right, #ffaa00 0%, #f4cb64 25%, #f2e1ba 50%, #f4cb64 75%, #ffaa00 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaa00', endColorstr='#ffaa00', GradientType=1 );
+            -moz-background-size: 200%;
+            -webkit-background-size: 200%;
+            background-size: 200%;
+            -webkit-transition:.5s background-position linear;
+            -moz-transition:.5s background-position linear;
+            transition:.5s background-position linear;
+        }
+        li.fruits {
+            height: 70px;
+            background: #ff1a00;
+            background: -moz-linear-gradient(left, #ff1a00 0%, #f9796b 25%, #fcb0a9 50%, #f9796b 75%, #ff1a00 100%);
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ff1a00), color-stop(25%, #f9796b), color-stop(50%, #fcb0a9), color-stop(75%, #f9796b), color-stop(100%, #ff1a00));
+            background: -webkit-linear-gradient(left, #ff1a00 0%, #f9796b 25%, #fcb0a9 50%, #f9796b 75%, #ff1a00 100%);
+            background: -o-linear-gradient(left, #ff1a00 0%, #f9796b 25%, #fcb0a9 50%, #f9796b 75%, #ff1a00 100%);
+            background: -ms-linear-gradient(left, #ff1a00 0%, #f9796b 25%, #fcb0a9 50%, #f9796b 75%, #ff1a00 100%);
+            background: linear-gradient(to right, #ff1a00 0%, #f9796b 25%, #fcb0a9 50%, #f9796b 75%, #ff1a00 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1a00', endColorstr='#ff1a00', GradientType=1 );
+            -moz-background-size: 200%;
+            -webkit-background-size: 200%;
+            background-size: 200%;
+            -webkit-transition:.5s background-position linear;
+            -moz-transition:.5s background-position linear;
+            transition:.5s background-position linear;
+        }
+        li.veg {
+            height: 70px;
+            background: #708700;
+            background: -moz-linear-gradient(left, #708700 0%, #76842e 25%, #def754 51%, #76842e 75%, #708700 100%);
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%, #708700), color-stop(25%, #76842e), color-stop(51%, #def754), color-stop(75%, #76842e), color-stop(100%, #708700));
+            background: -webkit-linear-gradient(left, #708700 0%, #76842e 25%, #def754 51%, #76842e 75%, #708700 100%);
+            background: -o-linear-gradient(left, #708700 0%, #76842e 25%, #def754 51%, #76842e 75%, #708700 100%);
+            background: -ms-linear-gradient(left, #708700 0%, #76842e 25%, #def754 51%, #76842e 75%, #708700 100%);
+            background: linear-gradient(to right, #708700 0%, #76842e 25%, #def754 51%, #76842e 75%, #708700 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#708700', endColorstr='#708700', GradientType=1 );
+            -moz-background-size: 200%;
+            -webkit-background-size: 200%;
+            background-size: 200%;
+            -webkit-transition:.5s background-position linear;
+            -moz-transition:.5s background-position linear;
+            transition:.5s background-position linear;
+        }
+        li.proteins {
+            height: 70px;
+            background: #8c3310;
+            background: -moz-linear-gradient(left, #8c3310 0%, #a04e30 25%, #f0b7a1 50%, #a04e30 75%, #8c3310 100%);
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%, #8c3310), color-stop(25%, #a04e30), color-stop(50%, #f0b7a1), color-stop(75%, #a04e30), color-stop(100%, #8c3310));
+            background: -webkit-linear-gradient(left, #8c3310 0%, #a04e30 25%, #f0b7a1 50%, #a04e30 75%, #8c3310 100%);
+            background: -o-linear-gradient(left, #8c3310 0%, #a04e30 25%, #f0b7a1 50%, #a04e30 75%, #8c3310 100%);
+            background: -ms-linear-gradient(left, #8c3310 0%, #a04e30 25%, #f0b7a1 50%, #a04e30 75%, #8c3310 100%);
+            background: linear-gradient(to right, #8c3310 0%, #a04e30 25%, #f0b7a1 50%, #a04e30 75%, #8c3310 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3310', endColorstr='#8c3310', GradientType=1 );
+            -moz-background-size: 200%;
+            -webkit-background-size: 200%;
+            background-size: 200%;
+            -webkit-transition:.5s background-position linear;
+            -moz-transition:.5s background-position linear;
+            transition:.5s background-position linear;
+        }*/
+		.status {
+			background-position:right;
+		}
+
+		#grainsImg, #proteinImg, #vegImg, #fruitImg {
+			position: relative;
+			left: 5px;
+			cursor:pointer;
+		}
+		#proteinImg {
+			padding-top:10px;
+		}
+		/* add .check class here */
+
+
+		/* add @-webkit-keyframes imageSlide here */
+
+	</style>
+	<script type="text/javascript" src="libs/jquery-3.1.1.js"></script>
+</head>
+
+<body>
+<div id="circles">
+	<header id="welcomeHeader"> <img id="foodPlateImg" src="images/MyFoodPlate_logo.png" /> </header>
+	<section id="mainContent">
+		<section id="plateImage">
+			<div id="statusContainer">
+				<ul>
+					<li class="grains"><img src="images/Bread.png" alt="grains" id="grainsImg"></li>
+					<li class="veg"><img src="images/onion.png" alt="vegetables" id="vegImg"></li>
+					<li class="proteins"><img src="images/Chicken.png" alt="proteins" id="proteinImg"></li>
+					<li class="fruits"><img src="images/apple.png" alt="fruits" id="fruitImg"></li>
+				</ul>
+			</div>
+		</section>
+		<form name="statusForm" id="statusForm">
+			<input type="button" name="status_btn" id="status_btn" value="Check Status">
+		</form>
+	</section>
+</div>
+<script>
+
+	/* jQuery animate
+
+	 $('li.veg').css('background-position', 'right');
+	 $('#vegImg').animate({"left": "+=65px"}, "2000");
+	 $('li.proteins').css('background-position', 'right');
+	 $('#proteinImg').animate({"left": "+=125px"}, "2000");
+	 $('li.fruits').css('background-position', 'right');
+	 $('#fruitImg').animate({"left": "+=225px"}, "2000");
+	 $('li.grains').css('background-position', 'right');
+	 $('#grainsImg').animate({"left": "+=95px"}, "2000");
+	 status_btn.style.webkitBoxShadow = '0px 0px 20px rgba(255,255,255,0.85)';
+	 event.preventDefault();
+	 }
+	 */
+
+	$(document).ready(function()
+	{
+		$('#status_btn').click(function() {
+			//css animation
+			$('#grainsImg').attr('class', 'check');
+			$('li.grains').css('background-position', 'right');
+			$('#fruitImg').attr('class', 'check');
+			$('li.fruits').css('background-position', 'right');
+			$('#proteinImg').attr('class', 'check');
+			$('li.proteins').css('background-position', 'right');
+			$('#vegImg').attr('class', 'check');
+			$('li.veg').css('background-position', 'right');
+		})
+	});
+</script>
+</body>
+</html>

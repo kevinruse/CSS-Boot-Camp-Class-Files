@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mixed Layout Modes Demo</title>
+    <style>
+        .row {
+            display: flex;
+        }
+
+        .absolutePosition.item {
+            position: absolute;
+            /*right: 200px;*/
+            /*top: 200px;*/
+        }
+
+        .item {
+            background-color: yellow;
+            outline: 1px solid darkslategray;
+        }
+
+        li {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+
+<ul class="row">
+    <li class="item">Am I a flex item?</li>
+    <li class="absolutePosition item">How about me?</li>
+    <li class="item">Am I a flex item?</li>
+</ul>
+</body>
+</html>

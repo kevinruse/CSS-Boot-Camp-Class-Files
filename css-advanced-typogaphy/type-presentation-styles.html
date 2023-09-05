@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Type Presentation Styles</title>
+	<style>
+		#gradientType {
+			/*-webkit-text-fill-color: transparent;*/
+			-webkit-background-clip: text;
+			background: radial-gradient(#0088ff, #ff65aa);
+		}
+
+		p.truncate {
+			width: 200px;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		::selection {
+			background-color: #f3b70f;
+		}
+	</style>
+</head>
+<body>
+<h1 id="gradientType">This is a heading with a gradient background.</h1>
+<p class="truncate"> This paragraph will truncate via an ellipsis after rendering 3 lines of type. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur deserunt, distinctio dolore dolores dolorum esse est magni minima nobis non odio optio provident quae quia, recusandae suscipit vel veritatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur deleniti enim et ex harum impedit iure, quidem. Adipisci aperiam deleniti dolore eos, fugiat illo incidunt, inventore molestiae perspiciatis sed, suscipit?</p>
+<p>Select this text with a mouse down and drag to see the effect of the ::selection selector in CSS.</p>
+</body>
+</html>

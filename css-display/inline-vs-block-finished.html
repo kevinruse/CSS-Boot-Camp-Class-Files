@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inline vs block</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div {
+            outline: 1px solid #000;
+            width: 200px;
+        }
+        #one {
+            background-color: #00b3ee;
+        }
+        #two {
+            background-color: #00CC00;
+        }
+        #three {
+            background-color: #c12e2a;
+        }
+
+        em {
+            color: blue;
+            outline: 1px solid #000;
+            width: 300px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div id="one">Div One</div>
+<div id="two">Div Two</div>
+<div id="three">Div Three</div>
+<p>This is a paragraph element which is a block element. It contains an emphasis element <em>which is an inline element.</em> Unlike block elements, inline elements do not start on a new line. </p>
+</body>
+</html>

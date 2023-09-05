@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relative Positioning</title>
+    <style>
+        * {
+            outline: 1px solid #1d1d1d;
+        }
+        p {
+            /* 1. Run this file in a web browser and note the position of the elements */
+            /* 2. Remove the comments around the position property and test the file in a web browser */
+           /*position: relative;*/
+            /* 3. Remove the comments around the top and left properties and test the file in a web browser */
+            /*left: 30px;*/
+            /*top: 30px;*/
+        }
+
+    </style>
+</head>
+<body>
+<h1>Relative Flow</h1>
+<p>Relatively positioned elements are positioned the same as statically positioned elements, unless the <code>top, bottom, left or right</code> properties are added. Elements positioned with the additional properties (top, bottom, left, right) leave the normal document flow, but the space they took up in the document isn’t collapsed. The space stays open and in the same spot the element originally occupied, regardless of where the element moves via the additional CSS properties. Thus, the surrounding elements will not be adjusted to fit into any gap left by the relatively positioned element.</p>
+<div>
+    <p>A div element.</p>
+</div>
+<!--<ul>
+    <li>Item one</li>
+    <li>Item two</li>
+    <li>Item three</li>
+</ul>-->
+</body>
+</html>

@@ -1,0 +1,69 @@
+/* CSS Document */
+/* PRINT STYLESHEET */
+#container {
+	width: 8.5in;
+	height: 10in;
+	page-break-after: avoid;
+}
+
+#brandBanner {
+	height: 1in;
+	width: 7.5in;
+}
+
+#logo, #main, #mainPageGraphic, #mobileApp, #resources, #searchBox, #resources footer {
+	display: none;
+}
+
+#header {
+	display:inline-block;
+	margin-top: -1in;
+	width: 7.5in;
+	font-size: 72pt;
+	font-weight: bold;
+	color: #000;
+}
+
+#printOnly {
+	visibility:visible;
+	display: block;
+	margin-top: 8px;
+	height: 301px;
+	width: 960px;
+}
+
+#mainContentGraphic {
+	margin-top: 1in;
+	width:168px;
+	height: 254px;	
+}
+#mainTextContent {
+	margin-left: .35in;
+	width: 5in;
+	float: left;
+}
+
+#mainTextContent h2 {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 30pt;
+	font-weight: bold;
+	color: #000;
+	margin-bottom: 16px;
+	padding-top: 28px;
+}
+#mainTextContent p {
+	width: 6.5in;	
+	font-family:Times, "Times New Roman", serif;
+	font-size: 14pt;
+	line-height: 20pt;
+	font-weight: normal;
+	color: #000;
+	text-align:justify;
+}
+
+#siteInfo {
+	position:absolute;
+	top: 13in;
+	margin-left: 224px;	
+	text-align: left;
+}

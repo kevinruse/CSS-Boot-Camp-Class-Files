@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Grid-layout - finished</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html, body {
+            padding: 0;
+            margin: 2em;
+            overflow: hidden;
+        }
+
+        #wrapper {
+            margin: 18px;
+            display: grid;
+            grid-gap: 15px;
+            grid-template-columns: [col-start] 200px [middle] 1fr [col-end];
+            grid-template-rows: [header] auto [main] auto [footer] auto;
+        }
+
+        header {
+            background-color: #6F3;
+            grid-row: header;
+            grid-column-start: col-start;
+            grid-column-end: col-end;
+        }
+
+        footer {
+            background-color: #933;
+            grid-row: footer;
+            grid-column-start: col-start;
+            grid-column-end: col-end;
+        }
+
+        section {
+            background-color: #C6F;
+            grid-row: main;
+        }
+
+        nav {
+            background-color: #F30;
+            grid-row: main;
+        }
+
+        @media all and (max-width: 600px) {
+            #wrapper {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 5px auto 5px auto 5px auto;
+            }
+
+            header, footer, nav, section {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+
+            header {
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+
+            section {
+                grid-row-start: 5;
+                grid-row-end: 6;
+            }
+
+            nav {
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+
+            footer {
+                grid-row-start: 7;
+                grid-row-end: 8;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <nav><h2>Navigation</h2></nav>
+    <section>
+        <h2>Main</h2>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+            tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+            semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+            tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+            semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+            tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+            semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    </section>
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+    <header>
+        <h2>Header</h2>
+    </header>
+</div>
+</body>
+</html>

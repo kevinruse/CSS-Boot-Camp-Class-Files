@@ -1,0 +1,74 @@
+@charset "utf-8";
+body {
+					background-color: #C1CAB3;
+				}
+				
+				#container, #brandBanner, #main {
+					margin: 0;
+				}
+		
+				#container {
+					width: 100%;
+				}
+	
+				#brandBanner {
+					width: auto;
+				}
+				
+				#logo {
+					padding-top: 18px;	
+				}
+							
+				#main {
+					width: auto;
+					height: 100%;
+					background-color:transparent;
+				}
+				
+				#main ul {
+					width:96%;
+					text-align:center;
+					padding: 3%;
+					padding-left: 5%;
+					padding-top: 5%;
+				}
+				
+				#main ul li {
+					width: 43%;
+					height: 50px;
+					background-color: #bfd730;
+					border: 2px solid #fff;
+					float:left;
+					padding-top: 10%;
+					cursor: pointer;
+				}
+				
+				#main ul li:nth-child(6) {
+					border-right: 2px solid #fff;	
+				}
+				
+				#main ul li a {
+					text-align: center;
+					text-decoration: none;
+					font-family:Verdana, Geneva, sans-serif;
+					font-size: .85em;
+					color: #1d2a16;	
+				}
+				
+				
+				#searchForm, #resources, #siteInfo, #mainContent, #helpSearch {
+					display:none;
+				}
+				
+				#mainPageGraphic {
+					width: 90%;
+					height: 100%;
+					margin: 4% 4%;
+					clear: both;
+				}
+				
+				#plateImg {
+					padding-top: 16px;
+					display: block;
+					width: 100%;
+				}

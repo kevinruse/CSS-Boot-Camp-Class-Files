@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Font Size Demo</title>
+    <style>
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p {
+            font-size: 100px;
+            line-height: 82px;
+            padding: 0;
+            margin: 0;
+        }
+        .font1 {
+            font-family: Helvetica;
+        }
+        .font2 {
+            font-family: Batang;
+        }
+        .font3 {
+            font-family: "Lucida Console";
+        }
+
+        .caption {
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+        }
+
+        figcaption {
+            background-color: yellow;
+            font-weight: bold;
+            width: 200px;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            width: 450px;
+            margin-bottom: 36px;
+        }
+        img {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h1> CSS for all p elements:
+    <code>
+    p {
+    font-size: 100px;
+    line-height: 82px;
+    padding: 0;
+    margin: 0;
+    }
+    </code>
+</h1>
+<p>
+    <span class="font1">Aa</span>
+    <span class="font2">Aa</span>
+    <span class="font3">Aa</span>
+</p>
+<section>
+    <span class="caption">Helvetica</span> <span class="caption">Batang</span> <span class="caption">Lucida Console</span>
+</section>
+<figure>
+    <img src="../../assets/images/font1.png" alt="font1 size in pixels">
+    <figcaption class="caption">Helvetica</figcaption>
+</figure>
+<figure>
+    <img src="../../assets/images/font2.png" alt="font1 size in pixels">
+    <figcaption class="caption">Batang</figcaption>
+</figure>
+<figure>
+    <img src="../../assets/images/font3.png" alt="font1 size in pixels">
+    <figcaption class="caption">Lucida Console</figcaption>
+</figure>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Query Finished</title>
+    <style>
+        * {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #wrapper {
+            display: grid;
+            grid-template-columns: 1fr 250px;
+            grid-gap: 20px;
+        }
+
+        p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-auto-flow: row;
+        }
+
+        .product-card {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-auto-flow: row;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        }
+
+
+        .bg-color {
+            background-color: #fff;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div id="wrapper">
+    <div class="container">
+        <h2>Column One</h2>
+        <!-- <p class="adjust-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+        <div class="card-container">
+            <div class="product-card bg-color">
+                <img src="https://picsum.photos/200" alt="Product Photo">
+                <div class="product-info">
+                    <h3 class="product-title">Product Name</h3>
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="product-price">$99.99</p>
+                </div>
+            </div>
+            <div class="product-card bg-color">
+                <img src="https://picsum.photos/200" alt="Product Photo">
+                <div class="product-info">
+                    <h3 class="product-title">Product Name</h3>
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="product-price">$99.99</p>
+                </div>
+            </div>
+
+            <div class="product-card bg-color">
+                <img src="https://picsum.photos/200" alt="Product Photo">
+                <div class="product-info">
+                    <h3 class="product-title">Product Name</h3>
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <p class="product-price">$99.99</p>
+                </div>
+            </div>
+            <div class="product-card bg-color">
+                <img src="https://picsum.photos/200" alt="Product Photo">
+                <div class="product-info">
+                    <h3 class="product-title">Product Name</h3>
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.
+                    </p>
+                    <p class="product-price">$99.99</p>
+                </div>
+            </div>
+            <div class="product-card bg-color">
+                <img src="https://picsum.photos/200" alt="Product Photo">
+                <div class="product-info">
+                    <h3 class="product-title">Product Name</h3>
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.
+                    </p>
+                    <p class="product-price">$99.99</p>
+                </div>
+            </div>
+            <div class="product-card bg-color">
+                <img src="https://picsum.photos/200" alt="Product Photo">
+                <div class="product-info">
+                    <h3 class="product-title">Product Name</h3>
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.
+                    </p>
+                    <p class="product-price">$99.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>Column Two</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo ratione sint, molestias omnis illum
+            dolorem quas velit qui temporibus earum, iusto sed error natus itaque voluptatibus tenetur officia vero
+            laudantium.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo ratione sint, molestias omnis illum
+            dolorem quas velit qui temporibus earum, iusto sed error natus itaque voluptatibus tenetur officia vero
+            laudantium.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo ratione sint, molestias omnis illum
+            dolorem quas velit qui temporibus earum, iusto sed error natus itaque voluptatibus tenetur officia vero
+            laudantium.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo ratione sint, molestias omnis illum
+            dolorem quas velit qui temporibus earum, iusto sed error natus itaque voluptatibus tenetur officia vero
+            laudantium.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo ratione sint, molestias omnis illum
+            dolorem quas velit qui temporibus earum, iusto sed error natus itaque voluptatibus tenetur officia vero
+            laudantium.</p>
+    </div>
+</div>
+</body>
+
+</html>

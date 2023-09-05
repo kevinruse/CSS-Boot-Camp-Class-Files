@@ -1,0 +1,13 @@
+<script>
+    const divs = document.getElementsByTagName("div");
+    if (Modernizr.backgroundblendmode) {
+        console.info("backgroundBlendMode is supported.");
+        for(div of divs) {
+            div.className += ' foodBlend'
+        }
+    } else {
+        for (div of divs) {
+            div.className += ' foodBorder'
+        }
+    }
+</script>

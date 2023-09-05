@@ -1,0 +1,69 @@
+* {
+    border: 1px solid darkgray;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+// Header
+.header {
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+
+            li {
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+// Hero Section
+.hero {
+    height: 70vh;
+
+    .hero-content {
+        text-align: center;
+
+        h1 {
+            font-size: 48px;
+        }
+
+        .tagline {
+            font-size: 24px;
+        }
+
+        .cta-button {
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 4px;
+        }
+    }
+}
+
+// Footer
+.footer {
+    p {
+        font-size: 14px;
+        text-align: center;
+    }
+}

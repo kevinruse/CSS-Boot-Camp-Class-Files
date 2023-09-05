@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sticky Flow</title>
+	<style>
+		/*h2 {
+			border: 1px solid #00b6f1;
+			background-color: #cccccc;
+			padding: 6px;
+			position: sticky;
+			top: 10px;
+		}*/
+
+		body {
+			min-height: 2000px;
+		}
+	</style>
+</head>
+<body>
+<h1>CSS Position property</h1>
+<h2>Position: static</h2>
+<p>The order an element appears in the source code determines where it appears on the rendered page in the browser, resulting in what is known as “normal flow” in the web browser.</p>
+<p>Static is the default position value for all elements, unless it is overwritten by the developer.</p>
+<h2>Position: relative
+</h2>
+<p>Relatively positioned elements are positioned the same as statically positioned elements, unless the top, bottom, left or right properties are added.</p>
+<p>Elements positioned with the additional properties (top, bottom, left, right) leave the normal document flow, but the space they take up in the document isn’t collapsed. The space stays open and in the same spot the element originally occupied (prior to applying the left, right, top, bottom properties), regardless of where the element moves via the additional CSS properties. Thus, the surrounding elements will not be adjusted to fit into any gap left by the relatively positioned element.</p>
+<h2>Position: absolute</h2>
+<p>Absolutely positioned elements are positioned relative to the nearest positioned ancestor using the top, bottom, left and right properties. If the element has no ancestors the body element is used to determine the relative position.</p>
+<p>An absolutely positioned element leaves the normal document flow and sit on top of the normal document. The space that would have been occupied by the absolute positioned element in the normal document flow is collapsed. Absolutely positioned elements will scroll with the page content when the page is scrolled.</p>
+<h2>Position: fixed</h2>
+<p>A element with a position of fixed is positioned relative to the viewport using the top, bottom, left and right properties.</p>
+<p>A fixed positioned element leaves the normal document flow and sit on top of the normal document. The space that would have been occupied by the absolute positioned element in the normal document flow is collapsed. Fixed positioned elements will not scroll with the page content when the page is scrolled.</p>
+<h2>Position: sticky</h2>
+<p>A element with a position of sticky combines relative and fixed values to create an element that is positioned relatively until it crosses a threshold where it becomes fixed.</p>
+
+</body>
+</html>

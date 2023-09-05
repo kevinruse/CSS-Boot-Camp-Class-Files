@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flow Layout Mode Demo</title>
+    <style>
+        .imageBorder {
+            border: 1px solid black;
+        }
+      /*  img {
+            display: block;
+        }*/
+    </style>
+</head>
+<body>
+<h1>Flow Layout</h1>
+<ol>
+    <li>Run this file in the browser.</li>
+    <li>Note the image is inside of a div, and the div has a 1-pixel border.</li>
+    <li>Notice the gap of space between the border and the bottom of the image</li>
+    <p>This is because the image element is rendered in the flow layout mode which means the browser is leaving space around it like it was a word in a sentence, flowing like an eBook or other flexible document type would flow.</p>
+    <li>Change the layout mode of the image by removing the comments around the image CSS style rule.</li>
+    <li>Refresh the file in the browser and the space is removed.</li>
+    <p>The display: block value sets the layout mode of the element.</p>
+</ol>
+<section>
+    <h2>Flow Layout Mode</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eius hic odit officiis pariatur! Amet assumenda autem doloremque impedit laudantium molestiae quibusdam recusandae, unde. Amet animi hic maxime mollitia quaerat.</p>
+    <div class="imageBorder">
+        <img src="../assets/images/kidsStateDinner-cropped.jpg" width="266">
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores aspernatur, culpa debitis doloremque doloribus eligendi expedita, laborum libero maiores molestiae nisi quia quod saepe sed soluta suscipit tempora temporibus?</p>
+</section>
+</body>
+</html>

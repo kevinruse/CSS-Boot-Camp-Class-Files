@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS Box Model Demo - finished</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<style>
+			h1, p, img, ul, li {
+				border: 1px solid #000;
+			}
+			h1 {
+				width: 325px;
+				background-color: #FF0;
+			}
+			p {
+				width: 275px;
+				padding-left: 50px;	
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+			img {
+				margin: 18px;	
+			}
+			ul {
+				border: none;	
+			}
+			li {
+				border: none;
+				list-style: square;	
+			}
+		</style>
+	</head>
+	<body>
+		<h1>The CSS Box Model</h1>
+		<p>According to the specification found at http://www.w3.org/TR/CSS2/box.html, The CSS box model describes the rectangular boxes that are generated for elements in the document tree and laid out according to the visual formatting model. Each box has a content area (e.g., text, an image, etc.) and optional surrounding padding, border, and margin areas; the size of each area is specified by properties defined below. The following diagram shows how these areas relate and the terminology used to refer to pieces of margin, border, and padding:</p>
+		<img src="../../assets/images/boxdim.png" width="455" height="340"  alt=""/>
+		<p>The perimeter of each of the four areas (content, padding, border, and margin) is called an "edge", so each box has four edges:</p>
+		<ul>
+			<li>content edge or inner edge</li>
+			<li>padding edge</li>
+			<li>border edge</li>
+			<li>margin edge or outer edge</li>
+		</ul>
+	</body>
+</html>

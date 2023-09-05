@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+}
+
+div[data-role='header'] {
+    background-color: #2d6ca2;
+    color: #fff;
+}
+
+
+div[data-role='page'] {
+    text-align: center;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00b6f1;
+    background-image:url(../../assets/images/backgroundImages/circle1.png) , url(../../assets/images/backgroundImages/circle1.png);
+    background-position: -24px -24px, -132px -132px;
+    background-repeat: repeat, repeat;
+    box-shadow: inset 0 0 95px rgba(0,0,0,.80);
+}
+
+/* form styles ********************************************************************** */
+select {
+    top:.5em;
+    width: 11.25em;
+    margin: 0 auto;
+}
+
+.fpButton {
+    color:#333;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    height: 45px;
+    width: 9.37em;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow:rgba(0,0,0,0.5) 4px 4px 24px;
+    text-shadow: -1px -1px 1px #ccc;
+    border: solid #b8b8b8 2px;
+    background: linear-gradient(#fff7fb, #d1cdcf);
+    margin-top: 24px;
+}
+.fpButton:active {
+     background-color: #fff;
+     box-shadow: 0 0 20px rgba(255,255,255,0.85);
+     margin-top: 24px;
+ }
+
+.message {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7em;
+    line-height: 1em;
+    font-weight: bold;
+    color:#333;
+    padding: 8px;
+    width: 150px;
+    margin: 10px auto;
+    border-radius: 10px;
+    background: linear-gradient(#fff7fb, #d1cdcf);
+    display: none;
+}
+
+#iconList li {
+    list-style-image:none;
+    display:inline;
+}
+
+div[data-role="header"] h1:first-of-type
+{
+    margin: auto auto;
+    padding: 12px;
+}
+
+/* fp (foodPlate) classes *********************************** */
+
+/*stitches plate together */
+.plateWrapper
+{
+    width: 235px;
+    margin: auto;
+}
+#colwrap1 {
+    float: left;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    width: 112px;
+}
+#colwrap2 {
+    float: left;
+    margin: 0;
+    display: inline;
+    width: 122px;
+}
+
+/* plate styles ******************************************************************* */
+#fruitempty {
+    height: 81px;
+    width: 112px;
+    float: left;
+}
+#vegempty {
+    float: left;
+    height: 93px;
+    width: 112px;
+}
+
+#graindairyempty {
+    float: left;
+    height: 93px;
+    width: 122px;
+}
+#proteinempty {
+    float: left;
+    height: 81px;
+    width: 122px;
+}
+#text {
+    margin-bottom: 1em;
+    display: inline;
+    float: left;
+    height: 40px;
+    width: 234px;
+}
+/* end plate stitch */
+
+.fp-input {
+    line-height: 2.5;
+    border-radius: 1em;
+}
+
+/* *********************************************************** jqmobile css overrides */
+.ui-header .ui-title {
+    font-size: 24px;
+    background-color: #0071bc /*{a-bar-background-color}*/;
+    border-color: #003e67 /*{a-bar-border}*/;
+    color: #ffffff /*{a-bar-color}*/;
+    text-shadow: 0 /*{a-bar-shadow-x}*/ 1px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #444444 /*{a-bar-shadow-color}*/;
+    font-weight: bold;
+    width: 100%;
+}
+.ui-content {
+    margin-bottom:42px; /* Set this to whatever your footer size is... */
+}
+.ui-footer {
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+    font-size: 24px;
+    background-color: #0071bc /*{a-bar-background-color}*/;
+    border-color: #003e67 /*{a-bar-border}*/;
+    color: #ffffff /*{a-bar-color}*/;
+    text-shadow: 0 /*{a-bar-shadow-x}*/ 1px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #444444 /*{a-bar-shadow-color}*/;
+    font-weight: bold;
+}
+.ui-controlgroup-label, label.ui-input-text {
+    font-size: 18px;
+    text-shadow: none;
+    font-weight: 700;
+}
+.ui-bar-a, .ui-header {
+    background-color: #0071bc;
+}
+
+/* accessibility classes */
+.visually-hidden { /*https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html*/
+    position: absolute !important;
+    /*clip: rect(1px, 1px, 1px, 1px);*/
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Normal Positioning</title>
+    <style>
+        * {
+            outline: 1px solid #1d1d1d;
+            /* 1. Run this file in a web browser and note the position of the elements */
+            /* 2. Remove the comments around the position property and test the file in a web browser */
+            /*position: static;*/
+            /* position: static is the default and does not need to be set unless overriding
+               element is not positioned and is displayed where it normally would in the document
+            */
+        }
+    </style>
+</head>
+<body>
+<h1>Normal Flow</h1>
+<h2><code>position: static</code></h2>
+<p>The order an element appears in the source code determines where it appears on the rendered page in the browser.</p>
+<div>
+    <p>A div element.</p>
+</div>
+<ul>
+    <li>Item one</li>
+    <li>Item two</li>
+    <li>Item three</li>
+</ul>
+</body>
+</html>

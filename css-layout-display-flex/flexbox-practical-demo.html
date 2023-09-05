@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Practical</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+        }
+
+        .ad {
+            margin: 10px;
+            padding: 1rem;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 450px;
+            outline: 1px solid #0d3349;
+        }
+
+        .ad1 {
+            flex: 1 2 auto;
+        }
+
+        .ad2 {
+            flex: 0 2 350px;
+        }
+
+        .pca    {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            height: 20%;
+            width: 30%;
+        }
+
+        .content {
+            margin: 0 2rem;
+            flex: 0 2 1000px;
+        }
+
+        .content img {
+            width: 100%;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <section class="ad ad1">
+        <div class="pca">
+            <img src="../assets/images/foodPlate-app-iPhone.png">
+            <button>Primary CTA</button>
+        </div>
+        <div class="info">
+            <h1> One</h1>
+            <h2>$50.00</h2>
+        </div>
+        <p>Description of product one.</p>
+    </section>
+    <section class="ad ad2">
+        <div class="pca">
+            <img src="../assets/images/candy2.png">
+            <button>Primary CTA</button>
+        </div>
+        <div class="info">
+            <h1> Two</h1>
+            <h2>$25.00</h2>
+        </div>
+        <p>Description of product two.</p>
+    </section>
+    <section class="content">
+        <h1>Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aliquid animi aperiam blanditiis consectetur corporis doloribus explicabo iusto laborum magnam, maxime odit provident quasi quibusdam quidem ratione reprehenderit rerum vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto beatae deserunt enim illum, in, ipsam iste, itaque magni optio quae quasi quis ratione rem repellat soluta tempore unde veritatis!</p>
+        <div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

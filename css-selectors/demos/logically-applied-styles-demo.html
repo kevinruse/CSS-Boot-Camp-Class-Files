@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logically-Applied Styles - Demo</title>
+    <style>
+        html {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        section {
+            outline: 1px solid #000;
+            width: 500px;
+            padding: 1em;
+        }
+        section:empty:after {
+            content: "Why  not add a rating?";
+            color: #F00;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <h1>Ratings</h1>
+    <h2>Your Ratings</h2>
+    <section id="yourRatings"></section>
+
+    <h2>Overall Ratings</h2>
+    <section id="OverallRatings">
+        <p>Five Stars: 75%</p>
+    </section>
+</div>
+</body>
+</html>

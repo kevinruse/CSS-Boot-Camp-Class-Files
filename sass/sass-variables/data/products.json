@@ -1,0 +1,56 @@
+[
+    {
+        "size": "Small",
+        "color": "Red",
+        "price": "$10",
+        "instock": "yes"
+    },
+    {
+        "size": "Large",
+        "color": "Blue",
+        "price": "$20",
+        "instock": "no"
+    },
+    {
+        "size": "Medium",
+        "color": "Lime Green",
+        "price": "$15",
+        "instock": "yes"
+    },
+    {
+        "size": "Medium",
+        "color": "Purple",
+        "price": "$16",
+        "instock": "yes"
+    },
+    {
+        "size": "Large",
+        "color": "Navy Blue",
+        "price": "$27",
+        "instock": "no"
+    },
+    {
+        "size": "Small",
+        "color": "Orange",
+        "price": "$17",
+        "instock": "yes"
+    },
+    {
+        "size": "Small",
+        "color": "Gray",
+        "price": "$10",
+        "instock": "no"
+    },
+    {
+        "size": "Large",
+        "color": "Gray",
+        "price": "$20",
+        "instock": "no"
+    },
+    {
+        "size": "Medium",
+        "color": "Forest Green",
+        "price": "$15",
+        "instock": "yes"
+    }
+]

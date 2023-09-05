@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Mutation</title>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Mutation</h1>
+<section id="controls">
+    <button id="addToListBtn">Add an Item to the List</button>
+</section>
+<section id="list">
+    <h1>List</h1>
+    <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</section>
+<script>
+    const addToListBtn = document.querySelector('#addToListBtn');
+    const list = document.getElementById('itemList');
+    let listItems = list.childElementCount;
+    const lastItem = document.querySelector('li:last-of-type');
+
+    addToListBtn.addEventListener('click', addItem);
+
+    function addItem() {
+        let newItem = document.createElement('li');
+        newItem.innerText = `Item  ${++listItems}`;
+        list.appendChild(newItem);
+    }
+
+</script>
+</body>
+</html>

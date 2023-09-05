@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS Counter</title>
+    <style>
+        html {
+            font-size: 20px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        /* add @supports rule here to test for counter properties: counter-reset and counter-increment */
+            article {
+                width: 75%;
+                margin: 5% auto;
+                counter-reset: footnotes;
+            }
+
+            a.footnote {
+                counter-increment: footnotes;
+                text-decoration: none;
+                cursor: pointer;
+                outline: none;
+                color: inherit;
+            }
+
+            a.footnote::after {
+                content: '[' counter(footnotes) ']';
+                vertical-align: super;
+                font-size: .8em;
+                margin-left: 2px;
+                color: blue;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            footer li::after {
+                content: attr(data-link);
+            }
+
+    </style>
+</head>
+
+<body>
+
+<article>
+    <header>
+        <h1>Web Standards</h1>
+    </header>
+    <p>According to the <a class="footnote" title="Web Standards Project" href="http://www.webstandards.org/learn/external/orgs/">Web Standards Project</a>:</p>
+    <h1>Standards Organizations</h1>
+    <p>Who’s responsible for setting the standards for the World Wide Web and the information technology universe in general? Here are some of the major players.</p>
+    <ul>
+        <li><a  class="footnote" title="World Wide Web Consortium" href="http://www.w3.org/">
+            W3C</a> (World Wide Web Consortium)</li>
+        <p>The W3C is the source for most of the recommendations that concern web developers. They produce recommendations for the implementation of such technologies as XHTML, the Document Object Model, and Cascading Style Sheets.
+            You may have noticed that we haven’t used the word“standards” yet. That’s because the W3C is not a standards body. Instead, the W3C organizes groups of experts in web-related fields. These groups produce recommendations on how to implement web technology. Although the W3C does not have any enforcement power over how their recommendations are implemented, most of their recommendations are taken as de facto standards.</p>
+        <li>
+            <a class="footnote" title="International Standards Organization" href="http://www.iso.org/iso/home.html">ISO</a> (International Organization for Standardization)</li>
+        <p>
+            This is a true standards body, with the resources to test products for standards compliance. They give their seal of
+            approval to products that pass their tests. Along with computer and web-based technology standards, ISO also administers over 13,000 standards, ranging from standards for freight containers to the identification of musical works.</p>
+        <li>
+            <a class="footnote" href="http://www.ansi.org/">ANSI</a> (American National Standards Institute)</li>
+        <p>
+            Another wide-ranging standards organization, ANSI is well-known as being the keeper of ASCII, the American Standard Code for Information Interchange.</p>
+        <li>
+            <a class="footnote" title="Unicode Consortium" href="http://www.unicode.org/">The Unicode Consortium</a></li>
+        <p>
+            This group has developed and maintained the Unicode standard, which, as their website says, “…provides a unique number	for every character, no matter what the platform, no matter what the program, no matter what the language.” Using Unicode makes it easier to develop multi-lingual versions of websites and documents.</p>
+        <li>
+            <a class="footnote" title="Internet Engineering Task Force" href="http://www.ietf.org/">The Internet Engineering Task Force</a></li>
+        <p>
+            The IETF is the home of the Request For Comments (RFCs) that	define the infrastructure of the Internet; these include such protocols as FTP, TCP/IP, and the format of email addresses.</p>
+        <li>
+            <a class="footnote" title="European Computer Manufacturers Association" href="http://www.ecma-international.org/">ECMA</a> (European Association for Standardizing Information and Communication Systems)</li>
+        <p>
+            Formerly the European Computer Manufacturers Association, this group is responsible for many information-based technology standards, including ECMAScript, the standard version of JavaScript.</p>
+    </ul>
+    <footer>
+        <h2 id="footnote">Footnotes</h2>
+        <ol>
+            <li data-link="http://www.webstandards.org/learn/external/orgs/">Web Standards Project - </li>
+            <li data-link="http://www.w3.org/">World Wide Web Consortium - </li>
+            <li data-link="http://www.iso.org/iso/home.html">International Organization for Standardization - </li>
+            <li data-link="http://www.ansi.org/">American National Standards Institute - </li>
+            <li data-link="http://www.unicode.org/">The Unicode Consortium - </li>
+            <li data-link="http://www.ietf.org/">The Internet Engineering Task Force - </li>
+            <li data-link="http://www.ecma-international.org/">European Association for Standardizing Information and Communication Systems - </li>
+        </ol>
+    </footer>
+</article>
+
+</body>
+</html>

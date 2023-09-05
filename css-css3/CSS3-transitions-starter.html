@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Transitions - starter</title>
+	<style>
+		body, h2 {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			background-color: #00b6f1;
+		}
+		#wrapper {
+			width: 100%;
+			text-align: center;
+		}
+		#mainContent {
+			width: 320px;
+			margin: 0 auto;
+		}
+		#circles {
+			z-index: -999;
+			min-height: 100%;
+			width: 100%;
+			height: auto;
+			position: fixed;
+			top: 0;
+			left: 0;
+			margin: 0 auto;
+			background: url(images/circle1.png), url(images/circle2.png) -124px -124px, -182px -182px;
+
+			text-align: center;
+			box-shadow:inset 0 0 75px rgba(0,0,0,.70);
+		}
+
+		#emptyPlate {
+			margin-top: 30px;
+		}
+		#addFoodItem {
+			width: 100%;
+			height: 32px;
+			position: relative;
+			top: 10px;
+			background-color: #fda707;
+		}
+		#addFoodItem h2 {
+			padding-top: 6px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 18px;
+		}
+		#registerForm {
+			height: 75px;
+		}
+		#checkBtn {
+			font-family: Arial, Helvetica, sans-serif;
+			color:#333;
+			font-size: 16px;
+			font-weight: bold;
+			padding: 10px;
+			width: 125px;
+			height: 45px;
+			margin-top:12px;
+			text-decoration: none;
+			-webkit-border-radius: 10px;
+			border-radius: 10px;
+			box-shadow:rgba(0,0,0,0.5) 4px 4px 24px;
+			text-shadow: -1px -1px 1px #ccc;
+			border: solid #b8b8b8 2px;
+			background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff7fb), to(#d1cdcf));
+			background: -moz-linear-gradient(top, #fff7fb, #d1cdcf);
+		}
+		#checkBtn:active {
+			background-color: #fff;
+			-webkit-box-shadow: 0 0 20px rgba(255,255,255,0.85);
+			-moz-box-shadow: 0 0 20px rgba(255,255,255,0.85);
+			-o-box-shadow: 0 0 20px rgba(255,255,255,0.85);
+			box-shadow: 0 0 20px rgba(255,255,255,0.85);
+		}
+		#foodPlate {
+			width: 296px;
+			height: 335px;
+			border-radius:20px;
+			background-color:#fdb813;
+			margin-left: 12px;
+			margin-top: -25px;
+			margin-bottom:42px;
+		}
+		#foodIcons {
+			position:relative;
+			bottom: -10px;
+			width: 296px;
+			height: 78px;
+			padding-top: 10px;
+			background-color:#fed574;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+		}
+		/* add .foodIcon class here */
+
+
+		#fruit:active {
+			/* add transform here */
+			background: url(images/appleGlow.png) no-repeat center;
+		}
+		#bread:active {
+			/* add transform here */
+			background: url(images/breadGlow.png) no-repeat center;
+		}
+		#protein:active {
+			/* add transform here */
+			background: url(images/chickenGlow.png) no-repeat center;
+		}
+		#veg:active {
+			/* add transform here */
+			background: url(images/onionGlow.png) no-repeat center;
+		}
+	</style>
+</head>
+<body>
+<div id="wrapper">
+	<div id="circles">
+		<header id="welcomeHeader"> <img id="foodPlateImg" src="images/MyFoodPlate_logo_addFood.png" /> </header>
+		<section id="mainContent">
+			<section id="foodPlate"> <img id="emptyPlate" src="images/emptyPlate.png" />
+				<div id="addFoodItem">
+					<h2>Add a Food Item</h2>
+				</div>
+				<div id="foodIcons">
+					<img src="images/apple.png" name="fruit" width="57" height="62" id="fruit" class="foodIcon"/>
+					<img id="veg" src="images/onion.png" class="foodIcon" />
+					<img id="protein" src="images/Chicken.png"  class="foodIcon"/>
+					<img id="bread" src="images/Bread.png" class="foodIcon"/>
+				</div>
+			</section>
+			<form name="registerForm" id="registerForm">
+				<input type="button" name="checkBtn" id="checkBtn" value="My Status">
+			</form>
+		</section>
+	</div>
+</div>
+
+</body>
+</html>

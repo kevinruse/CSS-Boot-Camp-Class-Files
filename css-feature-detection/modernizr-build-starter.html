@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modernizr-build - starter</title>
+    <style>
+        html {
+            font-family: "Myriad Web Pro", "Myriad Pro", sans-serif;
+        }
+        header {
+            margin: 0;
+            background: linear-gradient(#1c2a16, #993,#1c2a16);
+            height: 110px;
+            padding: 0 1.5em;
+            display: flex;
+            justify-content: flex-end;
+            color: #fff;
+        }
+
+        .imgLogo {
+            background-image: url(../assets/images/choosemyplate_logo.png), linear-gradient(#1c2a16, #993,#1c2a16);
+            background-repeat:  no-repeat;
+            background-position: top left;
+        }
+
+        #helpSearch ul li a {
+            padding-right: 1em;
+            border-right: 1px solid #fff;
+            color: #fff;
+        }
+
+        #helpSearch ul li:last-child a {
+            border-right: none;
+        }
+
+        .fltRight {
+            float: right;
+        }
+
+        input[type=text] {
+            width:150px;
+            height: 20px;
+            padding: 4px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+
+        .navList {
+            list-style-type: none;
+        }
+        .navList li {
+            display: inline;
+        }
+
+    </style>
+
+</head>
+<body>
+<header id="mainHeader" class="imgLogo">
+    <nav id="helpSearch" class="fltRight">
+        <ul class="navList">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Search Tips</a></li>
+        </ul>
+        <form id="searchForm" class="fltRight">
+            <input type="text" placeholder="Search">
+        </form>
+    </nav>
+</header>
+
+</body>
+</html>

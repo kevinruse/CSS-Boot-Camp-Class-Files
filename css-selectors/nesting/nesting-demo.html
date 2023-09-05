@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Nesting Demo</title>
+    <style>
+        body {
+            font-family: serif;
+
+            @media all {
+                font-family: sans-serif;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <article id="special">
+        <div>I'm a div element.</div>
+        <div>
+            <section>
+                <p>I'm a paragraph - child element of a div.</p>
+            </section>
+        </div>
+    </article>
+</body>
+
+</html>

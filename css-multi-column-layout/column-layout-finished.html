@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>column-layout - finished</title>
+	<style>
+		body {
+			font-size: 100%;
+		}
+		p {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: .9em;
+			line-height: 1.5em;
+			text-align:justify;
+		}
+		#wrapper {
+			width: 90%;
+		}
+		#mainSection {
+			width: 600px;
+			-webkit-column-width: 276px;
+			column-width: 276px;
+			-webkit-column-gap:24px;
+			column-gap:24px;
+			-webkit-column-rule: 1px dotted #333333;
+			column-rule: 1px dotted #333333;
+			-webkit-column-fill: balance;
+		}
+		#mainSection h3 {
+			border: 1px solid black;
+			-webkit-column-span: all;
+			column-span: all;
+		}
+	</style>
+</head>
+<body>
+<div id="wrapper">
+	<header id="mainHeader">
+		<h1>This is the main header</h1>
+	</header>
+	<section id="mainSection">
+		<h2>This is the main section</h2>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.</p>
+
+		<h3>Late Breaking News!</h3>
+
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In posuere felis nec tortor. Pellentesque faucibus. Ut accumsan ultricies elit. Maecenas at justo id velit placerat molestie. Donec dictum lectus non odio. Cras a ante vitae enim iaculis aliquam. Mauris nunc quam, venenatis nec, euismod sit amet, egestas placerat, est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras id elit. Integer quis urna. Ut ante enim, dapibus malesuada, fringilla eu, condimentum quis, tellus. Aenean porttitor eros vel dolor. Donec convallis pede venenatis nibh. Duis quam. Nam eget lacus. Aliquam erat volutpat. Quisque dignissim congue leo.</p>
+
+		<p>Mauris vel lacus vitae felis vestibulum volutpat. Etiam est nunc, venenatis in, tristique eu, imperdiet ac, nisl. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In iaculis facilisis massa. Etiam eu urna. Sed porta. Suspendisse quam leo, molestie sed, luctus quis, feugiat in, pede. Fusce tellus. Sed metus augue, convallis et, vehicula ut, pulvinar eu, ante. Integer orci tellus, tristique vitae, consequat nec, porta vel, lectus. Nulla sit amet diam. Duis non nunc. Nulla rhoncus dictum metus. Curabitur tristique mi condimentum orci. Phasellus pellentesque aliquam enim. Proin dui lectus, cursus eu, mattis laoreet, viverra sit amet, quam. Curabitur vel dolor ultrices ipsum dictum tristique. Praesent vitae lacus. Ut velit enim, vestibulum non, fermentum nec, hendrerit quis, leo. Pellentesque rutrum malesuada neque.</p>
+	</section>
+	<aside id="sideNotes">
+		<h3>This is an aside</h3>
+		<ul>
+			<li>Side note one</li>
+			<li>Side note two</li>
+			<li>Side note three</li>
+			<li>Side note four</li>
+		</ul>
+	</aside>
+	<footer id="mainFooter">
+		<h3>This is the footer</h3>
+	</footer>
+</div>
+</body>
+</html>

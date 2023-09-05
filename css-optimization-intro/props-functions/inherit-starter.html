@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Using the CSS inherit value</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+        /*reset */
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* end of reset */
+        h3 {
+            margin-top:.5em;
+            margin-bottom: .55em;
+            font-weight: bold;
+        }
+        .food {
+            width: 225px;
+            border: 1px solid #000;
+            background: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+        }
+        div>img {
+            float: left;
+            padding-left:.5em;
+            padding-right: .25em;
+        }
+        .foodSection {
+            margin-left: 18px;
+            margin-right: 18px;
+            padding: .25em;
+        }
+        p {
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:.75em;
+            line-height: 1.4em;
+          /*  margin-left: inherit;
+            margin-right: inherit;
+            padding: inherit;*/
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="wrapper">
+    <header id="welcomeHeader">
+        <img id="foodPlateImg" src="../assets/images/backgroundImages/choosemyplate_logo.png" />
+    </header>
+    <section id="mainContent">
+        <div class="food">
+            <h3>Fruit</h3>
+            <img src="../assets/images/foodImages/apple.png">
+            <section class="foodSection">
+            <p>In general, 1 cup of fruit or 100% fruit juice, or ½ cup of dried fruit can be considered as 1 cup from the Fruit Group. This chart below shows specific amounts that count as 1 cup of fruit (in some cases equivalents for ½ cup are also shown) towards your daily recommended intake.</p>
+
+            <p>See more information <a href="http://www.choosemyplate.gov/fruit#sthash.KuXcTBQ2.dpuf">here.</a></p>
+            </section>
+    </section>
+</div>
+</div>
+
+</body>
+</html>

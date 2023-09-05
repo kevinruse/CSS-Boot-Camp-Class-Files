@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repaint</title>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div>section:first-of-type {
+            padding: 1em;
+            margin: 1em;
+            width: 100px;
+            outline: 1px solid #000;
+            background-color: #fff;
+        }
+
+        body div:nth-child(2)>section {
+            padding: 1em;
+            margin: 1em;
+            width: 100px;
+            outline: 1px solid #f00;
+            background-color: #fff;
+            will-change: transform;
+        }
+
+
+        .willRepaint {
+            position: relative;
+            left: 500px;
+            top: 10px;
+            border: 3px solid #f00;
+        }
+
+        .willNotRepaint {
+            transform: translateX(200px);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <section id="willRepaint">
+        <p>Section One: I will be repainted.</p>
+
+    </section>
+</div>
+
+<div>
+    <section id="willNotRepaint">
+        <p>Section Two: I will NOT be repainted.</p>
+    </section>
+</div>
+
+<button id="moveSectionOneBtn">Move Section One</button>
+<button id="moveSectionTwoBtn">Move Section Two</button>
+
+
+<script>
+    let sectionOneBtn = document.getElementById('moveSectionOneBtn');
+    let sectionTwoBtn = document.getElementById('moveSectionTwoBtn');
+    let willRepaintSection = document.getElementById('willRepaint');
+    let willNotRepaintSection = document.getElementById('willNotRepaint');
+
+    sectionOneBtn.addEventListener('click', () => willRepaintSection.classList.add('willRepaint'));
+    sectionTwoBtn.addEventListener('click', () => willNotRepaintSection.classList.add('willNotRepaint'));
+
+</script>
+</body>
+</html>

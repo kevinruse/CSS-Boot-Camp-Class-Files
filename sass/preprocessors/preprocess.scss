@@ -1,0 +1,62 @@
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$border-radius: 4px;
+
+// Mixins
+@mixin button-styles($background, $text-color) {
+  background-color: $background;
+  color: $text-color;
+  border-radius: $border-radius;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+// Nesting
+.container {
+  width: 100%;
+
+  .header {
+    background-color: $secondary-color;
+
+    h1 {
+      color: $primary-color;
+      font-size: 24px;
+    }
+  }
+
+  .content {
+    margin-top: 20px;
+
+    p {
+      color: $primary-color;
+      font-size: 16px;
+    }
+  }
+}
+
+// Inheritance
+.button {
+  @include button-styles($primary-color, white);
+
+  &.secondary {
+    @include button-styles($secondary-color, white);
+  }
+}
+
+// Functions
+@function double($number) {
+  @return $number * 2;
+}
+
+// Examples
+.example {
+  width: double(200px);
+  height: double(100px);
+  background-color: lighten($primary-color, 20%);
+  border-radius: $border-radius;
+
+  &.highlighted {
+    background-color: darken($primary-color, 10%);
+  }
+}

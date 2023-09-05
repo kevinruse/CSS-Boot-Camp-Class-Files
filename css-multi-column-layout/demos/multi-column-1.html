@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Multi-Column Layout-1</title>
+<style>
+html, p, h1, h2, h3 {
+	font-family: Verdana, Geneva, sans-serif;
+	margin:0;
+	padding: 0;
+}
+
+html {
+	font-size: 95%;	
+}
+
+h1 {
+	margin-bottom: 18px;	
+}
+
+h2, h3 {
+	margin-top: 10px;
+	margin-bottom: 8px;	
+}
+
+dt {
+	font-weight: bold;
+	font-variant: small-caps;
+	margin-top: 1.25rem;
+}
+
+dd:before {
+	content: '* ';
+}
+
+dd {
+	padding-left: 14px;
+	text-indent: -14px;
+	margin-top: .85rem;
+	line-height: 110%;
+}
+/* *********************************************************** multi-column */
+#activity {
+	/* step 1: set section to 4 columns and test in browsers */
+	/*column-count: 4; */
+	/* Step 2: comment step one and add a column width of 140px; */
+	/* column-width: 140px; */
+	/* Step 3: experiment with other column widths [pixels and ems, no %];
+	/* Step 4: return the width to 140px and add a column count of 4 and test in browsers */
+	-webkit-column-count: 4;
+	/* add the following properties one at a time and test in browsers:  
+		column-gap: This property sets the length of the gap between columns.
+		column-rule-color: Use any standard value for the rule color.
+		column-rule-style: This property allows you to style rules using border styles from CSS 2.1 
+		column-rule-width: Sets the width of the rule between columns. 
+						   The rule will appear in the middle of the gap.
+		column-rule: : Shorthand for setting column-rule-color, column-rule-style, and column-rule-width. */
+		-webkit-column-gap: 1.5em;
+		/* column-rule-color: #063;
+		column-rule-style: dotted;
+		column-rule-width: 1px; */
+		/* Step 5: replace the last three rules with the column-rule shortcut */
+		-webkit-column-rule: #063, dotted, 1px;
+}
+
+/* Step 6: add a column-span to the h1 */
+#activity h1 {
+	-webkit-column-span: all;	
+}
+</style>
+</head>
+
+<body>
+<section id="activity">
+<h1>Tips for Increasing Your Physical Activity Level</h1>
+<h2>Make physical activity a regular part of the day</h2>
+<p> Choose activities that you enjoy and can do regularly. Fitting activity into a daily routine can be easy — such as taking a brisk 10 minute walk to and from the parking lot, bus stop, or subway station. Or, join an exercise class. Keep it interesting by trying something different on alternate days. Every little bit adds up and doing something is better than doing nothing.</p>
+<p>Make sure to do at least 10 minutes of activity at a time, shorter bursts of activity will not have the same health benefits. For example, walking the dog for 10 minutes before and after work or adding a 10 minute walk at lunchtime can add to your weekly goal. Mix it up. Swim, take a yoga class, garden or lift weights. To be ready anytime, keep some comfortable clothes and a pair of walking or running shoes in the car and at the office.</p>
+<h3>More ways to increase physical activity</h3>
+<dl>
+<dt>At home:</dt>
+<dd> Join a walking group in the neighborhood or at the local shopping mall. Recruit a partner for support and encouragement.
+	Push the baby in a stroller.
+<dd> Get the whole family involved — enjoy an afternoon bike ride with your kids.
+	Walk up and down the soccer or softball field sidelines while watching the kids play.
+<dd> Walk the dog — don't just watch the dog walk.</dd>
+<dd> Clean the house or wash the car.</dd>
+<dd> Walk, skate, or cycle more, and drive less.</dd>
+<dd> Do stretches, exercises, or pedal a stationary bike while watching television.</dd>
+<dd> Mow the lawn with a push mower.</dd>
+<dd> Plant and care for a vegetable or flower garden.</dd>
+<dd> Play with the kids — tumble in the leaves, build a snowman, splash in a puddle, or dance to favorite music.</dd>
+<dd> Exercise to a workout video.</dd>
+<dt>At work:</dt>
+<dd> Get off the bus or subway one stop early and walk or skate the rest of the way.</dd>
+<dd> Replace a coffee break with a brisk 10-minute walk. Ask a friend to go with you.</dd>
+<dd> Take part in an exercise program at work or a nearby gym.</dd>
+<dd>Join the office softball team or walking group.</dd>
+</dd>
+<dt>At play:</dt>
+<dd> Walk, jog, skate, or cycle.</dd>
+<dd> Swim or do water aerobics.</dd>
+<dd> Take a class in martial arts, dance, or yoga.</dd>
+<dd> Golf (pull cart or carry clubs).</dd>
+<dd> Canoe, row, or kayak.</dd>
+<dd> Play racquetball, tennis, or squash.</dd>
+<dd> Ski cross-country or downhill.</dd>
+<dd> Play basketball, softball, or soccer.</dd>
+<dd> Hand cycle or play wheelchair sports.</dd>
+<dd> Take a nature walk.</dd>
+<dd> Most important — have fun while being active!
+</body>
+</html>

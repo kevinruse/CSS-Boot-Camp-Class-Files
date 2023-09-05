@@ -1,0 +1,12 @@
+:root {
+    --title-block-bg:           #0071bc;
+    --title-block-shadow:       #444444;
+    --title-block-border:       #003e67;
+    --title-block-color:        #fff;
+    --title-block-height:       88px;
+    --nav-height:               75px;
+    --title-block-font-size:    32px;
+    --white:                    #000;
+}
+
+

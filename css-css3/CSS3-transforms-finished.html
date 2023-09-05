@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS3 Transforms - finished</title>
+	<style>
+		h2 {
+			font-family: "Myriad Web Pro", "Myriad Pro", sans-serif;
+			font-size: 18px;
+			font-weight:bold;
+			text-align:center;
+			margin-top:24px;
+		}
+
+		#skew {
+			width: 100px;
+			padding:10px;
+			margin-left: 30px;
+			background-color:#009900;
+			border: 1px #000000 solid;
+			transform:skew(35deg);
+		}
+		#scale {
+			width: 100px;
+			padding:10px;
+			margin-top: -35px;
+			margin-left: 10px;
+			background-color:#FFC;
+			border: 1px #000000 solid;
+			transform:scale(2,0.45);
+		}
+		#rotate {
+			width: 90px;
+			padding:10px;
+			margin-left: 55px;
+			margin-top: -25px;
+			background-color:#FF0000;
+			border: 1px #000000 solid;
+			transform:rotate(45deg);
+		}
+		#translate {
+			width: 120px;
+			padding:10px;
+			background-color:#990000;
+			border: 1px #000000 solid;
+			transform:translate(10px, 20px);
+		}
+		#rotate-skew-scale-translate {
+			width: 120px;
+			padding:10px;
+			margin-left:25px;
+			margin-top: -26px;
+			background-color:#FFFF00;
+			border: 1px #000000 solid;
+			transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);
+		}
+	</style>
+</head>
+
+<body>
+<div id="scale">
+	<h2>Grain tip of the day</h2>
+</div>
+<div id="skew">
+	<h2>Vegetable tip of the day</h2>
+	<p><img src="images/vegFlip.png" alt="vegetable"></p>
+</div>
+<div id="rotate">
+	<h2>Fruit tip of the day</h2>
+</div>
+<div id="rotate-skew-scale-translate">
+	<h2>Dairy tip of the day</h2>
+</div>
+<div id="translate">
+	<h2>Protein tip of the day</h2>
+</div>
+</body>
+</html>

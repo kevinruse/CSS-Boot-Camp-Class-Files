@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Box Model - finished</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href="reset.css" rel="stylesheet" type="text/css">
+	<style>
+		.demo {
+			border: 1px solid #000;
+		}
+		#theBox {
+			width: 300px;
+		}
+		#content {
+			margin-top: 8px;
+			margin-bottom: 8px;
+			margin-left: 4px;
+			margin-right: 4px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			padding-left: 4px;
+			padding-right: 4px;
+			border: 2px dotted #F00;
+		}
+		#outerDiv {
+			width: 100px;
+			margin-top: 20px;
+			border: 2px solid #F00;
+		}
+		#innerDiv {
+			width: auto;
+			padding: 4px;
+			border: 3px solid #00F;
+		}
+	</style>
+</head>
+<body>
+<div id="theBox" class="demo">
+	<h1 id="content" class="demo">The Content</h1>
+</div>
+<div id="outerDiv" class="demo">
+	<div id="innerDiv" class="demo">
+		<h1 id="innerContent" class="demo">The Content</h1>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-layout - finished</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/normalize.css">
+    <link rel="stylesheet" href="css/flex-layout-finished.css">
+</head>
+<body>
+<header>
+    <img id="logo" src="../assets/images/choosemyplate_logo.png" alt="Food Plate Logo">
+    <nav id="helpSearch">
+        <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Search Tips</a>  </li>
+        </ul>
+        <form id="searchForm">
+            <input type="text" placeholder="Search">
+        </form>
+    </nav>
+</header>
+<section class="container">
+    <nav class="foodNav">
+        <a href="#">
+            <img src="../assets/images/broccoli.png" class="foodImg">
+            <div class="btn-txt">
+                <p class="foodBtn vegetable">Vegetables</p>
+            </div>
+        </a>
+        <a href="#">
+            <img src="../assets/images/brownrice.png" class="foodImg">
+            <div class="btn-txt">
+                <p class="foodBtn grains">Grains</p>
+            </div>
+        </a>
+        <a href="#">
+            <img src="../assets/images/chicken-lg.png" class="foodImg">
+            <div class="btn-txt">
+                <p class="foodBtn protein">Protein</p>
+            </div>
+        </a>
+        <a href="#">
+            <img src="../assets/images/cantaloupe.png" class="foodImg">
+            <div class="btn-txt">
+                <p class="foodBtn fruit">Fruit</p>
+            </div>
+        </a>
+        <a href="#">
+            <img src="../assets/images/yogurt.png" class="foodImg">
+            <div class="btn-txt">
+                <p class="foodBtn dairy">Dairy</p>
+            </div>
+        </a>
+    </nav>
+    <div class="main">
+        <nav class="mainNav">
+            <button type="button" class="fp-btn protein">My Plate</button>
+            <button type="button" class="fp-btn fruit">Exercise</button>
+            <button type="button" class="fp-btn grains">About Us</button>
+            <button type="button" class="fp-btn vegetable">FAQs</button>
+            <button type="button" class="fp-btn dairy">Contact Us</button>
+            <button type="button" class="hidden">
+                <!--<img src="../../assets/images/hamburger.svg">-->
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <rect fill="#000000" x="4" y="7" width="30" height="2"/>
+                    <rect fill="#000000" x="4" y="13" width="30" height="2"/>
+                    <rect fill="#000000" x="4" y="19" width="30" height="2"/>
+                </svg>
+            </button>
+        </nav>
+        <article>
+            <h1>My Food Plate</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto delectus, distinctio dolorem dolorum ex excepturi exercitationem facere ipsam laboriosam laudantium molestias mollitia nihil quaerat quod sequi soluta suscipit totam unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad amet aspernatur commodi corporis delectus deleniti dolorum eius error ipsam iste laboriosam, maxime mollitia nostrum pariatur possimus, quod repudiandae similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at ducimus eum laborum, nisi quod recusandae soluta unde. Adipisci dolores ex illum laboriosam obcaecati officiis rerum sint sunt vitae voluptate!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius est iure magnam, magni optio quibusdam similique? Ab aspernatur distinctio iste laborum mollitia officiis quia veritatis voluptatibus. Fugiat, id, sequi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis culpa, doloribus eligendi ex ipsam iusto laborum maxime modi nulla odit porro repellat repellendus. Ab aperiam asperiores aspernatur nostrum veritatis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto delectus, distinctio dolorem dolorum ex excepturi exercitationem facere ipsam laboriosam laudantium molestias mollitia nihil quaerat quod sequi soluta suscipit totam unde.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eius est iure magnam, magni optio quibusdam similique? Ab aspernatur distinctio iste laborum mollitia officiis quia veritatis voluptatibus. Fugiat, id, sequi.</p>
+        </article>
+    </div>
+</section>
+<footer>
+    <header class="footerHeader">
+        <h4>Resources for Nutrition and Health</h4>
+    </header>
+    <section class="footerBody">
+        <section class="footerSection">
+            <h4>Food Groups</h4>
+            <ul>
+                <li>Fruits</li>
+                <li>Vegetables</li>
+                <li>Grains</li>
+                <li>Protein Foods</li>
+                <li>Dairy</li>
+                <li>Oils</li>
+                <li>Empty Calories</li>
+            </ul>
+        </section>
+        <section class="footerSection">
+            <h4>Audiences</h4>
+            <ul>
+                <li>Dieters</li>
+                <li>Pregnant Women</li>
+                <li>Children (6-11)</li>
+                <li>Preschoolers (2-5)</li>
+                <li>Educators/Teachers</li>
+                <li>Health Professionals</li>
+                <li>Partners</li>
+            </ul>
+        </section>
+        <section class="footerSection">
+            <h4>Printed Materials</h4>
+            <ul>
+                <li>10 Tips Nutrition</li>
+                <li>My Plate Poster</li>
+                <li>Coloring Sheets</li>
+                <li>My Plate Images</li>
+                <li>More  Materials</li>
+                <li>Ordering Materials</li>
+            </ul>
+        </section>
+        <section class="footerSection">
+            <h4>Resources</h4>
+            <ul>
+                <li>Dietary Guidelines</li>
+                <li>Food Safety</li>
+                <li>Nutrition Data</li>
+                <li>USDA Center</li>
+                <li>Policy and Promotion</li>
+            </ul>
+        </section>
+    </section>
+</footer>
+</body>
+</html>

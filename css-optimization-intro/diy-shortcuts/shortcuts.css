@@ -1,0 +1,60 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+    background: url("../../assets/images/backgroundImages/circle1.png");
+    background-color: #00b6f1;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+/*rewrite the rules for the div selector with shortcuts here*/
+
+
+section {
+    background-color: #00b6f1;
+    background-image:url(../assets/images/backgroundImages/circle1.png),
+    url(../assets/images/backgroundImages/circle2.png);
+    background-position: -24px -24px, -132px -132px;
+    background-repeat: repeat, repeat;
+    width: 50%;
+    height: 200px;
+    float: left;
+}
+
+/*rewrite the rules for the section selector with shortcuts here*/
+
+
+ul {
+    list-style-position: outside;
+    list-style-image: url(../../assets/images/icons/favicon.png);
+}
+
+/*rewrite the rules for the ul selector with shortcuts here*/
+ul {
+    list-style: outside url(../../assets/images/icons/favicon.png);
+}
+
+aside  {
+    color: #f00;
+    width: 300px;
+    height: 140px;
+    background: #ccc;
+    float: right;
+}
+
+/*minify the rules for the aside selector here*/
+
+
+footer {
+    border-width: 2px 2px 2px 2px;
+    border-color: #000;
+    border-style: solid;
+    width: 100%;
+    clear: both;
+}
+
+/*write a briefer version of the footer rule here*/

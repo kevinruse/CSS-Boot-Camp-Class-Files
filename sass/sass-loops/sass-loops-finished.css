@@ -1,0 +1,73 @@
+:root {
+  font-family: "Arial", sans-serif;
+}
+
+.stock-bond-list {
+  display: flex;
+  width: 635px;
+  justify-content: space-around;
+}
+
+.security {
+  border-radius: 1em;
+  border: 1px solid darkgrey;
+  padding: 1em;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.security :not(last-child) {
+  margin-bottom: 1em;
+}
+
+.bond-list {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border-radius: 1em;
+}
+.bond-list .asset {
+  padding: 1em;
+  border-radius: 1em;
+  outline: 1px solid darkgrey;
+}
+.bond-list .asset.safe {
+  background-color: #28a745;
+  color: white;
+}
+.bond-list .asset.moderateRisk {
+  background-color: #ffff00;
+  color: black;
+}
+.bond-list .asset.risky {
+  background-color: #dc3545;
+  color: white;
+}
+
+.buy {
+  color: #00A000;
+  font-weight: 900;
+}
+.buy::after {
+  content: "BUY";
+}
+
+.hold {
+  color: #ffff00;
+  -webkit-text-stroke: 0.5px black;
+  font-weight: 900;
+}
+.hold::after {
+  content: "HOLD";
+}
+
+.sell {
+  color: #ff0000;
+  font-weight: 900;
+}
+.sell::after {
+  content: "SELL";
+}
+
+/*# sourceMappingURL=sass-loops-finished.css.map */

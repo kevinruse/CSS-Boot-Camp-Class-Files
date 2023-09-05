@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ****************************************************************************************** CSS Resets */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+/* ************************************************** Search Box */
+#searchBox {
+	text-align:right;	
+	font-family:Verdana, Geneva, sans-serif;
+	color: #bfd730;
+}
+#searchBox a{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: .80em;
+	color: #bfd730;
+	text-decoration:none;
+}
+
+
+/* ************************************************** Choose My Plate */
+#brandBanner h1 {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 1.75em;
+	font-weight: bold;
+	color: #fff;
+	padding-left: 1.25em;
+}
+#brandBanner .my {
+	color: #bfd730;
+}
+
+/* ****************************************************************************************** Main Nav */
+#main {
+	margin-top: 8px;
+	height: 50px;
+	width: 100%;
+	text-align:right;
+}
+
+#main ul li {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: .85em;
+	color: #fff;
+	display:inline;
+	padding-right: 6px;
+	border-right: 1px solid #fff;
+}
+#main ul li:last-child {
+	border-right: none;
+}
+
+#mainTextContent h2 {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 1.75em;
+	font-weight: normal;
+	color: #333333;
+}
+#mainTextContent p {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: .70em;
+	line-height: 1.85em;
+	font-weight: normal;
+	color: #333333;
+}
+
+/* ************************************************** Mobile App Download */
+
+#mobileApp h3 {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	color: #1aa4d8;
+}
+
+/* ****************************************************************************************** Footer */
+
+#resources h3 {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	text-align:center;
+	margin-bottom:10px;
+}
+
+
+#foodGroups h4, #audiences h4, #printedMaterials h4, #relatedResources h4, #addlInfo h4{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: .7em;
+	font-weight:bold;
+}
+
+#foodGroups ul li, #audiences ul li, #printedMaterials ul li, #relatedResources ul li, #addlInfo ul li {
+	list-style:none;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: .7em;
+	line-height:1.35em;
+	color: #1d2a16;
+}
+

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Layout - starter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../bootstrap-4.0.0-dist/css/bootstrap.css">
+    <style>
+        .brandBanner {
+            /*border: 1px solid #666;*/
+            background: linear-gradient(#1c2a16, #993,#1c2a16 );
+        }
+        #footerTitle {
+            background-color: #5B6224;
+            color: #fff;
+        }
+        .bgGradient {
+            background-image: linear-gradient(to right, rgba(125,185,232,0) 0%,rgba(95,154,207,0.7) 62%,rgba(89,148,202,1) 100%);
+        }
+        ul li a {
+            border-right: 1px solid #fff;
+            padding-right: .75em;
+        }
+        ul li:last-child a {
+            border-right:none;
+        }
+        /* Bootstrap overrides */
+        .navbar {
+            background-color: #233017;
+        }
+        #wrapper nav a.nav-link {
+            color: #fff;
+            border-right:none;
+        }
+        .btn-outline-success {
+            color: #BED732;
+            background-color: transparent;
+            background-image: none;
+            border-color: #BED732;
+        }
+        .btn-outline-success:hover {
+            color: #fff;
+            background-color: #BED732;
+            border-color: #BED732;
+        }
+        .btn-outline-success:focus, .btn-outline-success.focus {
+            box-shadow: 0 0 0 0.2rem #959632;
+        }
+        .btn-outline-success.disabled, .btn-outline-success:disabled {
+            color: #BED732;
+            background-color: transparent;
+        }
+        #wrapper .navbar-toggler-icon {
+            background-color: #9FB42B;
+            color: rgba(0,0,0,1);
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper" class="container">
+    <header id="brand" class="brandBanner row justify-content-between p-3 pb-4">
+        <img id="logo" src="../../assets/images/MyFoodPlate_logo.png" alt="Food Plate Logo" />
+        <nav id="help-search" class="d-none d-xs-block">
+            <ul class="list-unstyled list-inline">
+                <li class="list-inline-item"><a class="text-white" href="#">Help</a></li>
+                <li class="list-inline-item"><a class="text-white" href="#">Search Tips</a></li>
+            </ul>
+            <form id="search-form">
+                <input id="search" type="search" placeholder="search" />
+            </form>
+        </nav>
+    </header>
+    <nav class="row navbar navbar-expand-lg">
+        <a class="navbar-brand text-white" href="#">FoodPlate</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="bgGradient pt-3 row">
+        <section id="cards">
+            <div class="card">
+                <img class="card-img-top" src="../../assets/images/foodImages/apple.png">
+                <div class="card-body">
+                    <h5 class="card-title">Fruit</h5>
+                    <p>Any fruit or 100% fruit juice counts as part of the Fruit Group. Fruits may be fresh, canned, frozen, or dried, and may be whole, cut-up, or pureed.</p>
+                    <a id="fruit" href="#" class="btn btn-primary">More Info </a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="../../assets/images/foodImages/bread.png">
+                <div class="card-body">
+                    <h5 class="card-title">Grain</h5>
+                    <p class="card-text">Any food made from wheat, rice, oats, cornmeal, barley or another cereal grain is a grain product. Bread, pasta, oatmeal, breakfast cereals, tortillas, and grits are examples of grain products.</p>
+                    <a id="fruita" href="#" class="btn btn-primary">More About Fruit</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="../../assets/images/apple.gif">
+                <div class="card-body">
+                    <h5 class="card-title">Fruit</h5>
+                    <p class="card-text">In general, 1 cup of fruit or 100% fruit juice, or ½ cup of dried fruit can be considered as 1 cup from the Fruit Group. This table below shows specific amounts that count as 1 cup of fruit (in some cases equivalents for ½ cup are also shown) towards your daily recommended intake.</p>
+                    <a id="fruitc" href="#" class="btn btn-primary">More About Fruit</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="../../assets/images/oil.png">
+                <div class="card-body">
+                    <h5 class="card-title">Oils</h5>
+                    <p class="card-text">Oils are fats that are liquid at room temperature, like the vegetable oils used in cooking. Oils come from many different plants and from fish. Oils are NOT a food group, but they provide essential nutrients. Therefore, oils are included in USDA food patterns.</p>
+                    <a id="fruitd" href="#" class="btn btn-primary">More About Fruit</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="../../assets/images/apple.gif">
+                <div class="card-body">
+                    <h5 class="card-title">Fruit</h5>
+                    <p class="card-text">Any fruit or 100% fruit juice counts as part of the Fruit Group. </p>
+                    <a id="fruite" href="#" class="btn btn-primary">More About Fruit</a>
+                </div>
+            </div>
+            <div id="moreFruit" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">About the Fruit Group</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>In general, 1 cup of fruit or 100% fruit juice, or ½ cup of dried fruit can be considered as 1 cup from the Fruit Group. This table below shows specific amounts that count as 1 cup of fruit (in some cases equivalents for ½ cup are also shown) towards your daily recommended intake.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="../../assets/images/chicken.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Protein</h5>
+                    <p class="card-text">All foods made from meat, poultry, seafood, beans and peas, eggs, processed soy products, nuts, and seeds are considered part of the Protein Foods Group. Beans and peas are also part of the Vegetable Group.</p>
+                    <a href="#" class="btn btn-primary">More Info</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="../../assets/images/broccoli.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Vegetable</h5>
+                    <p class="card-text">Any vegetable or 100% vegetable juice counts as a member of the Vegetable Group. Vegetables may be raw or cooked; fresh, frozen, canned, or dried/dehydrated; and may be whole, cut-up, or mashed.</p>
+                    <a href="#" class="btn btn-primary">More Info</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="../../assets/images/yogurt.png">
+                <div class="card-body">
+                    <h5 class="card-title">Dairy</h5>
+                    <p class="card-text">All fluid milk products and many foods made from milk are considered part of this food group. Most Dairy Group choices should be fat-free or low-fat. Foods made from milk that retain their calcium content are part of the group. Foods made from milk that have little to no calcium, such as cream cheese, cream, and butter, are not. Calcium-fortified soymilk (soy beverage) is also part of the Dairy Group.</p>
+                    <a href="#" class="btn btn-primary">More Info</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--    <div id="moreFruit" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">About the Fruit Group</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>In general, 1 cup of fruit or 100% fruit juice, or ½ cup of dried fruit can be considered as 1 cup from the Fruit Group. This table below shows specific amounts that count as 1 cup of fruit (in some cases equivalents for ½ cup are also shown) towards your daily recommended intake.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    <footer class="row justify-content-around">
+        <h2 id="footerTitle" class="col-sm-12 border-top border-bottom text-center p-2">Resources for Nutrition &amp; Health</h2>
+
+        <section id="foodGroups" class="col-xs-12 p-4">
+            <h5><strong>Food Groups</strong></h5>
+            <ul>
+                <li>Fruits</li>
+                <li>Vegetables</li>
+                <li>Grains</li>
+                <li>Protein Foods</li>
+                <li>Dairy</li>
+                <li>Oils</li>
+                <li>Empty Calories</li>
+            </ul>
+        </section>
+        <section id="printedMaterials" class="col-xs-12 p-4">
+            <h5><strong>Printed Materials & Ordering</strong></h5>
+            <ul>
+                <li>My Plate Mini Poster</li>
+                <li>Coloring Sheets</li>
+                <li>My Plate Images</li>
+                <li>Printable Materials</li>
+                <li>Ordering Materials</li>
+            </ul>
+        </section>
+        <section id="relatedResources" class="col-xs-12 p-4">
+            <h5><strong>Related Resources</strong></h5>
+            <ul>
+                <li>Dietary Guidelines</li>
+                <li>Food Safety</li>
+                <li>Food and Nutrition Data</li>
+                <li>The <abbr title="United States Department of Agriculture"><span class="initialism">USDA</span></abbr></li>
+                <li>Policy and Promotion</li>
+            </ul>
+        </section>
+        <section id="addlInfo" class="col-xs-12 p-4">
+            <h5><strong>Additional Information</strong></h5>
+            <ul>
+                <li>Nutrition.gov</li>
+                <li>Fruits & Veggies</li>
+                <li>Weight Control</li>
+                <li>Diabetes</li>
+                <li>Heart Disease</li>
+                <li>More Links</li>
+            </ul>
+        </section>
+    </footer>
+</div>
+
+<script src="bootstrap-dependencies/jquery-3.3.1.min.js"></script>
+<script src="../bootstrap-4.0.0-dist/js/bootstrap.bundle.js"></script>
+<script>
+    $('#fruit').on('click', function () {
+        $('#moreFruit').modal();
+    })
+</script>
+</body>
+</html>

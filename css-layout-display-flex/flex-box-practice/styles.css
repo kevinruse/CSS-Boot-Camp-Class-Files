@@ -1,0 +1,49 @@
+/* ----------- base styles ----------- */
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: helvetica;
+  font-size: 1em;
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0;
+  padding: 1em 5%; }
+
+ul {
+  margin: 1em 5%;
+  padding: 0; }
+
+container {
+  max-width: 75em;
+  margin: 0 auto; }
+
+.header {
+  width: 100%;
+  background: #555;
+  color: #eee;
+  padding: 1em 0; }
+
+.content {
+  width: 100%;
+  background: #fff;
+  padding: 1em 0; }
+
+.sidebar {
+  width: 100%;
+  padding: 1em 0; }
+
+.primary {
+  background: #f00; }
+
+.secondary {
+  background: #0f0; }
+
+.footer {
+  width: 100%;
+  background: #444;
+  color: #eee;
+  padding: 1em 0; }
+

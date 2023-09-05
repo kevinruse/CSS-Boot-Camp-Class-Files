@@ -1,0 +1,8 @@
+<script>
+    const styles = getComputedStyle(document.getElementsByTagName('div')[0]);
+	 console.log(styles);
+    const colorVariable = styles.getPropertyValue('--color');
+    const userColor = document.getElementById('colorPicker').addEventListener('change', function () {
+        document.getElementById('greeting').style.setProperty('--color', this.value);
+    })
+</script>

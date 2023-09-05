@@ -1,0 +1,40 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: black;
+}
+
+#legend {
+  height: 30px;
+  width: 400px;
+  display: flex;
+  outline: 1px solid black;
+  margin: 1em;
+}
+
+#legend > span {
+  font-size: 14px;
+  line-height: 28px;
+  height: 30px;
+  width: 125px;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  flex: 1;
+}
+
+ul.product-list {
+  margin: 1em 0 0 2em;
+  width: 240px;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.5em;
+  list-style-type: none;
+}
+
+ul.product-list > li {
+  border-bottom: 1px dotted black;
+  padding: 4px;
+  color: black;
+}
+
+/*# sourceMappingURL=sass-variables-starter.css.map */

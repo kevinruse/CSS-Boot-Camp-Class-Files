@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Z-Index</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        html {
+            padding: 20px;
+            font: 12px/20px Arial, sans-serif;
+        }
+        div {
+            outline: 1px solid black;
+            width: 400px;
+            height: 240px;
+            /*position: relative;*/
+        }
+
+        h1 {
+            font: inherit;
+            font-weight: bold;
+        }
+        #div1 {
+            position: relative;
+            border: 1px dashed #696;
+            padding: 10px;
+            background-color: #00b6f1;
+        }
+
+        #div2 {
+            position: relative;
+            top: -75px;
+            left: 75px;
+            border: 1px dashed #696;
+            padding: 10px;
+            padding-top: 50px;
+            background-color: #cfc;
+        }
+        #div3 {
+            position: relative;
+            top: -240px;
+            left: 180px;
+            width: 330px;
+            border: 1px dashed #900;
+            background-color: #fdd;
+            padding: 40px 20px 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="div1">
+    <h1>Division Element #1 (root context)</h1>
+</div>
+
+<div id="div2">
+    <h1>Division Element #2</h1>
+</div>
+
+<div id="div3">
+    <h1>Division Element #3</h1>
+</div>
+
+
+</body>
+</html>
+

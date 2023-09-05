@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model Demo 1: Box <Size></Size></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        ol, li {
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+        figcaption {
+            margin-top: 1em;
+        }
+        em {
+            text-decoration: underline;
+        }
+        #w3cBoxModel {
+            background: #df8505;
+            height: 100px;
+            width: 200px;
+            padding: 20px;
+            border: 10px solid black;
+            box-sizing: content-box;
+        }
+        #traditionalBoxModel {
+            background: #df8505;
+            height: 100px;
+            width: 200px;
+            padding: 20px;
+            border: 10px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<h1>The W3C vs. the traditional box model</h1>
+
+<figure>
+    <div id="w3cBoxModel"></div>
+    <figcaption>The div above is sized using the <em>W3C box model</em> which considers the width of the element to be equal to the content of the box.</figcaption>
+</figure>
+<figure>
+    <div id="traditionalBoxModel"></div>
+    <figcaption>The div above is sized using the <em>traditional box model</em> which considers the width of the element to be equal to the sum of the content, padding and the border applied to the box.</figcaption>
+</figure>
+<h2>Instructions</h2>
+<p>Follow the steps below to see more information about each <code>div</code> element.</p>
+<ol>
+    <li>Examine the first div using the browser's web development tools.</li>
+    <ul>
+        <li>Right-click the top-most div and choose Inspect.</li>
+        <li>The elements tab of the Developer Tools should be active.</li>
+        <li>Examine the box model properties on the graphic in the developer tools.</li>
+            <li>Click on the computed tab of the styles and examine the box model properties like width.</li>
+    </ul>
+    <li>Repeat the steps above using the second div on the page.</li>
+</ol>
+</body>
+</html>

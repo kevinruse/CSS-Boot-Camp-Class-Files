@@ -1,0 +1,21 @@
+ol {
+    border: 3px solid;
+    padding: 2em;
+    font-size: 1.5em;
+    line-height: 3em;
+
+    >li {
+        border-bottom: 1pt solid darkslategrey;
+        padding-left: 1em;
+
+        >span {
+            text-transform: capitalize;
+            color: red;
+
+            >em::before {
+                color: blue;
+
+            }
+        }
+    }
+}

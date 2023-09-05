@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Flex Grow Property</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .outline {
+            outline: 1px solid #000;
+        }
+
+        div {
+            width: 500px;
+            height: 250px;
+        }
+
+        #sectionFlexBox {
+            display: flex;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <section id="sectionFlexBox" class="outline">
+        <h1>Item One</h1>
+        <h1>Item Two</h1>
+        <h1>Item Three</h1>
+    </section>
+</div>
+
+<section id="specs">
+    <h1 id="mainWidthRow"></h1>
+    <h1 id="mainWidthCol"></h1>
+</section>
+<script>
+    sectionFlexBox = document.getElementById('sectionFlexBox');
+    specs = document.getElementById('specs');
+    mainWidthRow = document.getElementById('mainWidthRow');
+    mainWidthCol = document.getElementById('mainWidthCol');
+    mainSizeRow = sectionFlexBox.getBoundingClientRect().width;
+    mainSizeCol = sectionFlexBox.getBoundingClientRect().height;
+    console.log(`sectionFlexBox main size is ${mainSizeRow}`);
+    mainWidthRow.innerText = `flex-direction: row. The FlexBox main width is ${mainSizeRow} px`;
+    mainWidthCol.innerText = `flex-direction: col. The FlexBox main width is ${mainSizeCol} px`;
+</script>
+</body>
+</html>

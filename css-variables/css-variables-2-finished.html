@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Variables</title>
+    <style>
+        body {
+            --btn-height: 64px;
+            --btn-color: #e43;
+        }
+        .face-button {
+            height: var(--btn-height);
+            display: inline-block;
+            font-family: 'Arial', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: none;
+            overflow: hidden;
+            border: 3px solid var(--btn-color);
+            color: var(--btn-color);
+        }
+
+       .face-button .face-primary,
+        .face-button .face-secondary {
+            display: block;
+            padding: 0 32px;
+            line-height: var(--btn-height);
+            transition: margin .4s;
+        }
+        .face-button .face-primary {
+            background-color: var(--btn-color);
+            color: #fff;
+        }
+        .face-button:hover .face-primary {
+            margin-top: calc(var(--btn-height) - var(--btn-height) * 2);
+        }
+        @media (max-width: 650px) {
+            body {
+                --btn-height: 34px;
+                --btn-color: green;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+<div>
+<a class="face-button" href="#">
+    <div class="face-primary">
+        Fruit Group
+    </div>
+    <div class="face-secondary">
+        <span>Apples, Oranges, Bananas</span>
+    </div>
+</a>
+</div>
+<input type="button" id="changeColor" value="Change Color"></input>
+<script>
+    document.getElementById('changeColor').addEventListener('click', () => document.body.style.setProperty('--btn-color', 'blue'));
+</script>
+</body>
+</html>

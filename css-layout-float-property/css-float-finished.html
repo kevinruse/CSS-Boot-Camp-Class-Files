@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Float</title>
+    <style>
+        div {
+            border: 2px solid #f00;
+            background-color: #ccc;
+            padding: 5px;
+        }
+
+        section {
+            outline: 1px solid #000;
+            height: 50px;
+            padding: 6px;
+            margin: 1em;
+        }
+
+        #section1 {
+            background-color: #00b3ee;
+            float: left;
+        }
+
+        #section2 {
+            background-color: #df8505;
+            float: left;
+        }
+
+        #section3 {
+            background-color: #00CC00;
+            clear: both;
+        }
+
+        .addFloat {
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <!--step 1 add a float class to section1 section2 divs-->
+    <section id="section1">Add a float to this section.</section>
+    <section id="section2">Add a float to this section.</section>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque esse, exercitationem iusto laborum molestiae
+        obcaecati praesentium quia quis temporibus totam. Autem commodi dolorem ipsam modi non pariatur quos
+        reprehenderit soluta.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, architecto atque autem commodi corporis
+        deleniti dicta dolor doloremque exercitationem fuga impedit, itaque mollitia nihil, quas quod saepe sed vitae
+        voluptatibus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ipsam molestias neque nisi rem! Alias, debitis
+        doloremque doloribus fugiat minima nam pariatur quam quod, reprehenderit rerum sequi velit voluptates
+        voluptatum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, odio, tenetur! Aperiam debitis doloribus eos fugit,
+        itaque libero molestiae molestias nam nemo nihil numquam odit perspiciatis recusandae rem, rerum voluptatem?</p>
+    <section id="section3">Add a float to this section.</section>
+    <!-- the container of the floated elements (the body tag will  lose height, because floated elements do not cause containers to stretch -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    width: 100%;
+}
+
+div[data-role='page'] {
+    background-color: #00b6f1;
+    background-image: url(../../assets/images/backgroundImages/circle1.png) , url(../../assets/images/backgroundImages/circle2.png);
+    background-position: -24px -24px, -132px -132px;
+    background-repeat: repeat, repeat;
+    box-shadow: inset 0 0 95px rgba(0,0,0,.80);
+    height: 100%;
+    left: 0;
+    min-height: 100%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+/* form styles ********************************************************************** */
+select {
+    margin: 0 auto;
+    top: .5em;
+    width: 11.25em;
+}
+
+.fpButton {
+    background: linear-gradient(#fff7fb, #d1cdcf);
+    border: solid #b8b8b8 2px;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,.5) 4px 4px 24px;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 45px;
+    line-height: 1.2em;
+    margin-top: 24px;
+    padding: 10px;
+    text-decoration: none;
+    text-shadow: -1px -1px 1px #ccc;
+    width: 9.37em;
+}
+.fpButton:active {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(255,255,255,.85);
+    margin-top: 24px;
+}
+
+.message {
+    background: linear-gradient(#fff7fb, #d1cdcf);
+    border-radius: 10px;
+    color: #333;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7em;
+    font-weight: bold;
+    line-height: 1em;
+    margin: 10px auto;
+    padding: 8px;
+    width: 150px;
+}
+
+#iconList li {
+    display: inline;
+    list-style-image: none;
+}
+
+div[data-role='header'] h1:first-of-type {
+    margin: auto auto;
+    padding: 12px;
+}
+
+/* fp (foodPlate) classes *********************************** */
+
+/*stitches plate together */
+.plateWrapper {
+    margin: auto;
+    width: 235px;
+}
+#colwrap1 {
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 112px;
+}
+#colwrap2 {
+    display: inline;
+    float: left;
+    margin: 0;
+    width: 122px;
+}
+
+/* plate styles ******************************************************************* */
+#fruitempty {
+    float: left;
+    height: 81px;
+    width: 112px;
+}
+#vegempty {
+    float: left;
+    height: 93px;
+    width: 112px;
+}
+
+#graindairyempty {
+    float: left;
+    height: 93px;
+    width: 122px;
+}
+#proteinempty {
+    float: left;
+    height: 81px;
+    width: 122px;
+}
+#text {
+    display: inline;
+    float: left;
+    height: 40px;
+    margin-bottom: 1em;
+    width: 234px;
+}
+/* end plate stitch */
+
+.fp-input {
+    border-radius: 1em;
+    line-height: 2.5;
+}
+
+/* *********************************************************** jqmobile css overrides */
+.ui-header .ui-title {
+    background-color: #0071bc /*{a-bar-background-color}*/;
+    border-color: #003e67 /*{a-bar-border}*/;
+    color: #fff /*{a-bar-color}*/;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 /*{a-bar-shadow-x}*/ 1px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #444 /*{a-bar-shadow-color}*/;
+    width: 100%;
+}
+.ui-content {
+    margin-bottom: 42px; /* Set this to whatever your footer size is... */
+}
+.ui-footer {
+    background-color: #0071bc /*{a-bar-background-color}*/;
+    border-color: #003e67 /*{a-bar-border}*/;
+    bottom: 0;
+    color: #fff /*{a-bar-color}*/;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute !important;
+    text-shadow: 0 /*{a-bar-shadow-x}*/ 1px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #444 /*{a-bar-shadow-color}*/;
+    width: 100%;
+}
+.ui-controlgroup-label,
+label.ui-input-text {
+    font-size: 18px;
+    font-weight: 700;
+    text-shadow: none;
+}
+.ui-bar-a,
+.ui-header {
+    background-color: #0071bc;
+}
+
+/* accessibility classes */
+.visually-hidden {
+    /*https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html*/
+    border: 0 !important;
+    height: 1px !important;
+    overflow: hidden;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+}

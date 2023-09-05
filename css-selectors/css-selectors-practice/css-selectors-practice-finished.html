@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pick the right selector</title>
+    <style>
+        html {
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: #1c2a16;
+            padding: 1em;
+        }
+        nav ul li {
+            color: #fff;
+            display: inline;
+            border-right: 1px solid #fff;
+            padding-right: .5em;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+		
+		h1:after {
+			content: "KR: "
+		}
+		
+		
+
+        /* remove the right-side border from the last link in the nav section */
+        nav ul li:last-child {
+            border-right: none;
+        }
+
+        /* hide the "Home" link when you are on the home page
+           this will be done with JavaScript, but it is not part of the exercise
+           all you need to do is figure out the best selector */
+        .hide {
+            visibility: hidden;
+        }
+
+        /* highlight empty table cells caused when the database returns no records for quantity
+           this means the item is out of stock */
+        td:empty {
+            background-color: #FFFF00;
+        }
+        /* add the out of stock message to table cells with no data */
+        td:empty:after {
+            content:"0"
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="../../assets/images/choosemyplate_logo.png">
+    <nav>
+        <ul>
+            <li class="hide">Home</li>
+            <li>Contact Us</li>
+            <li>About Us</li>
+            <li>Search Site</li>
+        </ul></nav>
+</header>
+<h1>Database Data</h1>
+<p>OOS = "out of stock"</p>
+<section>
+    <table>
+        <thead>
+        <tr>
+            <th>Unit</th>
+            <th>Quantity</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+            <td>Widgets</td>
+            <td>10</td>
+        <tr>
+            <td>Things</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>Stuff</td>
+            <td>8</td>
+        </tr>
+        <tr>
+        <td>Extra</td>
+        <td></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Adaptive Layout - finished</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+		/* http://meyerweb.com/eric/tools/css/reset/
+           v2.0 | 20110126
+           License: none (public domain)
+        */
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed,
+		figure, figcaption, footer, header,
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			vertical-align: baseline;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure,
+		footer, header, menu, nav, section {
+			display: block;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		/* insert page styles here */
+		#wrapper {
+			width: 980px;
+			margin: 0 auto;
+			background-color: #CC0;
+			border: 1px solid black;
+		}
+
+		#mainHeader {
+			height: 100px;
+			background-color: #6F3;
+			border: 1px solid black;
+		}
+		#mainSection {
+			width: 600px;
+			float: left;
+			background-color:#C6F;
+			border: 1px solid black;
+		}
+		#sideNotes {
+			width: 370px;
+			float: right;
+			background-color: #F30;
+			border: 1px solid black;
+		}
+		#mainFooter {
+			clear: both;
+			background-color:#933;
+			border: 1px solid black;
+		}
+
+		/* add media queries here */
+		@media screen and (max-width: 980px) {
+			#wrapper {
+				width: 95%;
+			}
+
+			#mainSection {
+				width: 60%;
+				padding: 4% 4%;
+			}
+
+			#sideNotes {
+				width: 30%;
+			}
+		}
+
+		@media screen and (max-width: 650px) {
+			#mainSection {
+				width: auto;
+				float: none;
+			}
+
+			#sideNotes {
+				width: auto;
+				float: none;
+				margin: 0;
+			}
+		}
+	</style>
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv.js"></script>
+	<![endif]-->
+	<script src="libs/respond.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<header id="mainHeader">
+		<h1>This is the main header</h1>
+	</header>
+	<section id="mainSection">
+		<h2>This is the main section</h2>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.</p>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In posuere felis nec tortor. Pellentesque faucibus. Ut accumsan ultricies elit. Maecenas at justo id velit placerat molestie. Donec dictum lectus non odio. Cras a ante vitae enim iaculis aliquam. Mauris nunc quam, venenatis nec, euismod sit amet, egestas placerat, est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras id elit. Integer quis urna. Ut ante enim, dapibus malesuada, fringilla eu, condimentum quis, tellus. Aenean porttitor eros vel dolor. Donec convallis pede venenatis nibh. Duis quam. Nam eget lacus. Aliquam erat volutpat. Quisque dignissim congue leo.</p>
+
+		<p>Mauris vel lacus vitae felis vestibulum volutpat. Etiam est nunc, venenatis in, tristique eu, imperdiet ac, nisl. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In iaculis facilisis massa. Etiam eu urna. Sed porta. Suspendisse quam leo, molestie sed, luctus quis, feugiat in, pede. Fusce tellus. Sed metus augue, convallis et, vehicula ut, pulvinar eu, ante. Integer orci tellus, tristique vitae, consequat nec, porta vel, lectus. Nulla sit amet diam. Duis non nunc. Nulla rhoncus dictum metus. Curabitur tristique mi condimentum orci. Phasellus pellentesque aliquam enim. Proin dui lectus, cursus eu, mattis laoreet, viverra sit amet, quam. Curabitur vel dolor ultrices ipsum dictum tristique. Praesent vitae lacus. Ut velit enim, vestibulum non, fermentum nec, hendrerit quis, leo. Pellentesque rutrum malesuada neque.</p>
+	</section>
+	<aside id="sideNotes">
+		<h3>This is an aside</h3>
+		<ul>
+			<li>Side note one</li>
+			<li>Side note two</li>
+			<li>Side note three</li>
+			<li>Side note four</li>
+		</ul>
+	</aside>
+	<footer id="mainFooter">
+		<h3>This is the footer</h3>
+	</footer>
+</div>
+</body>
+</html>

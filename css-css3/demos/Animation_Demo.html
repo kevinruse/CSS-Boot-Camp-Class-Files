@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calorie Count</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+.panel {
+	float: left;
+	width: 300px;
+	height: 415px;
+	margin: 20px;
+	position: relative;
+	font-size: .8em;
+	 -webkit-perspective: 600px;
+	-moz-perspective: 600px; 
+}
+.panel .front {
+	float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 900;
+	width: inherit;
+	height: inherit;
+	border: 1px solid #ccc;
+	background: #ffffff;
+	text-align: center;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+	transform: rotateX(0deg) rotateY(0deg);
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	/* -- animation -- */
+	transition: all .4s ease-in-out;
+}
+.panel .back {
+	float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 800;
+	width: inherit;
+	height: inherit;
+	border: 1px solid #ccc;
+	background: #333;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+	transform: rotateY(-180deg);
+	transform-style: preserve-3d;
+    backface-visibility: hidden;
+	/* -- animation -- */
+	transition: all .4s ease-in-out;
+}
+.panel .pad {
+	padding: 0 15px;
+}
+.panel.flip .action {
+	display: none;
+}
+.panel.flip .front {
+	z-index: 900;
+	border-color: #eee;
+	background: #068ccf;
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-moz-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+}
+.panel.flip .back {
+	z-index: 1000;
+	background: #fff;
+	text-align:center;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+	box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+}
+.hover.panel .front .pad h2, .hover.panel .back .pad h2 {
+	font-family: "Myriad Web Pro", "Myriad Pro", "sans-serif";
+	font-size: 18px;
+	font-weight: bold;
+}
+.hover.panel .front .pad, .hover.panel .back .pad {
+	font-family: "Myriad Web Pro", "Myriad Pro", "sans-serif";
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	text-align: center;
+}
+.hover.panel .front .pad ul {
+	font-family: "Myriad Web Pro", "Myriad Pro", "sans-serif";
+	font-size: 12px;
+	font-style: normal;
+	line-height: 16px;
+	font-weight: normal;
+	color: #333;
+	text-align: left;
+	text-indent: 6px;
+	margin-left: 12px;
+	width: 165px;
+}
+#answer_btn {
+	font-family: Arial, Helvetica, sans-serif;
+	color:#333;
+	font-size: 16px;
+	font-weight: bold;
+	width: 100px;
+	height: 35px;
+	margin-top:12px;
+	text-decoration: none;
+	border-radius: 10px;
+	box-shadow:rgba(0,0,0,0.5) 4px 4px 24px;
+	text-shadow: -1px -1px 1px #ccc;
+	border: solid #b8b8b8 2px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff7fb), to(#d1cdcf));
+	background: -moz-linear-gradient(top, #fff7fb, #d1cdcf);
+}
+.activeBtn {
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 20px rgba(255,255,255,0.85);
+	-moz-box-shadow: 0 0 20px rgba(255,255,255,0.85);
+	-o-box-shadow: 0 0 20px rgba(255,255,255,0.85);
+	box-shadow: 0 0 20px rgba(255,255,255,0.85);
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			$('#answer_btn').click(function(){
+				$('.hover').addClass('flip');
+            })
+		})
+
+</script>
+</head>
+
+<body>
+<div class="hover panel">
+  <div class="front">
+    <div class="pad">
+      <h2>Which has more calories?</h2>
+      <p> One of these dishes has more calories than the other.</p>
+      <p>Each serving is 1/2 cup.</p>
+      <p>Other Nutritional Values:</p>
+      <ul>
+        <li>One has 3 grams of protein</li>
+        <li>One has 1 gram of protein</li>
+        <li>Each have 1 gram of fiber</li>
+        <li>Each have 0 grams of fat</li>
+      </ul>
+	    <p>Which has more calories?</p>
+      <img src="../images/rice.png" width="109" height="111" alt="rice"><img src="../images/spinach.png" width="144" height="103" alt="spinach">
+      <button id="answer_btn">Answer</button>
+    </div>
+  </div>
+  <div class="back">
+    <div class="pad">
+      <h2>Rice</h2>
+      <img src="../images/rice.png" width="109" height="111" alt="rice">
+      <p>The rice has 107 calories.</p>
+      <p>The spinach has 3 calories</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

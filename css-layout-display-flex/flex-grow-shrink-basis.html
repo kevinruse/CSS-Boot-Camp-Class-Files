@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Grow Shrink Basis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            width: 1400px;
+            /*width: 1800px;*/
+            /*width: 100%;*/
+            padding: 0;
+            margin: 0;
+            font-family: "Arial", sans-serif;
+        }
+
+        div {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            /*flex-wrap: wrap;*/
+        }
+
+        img {
+            width: 150px;
+        }
+
+        .card {
+            text-align: center;
+            outline: 1px solid #333;
+            /*flex-grow: 1;*/
+            /*flex: 0 2 230px;*/
+            /*flex: 1 2 auto;*/
+        }
+
+        .ad {
+            border: 4px solid red;
+            background-color: #00CC00;
+            padding: 1em;
+            /*flex: 1 0 400px;*/
+        }
+
+
+       .fruit {
+            /*flex-grow: 1;*/
+        }
+
+        .dairy {
+            /*flex-grow: 3;*/
+        }
+
+        .rice {
+            /*flex-grow: 2;*/
+        }
+
+       /* .veg {
+            flex: 3 2 auto;
+        }*/
+    </style>
+</head>
+<body>
+<div class="container">
+<!--    <section class="ad">This is an advertisement</section>-->
+    <section class="card fruit">
+        <h1>Card</h1>
+        <p>This is a card.</p>
+        <figure><img src="../assets/images/apple.gif">
+            <figcaption>Fruit</figcaption></figure>
+    </section>
+    <section class="card dairy">
+        <h1>Card</h1>
+        <p>This is a card.</p>
+        <figure><img src="../assets/images/yogurt.jpg">
+            <figcaption>Dairy</figcaption></figure>
+    </section>
+    <section class="card protein">
+        <h1>Card</h1>
+        <p>This is a card.</p>
+        <figure><img src="../assets/images/chicken-lg.png">
+            <figcaption>Protein</figcaption></figure>
+    </section>
+    <section class="card veg">
+        <h1>Card</h1>
+        <p>This is a card.</p>
+        <figure><img src="../assets/images/broccoli.png">
+            <figcaption>Vegetable</figcaption></figure>
+    </section>
+    <section class="card pizza">
+        <h1>Card</h1>
+        <p>This is a card.</p>
+        <figure><img src="../assets/images/pizza.jpg">
+            <figcaption>Pizza</figcaption></figure>
+    </section>
+    <section class="card rice">
+        <h1>Card</h1>
+        <p>This is a card.</p>
+        <figure><img src="../assets/images/brownrice.png">
+            <figcaption>Brown Rice</figcaption></figure>
+    </section>
+</div>
+</body>
+</html>

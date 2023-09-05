@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Demo - Writing Direction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        section {
+            width: 800px;
+            height: 400px;
+            padding: .5em;
+            border: 1px solid black;
+            background-color: #0e90d2;
+            display: flex;
+            flex-direction: row;
+            writing-mode: vertical-lr;
+            justify-content: space-around;
+        }
+        
+        .item {
+            width: 100px;
+            height: 50px;
+            padding: .5em;
+            background-color: #fff;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<p>flex-start will be where sentences begin in that writing mode</p>
+<section>
+    <div class="item">Item One</div>
+    <div class="item">Item Two</div>
+    <div class="item">Item Three</div>
+</section>
+</body>
+</html>

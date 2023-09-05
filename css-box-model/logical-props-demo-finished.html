@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        button {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            writing-mode: horizontal-tb;
+            /*writing-mode: vertical-rl;*/
+        }
+
+        .fancy-button {
+            display: inline-block;
+            padding-block: 10px;
+            padding-inline: 20px;
+            border-radius: 5px;
+            background-color: #2e91b5;
+            color: #FFF;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .fancy-button:hover {
+            background-color: rgba(2, 187, 255, 0.25);
+            color: black;
+        }
+
+        .fancy-button .icon {
+            display: inline-block;
+            vertical-align: middle;
+            margin-inline-end: 10px;
+        }
+
+        .fancy-button .label {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<button>
+    <a href="#" class="fancy-button">
+        <i class="fas fa-star icon"></i>
+        <span class="label">Button Label</span>
+    </a>
+</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+</body>
+</html>

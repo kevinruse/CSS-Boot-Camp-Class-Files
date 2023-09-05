@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    width: 100%;
+}
+
+div[data-role='page'] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    text-align: center;
+    background-color: #00b6f1;
+    background-image: url(../../assets/images/backgroundImages/circle1.png), url(../../assets/images/backgroundImages/circle2.png);
+    background-repeat: repeat, repeat;
+    background-position: -24px -24px, -132px -132px;
+    box-shadow: inset 0 0 95px rgba(0, 0, 0, .80);
+}
+
+/* form styles ********************************************************************** */
+select {
+    top: .5em;
+    width: 11.25em;
+    margin: 0 auto;
+}
+
+.fpButton {
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.2em;
+    width: 9.37em;
+    height: 45px;
+    margin-top: 24px;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border: solid #b8b8b8 2px;
+    border-radius: 10px;
+    background: linear-gradient(#fff7fb, #d1cdcf);
+    box-shadow: rgba(0,0,0,.5) 4px 4px 24px;
+    text-shadow: -1px -1px 1px #ccc;
+}
+.fpButton:active {
+    margin-top: 24px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(255,255,255,.85);
+}
+
+.message {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7em;
+    font-weight: bold;
+    line-height: 1em;
+    display: none;
+    width: 150px;
+    margin: 10px auto;
+    padding: 8px;
+    color: #333;
+    border-radius: 10px;
+    background: linear-gradient(#fff7fb, #d1cdcf);
+}
+
+#iconList li {
+    display: inline;
+    list-style-image: none;
+}
+
+div[data-role='header'] h1:first-of-type {
+    margin: auto auto;
+    padding: 12px;
+}
+
+/* fp (foodPlate) classes *********************************** */
+
+/*stitches plate together */
+.plateWrapper {
+    width: 235px;
+    margin: auto;
+}
+#colwrap1 {
+    display: inline;
+    float: left;
+
+    width: 112px;
+    margin: 0;
+    padding: 0;
+}
+#colwrap2 {
+    display: inline;
+    float: left;
+
+    width: 122px;
+    margin: 0;
+}
+
+/* plate styles ******************************************************************* */
+#fruitempty {
+    float: left;
+
+    width: 112px;
+    height: 81px;
+}
+#vegempty {
+    float: left;
+
+    width: 112px;
+    height: 93px;
+}
+
+#graindairyempty {
+    float: left;
+
+    width: 122px;
+    height: 93px;
+}
+#proteinempty {
+    float: left;
+
+    width: 122px;
+    height: 81px;
+}
+#text {
+    display: inline;
+    float: left;
+
+    width: 234px;
+    height: 40px;
+    margin-bottom: 1em;
+}
+/* end plate stitch */
+
+.fp-input {
+    line-height: 2.5;
+
+    border-radius: 1em;
+}
+
+/* *********************************************************** jqmobile css overrides */
+.ui-header .ui-title {
+    font-size: 24px;
+    font-weight: bold;
+
+    width: 100%;
+
+    color: #fff /*{a-bar-color}*/;
+    border-color: #003e67 /*{a-bar-border}*/;
+    background-color: #0071bc /*{a-bar-background-color}*/;
+    text-shadow: 0 /*{a-bar-shadow-x}*/ 1px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #444 /*{a-bar-shadow-color}*/;
+}
+.ui-content {
+    margin-bottom: 42px; /* Set this to whatever your footer size is... */
+}
+.ui-footer {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+    color: #fff /*{a-bar-color}*/;
+    border-color: #003e67 /*{a-bar-border}*/;
+    background-color: #0071bc /*{a-bar-background-color}*/;
+    text-shadow: 0 /*{a-bar-shadow-x}*/ 1px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #444 /*{a-bar-shadow-color}*/;
+}
+.ui-controlgroup-label,
+label.ui-input-text {
+    font-size: 18px;
+    font-weight: 700;
+
+    text-shadow: none;
+}
+.ui-bar-a,
+.ui-header {
+    background-color: #0071bc;
+}
+
+/* accessibility classes */
+.visually-hidden {
+    /*https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html*/
+    position: absolute !important;
+    overflow: hidden;
+    width: 1px !important;
+    height: 1px !important;
+    /*clip: rect(1px, 1px, 1px, 1px);*/
+    padding: 0 !important;
+    border: 0 !important;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Media Query Declarations</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<style>
+			#adjustWidth {
+				width: 900px;
+				background-color:#0CF;	
+			}
+			
+			#adjustHeight {
+				width: 900px;
+				background-color:#0CF;	
+			}
+			
+			#orientation {
+				border: 1px solid #000;	
+			}
+			
+			@media screen and (max-width: 400px) {
+				#adjustWidth {
+					width: 100px;
+					background-color: #FF0;	
+				}
+			}
+			@media screen and (max-height: 200px) {
+				#adjustHeight {
+					width: 200px;
+					background-color:#F00;	
+				}
+			}
+			@media screen and (orientation: portrait) {
+				#orientation {
+					background-color: #C60;	
+				}
+			}
+			@media screen and (orientation: landscape) {
+				#orientation {
+					background-color: #906;	
+				}
+			}
+			@media screen and (min-width: 768px) and (orientation: portrait) {
+				#compound {
+					background-color: #930;	
+				}
+			}
+		
+		</style>
+	</head>
+	
+	<body>
+	<div id="adjustWidth">
+		<p>Paragraph in the "adjustable width" div element.</p>
+		<p>When the screen width is less than 400px this divs width changes to 200px and the background color changes to yellow.</p>
+	</div>
+	
+	<div id="adjustHeight">
+		<p>Paragraph in the "adjustable height" div element.</p>
+		<p>When the screen height is less than 200px this divs width changes to 100px and the background color changes to red.</p>
+	</div>
+	
+	<div id="orientation">
+		<p>Paragraph in the "orientation" div element.</p>
+		<p>When the orientation is "portrait" the background color is orange.</p>
+		<p>When the orientation is "landscape" the backbround color is purple.</p>
+	</div>
+	
+	<div id="compound">
+		<p>Paragraph in the "compound" div element.</p>
+		<p>When viewed on most tablets the background color is brown.</p>
+		
+	</div>
+	</body>
+</html>

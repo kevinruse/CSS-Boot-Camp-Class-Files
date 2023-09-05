@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cascade Layers</title>
+    <link rel="stylesheet" href="cascade-layers-finished.css">
+</head>
+<body>
+<section>
+<h1>Understanding CSS Layers</h1>
+<p>Cascade layers allow developers to structure and organize their CSS and control how style rules cascade. By creating "layers," developers can set parameters or scope around what rules cascade. Layers can be re-ordered without worrying about altering the default cascade rules, thereby elminating unwanted inheritance.<p>
+<q class="noteStyle mAll">Rules within a single cascade layer cascade together, without interleaving with style rules outside the layer.</q>
+    <h2>Common Use cases for cascade layers</h2>
+    <ul>
+        <li>Overwriting frameworks</li>
+        <li>Utility classes that override style guide rules</li>
+    </ul>
+    <q>Authors could override the animation from a framework, by providing keyframes with the same name in a higher-priority layer:</q>
+    <p>CSS Cascade Layers are super cool!</p>
+    <nav>
+        <button class="infoButton">More Info</button>
+    </nav>
+    <button class="infoButton btn btn-danger">More Info</button>
+</section>
+</body>
+</html>

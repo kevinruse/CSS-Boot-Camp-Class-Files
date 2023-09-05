@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Embed SVG</title>
+<style>
+code {
+    font-size: 18px;
+    line-height: 30px;   
+}
+#svgExample {
+    background-image: url('svgExample.svg');
+    height: 150px;
+    width: 100px;
+    border: 1px solid #000;
+}
+#svgExample, img, object, iframe, svg {
+    display: inline;   
+}
+</style>
+</head>
+
+<body>
+
+<div id="svgExample"></div>
+<img src="svgExample.svg" alt="svg example" />
+<object type="image/svg+xml" data="svgExample.svg">SVG Object goes here</object>
+<iframe src="svgExample.svg">iFrame with SVG goes here</iframe>
+<embed type="image/svg+xml" src="svgExample.svg" />
+<svg width="440" height="180" xmlns="http://www.w3.org/2000/svg"> 
+<!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+<g>
+  <title>Layer 1</title>
+  <rect id="svg_1" height="85" width="203" y="10" x="10" stroke-width="5" stroke="#000000" fill="#FF0000"/>
+  <ellipse ry="28" rx="70" id="svg_2" cy="86" cx="107" stroke-width="2" stroke="#000000" fill="#ffff00"/>
+</g>
+</svg>
+<p><pre><code>&lt;img src="your-graphic.svg" alt="image description" /&gt;
+.element { background-image: url(path/to/your-graphic.svg); } 
+&lt;object type="image/svg+xml" data="your-graphic.svg><!-- fallback here --></object>&gt; 
+&lt;iframe src="your-graphic.svg"&gt;<!-- fallback here -->&lt;/iframe&gt;</code></pre> </p>
+</body>
+</html>

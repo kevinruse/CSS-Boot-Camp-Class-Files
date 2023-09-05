@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>CSS Selectors-finished</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+		.special {
+			background-color: #83ED96;
+		}
+		/* type selector */
+		h1
+		{
+			background-color: #FF0;
+		}
+		/* multiple type selector: h1 and h2*/
+		h1, h2
+		{
+			background-color: #FF0;
+		}
+		/* descendent selector: strong tags that are descendents of p tags */
+		p strong
+		{
+			background-color: #FF0;
+		}
+		/* text selected by the user */
+		::selection
+		{
+			background-color: #FF0;
+			text-shadow: 2px 2px #0e90d2;
+		}
+
+		/*prevent the user from selecting text. property not selector */
+		#syntax
+		{
+			user-select: none;
+		}
+		/* child selector: strong tags that have a p tag as a parent */
+		p>strong
+		{
+			background-color: #FF0;
+		}
+
+		/* Adjacent Sibling selector: strong tags that are immediately preceded by a ul tag */
+		ul+strong
+		{
+			background-color: #FF0;
+		}
+
+		/* general sibling selector: p tags that follow an h2 */
+		h2~p
+		{
+			font-style: italic;
+		}
+		/* id selector: any element with an id equal to "syntax" */
+		#syntax
+		{
+			background-color: #FF0;
+		}
+		/* attribute selector: any element with a title attribute */
+		*[title]
+		{
+			background-color: #FF0;
+		}
+
+		/* class selector: any element with a class of "hilite" */
+		.hilite
+		{
+			background-color: #FF0;
+		}
+		/*	attribute selector: Selects all elements with a title attribute containing the word "red" */
+		[title~=red] {
+			background-color: #FF0000;
+		}
+		/*	attribute selector: Selects all elements with a title attribute that starts with the word "red" */
+		[title^=red] {
+			background-color: #FF0000;
+		}
+		/* attribute selector:  any a element with a target attribute with a value of "_blank" */
+		a[target="_blank"]
+		{
+			background-color: #FF0;
+		}
+		/* universal selector: all elements */
+		*{
+			background-color: #FF0;
+		}
+		/* pseudo-selector: h2 elements when the mouse is hovered over them */
+
+		h2:hover {
+			background-color: #FF0;
+		}
+		/* pseudo-selector: h2 elements when the mouse is pressed down over them */
+
+		h2:active {
+			background-color: #00FF00;
+		}
+
+		/* pseudo-selector:  input tags with focus */
+		input:focus {
+			background-color: #f00;
+		}
+
+		/* pseudo-selector: first letter of p elements */
+		p:first-letter
+		{
+			font-size:200%;
+			color:#ff0000;
+		}
+		/* pseudo-selector:  first line of p elements */
+		p:first-line
+		{
+			background-color:yellow;
+		}
+		/* pseudo-selector:  the li element that is the first child of its parent */
+		li:first-child
+		{
+			background-color:yellow;
+		}
+		/* first of type selector: first p element of its parent */
+		p:first-of-type
+		{
+			background-color: green;
+		}
+
+		/* last of type selector: last p element of its parent */
+		p:last-of-type
+		{
+			background-color: green;
+		}
+		/* only of type selector: only a element of its parent */
+		a:only-of-type
+		{
+			background-color: green;
+		}
+		/* nth-child selector: 3rd li a element of its parent */
+		li:nth-child(n2+1)
+		/* li:nth-child(3) */
+		{
+			background-color: pink;
+		}
+		/* a disabled selector: text inputs that are disabled */
+		input:disabled
+		{
+			border: 1px solid red;
+		}
+
+		/* matches all required form fields */
+		:required
+		{
+			background-color: #E8C2C2;
+		}
+
+		/* matches all optional form fields */
+		:optional
+		{
+			background-color: #B6E5B4;
+		}
+
+		/* matches all valid number controls */
+		input[type=number]:valid
+		{
+			border: 2px solid green;
+		}
+
+		/* matches all invalid number controls */
+		input[type=number]:invalid
+		{
+			border: 2px solid red;
+		}
+
+		/* matches elements with a title attribute containing the word ‘Red’ (case-insensitive) vs ‘red (case-sensitive) */
+		[title~=Red i]
+		{
+			border: 2px solid red;
+		}
+		/* any elements that are alterable by the user */
+		*:read-write
+		{
+			background-color: #FF0;
+		}
+
+		button:focus:not(:focus-visible) {
+			outline: none;
+			box-shadow: 3px 3px 5px rgba(1, 0, 0, .75);
+		}
+
+		/* ********************************************* END OF EXERCISE ******************************** /
+
+		/* any element whose parent is a div that has a ‘data-category’ attribute equal to css’ */
+		/* NOTE: This solution works in Chrome only */
+		div>*:-webkit-any([data-category=css])
+		{
+			background-color: #FF0;
+		}
+
+		 */
+		/* style only the thumb of the range slider for Firefox*/
+		input[type=range]::-moz-range-thumb {
+			background-color: #00FF00;
+			width: 24px;
+			height: 32px;
+		}
+
+		/* style only the thumb of the range slider for Firefox*/
+		input[type=range]::-moz-range-track {
+			background-color: #E8C2C2;
+			height: 8px;
+		}
+		/* style only the thumb of the range slider for Chrome*/
+		input[type=range]::-webkit-slider-thumb
+		{
+			background-color: #00FF00;
+			width: 24px;
+			height: 32px;
+		}
+
+		/* style only the thumb of the range slider for Chrome*/
+		input[type=range]::-webkit-slider-runnable-track
+		{
+			background-color: #E8C2C2;
+			height: 8px;
+		}
+
+	</style>
+</head>
+<body>
+<h1>Cascading Style Sheets</h1>
+<div id="syntax">
+	<h2>Syntax</h2>
+	<p>Each property/value pair is considered a <em>CSS Declaration.</em> <span class="hilite"><em>Multiple declarations</em></span> are separated by semi-colons. The selector defines which elements are affected by the rule.
+	</p>
+	<p>For more information about <span title="red">CSS Syntax</span> see <a href="http://www.w3schools.com/css/css_syntax.asp" target="_blank">w3schools.com</a>. or the <a href="http://www.w3.org/TR/CSS2/selector.html">W3C Specfication</a></p>
+</div>
+<div id="rules">
+	<h2 contenteditable="true">CSS Rules</h2>
+	<p>CSS rules are <strong>statements</strong> that define the style of an element or group of elements.</p>
+	<p>Style rules consist of two parts:</p>
+	<ul>
+		<li>Property</li>
+		<li>Value</li>
+	</ul>
+</div>
+<div id="selectors">
+	<h2>CSS Selectors</h2>
+	<p>The selector defines which elements are <strong>affected by the rule</strong>.</p>
+	<p>Types of Selectors</p>
+	<ul>
+		<li>Type</li>
+		<li class="special">Descendent</li>
+		<li>Child</li>
+		<li>Class</li>
+		<li class="hilite">ID</li>
+		<li title="attributes are red">Attribute</li>
+		<li>Universal</li>
+		<li>
+			<input type="text" required/>
+		</li>
+		<li>
+			<input type="text" disabled />
+		</li>
+	</ul>
+	<strong class="footer">For more information about class and id's see <a href="http://www.w3schools.com/css/css_id_class.asp" target="_self">w3schools.com</a>.</strong>
+
+
+</body>
+</html>

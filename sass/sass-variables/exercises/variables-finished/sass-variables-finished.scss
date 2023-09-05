@@ -1,0 +1,72 @@
+// create three variables that represent colors for instock:green, outofstock: red, lowstock: yellow
+$product-instock: rgb(20, 243, 20);
+$product-outofstock: #f00;
+$product-lowstock: #ff0;
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: black;
+}
+
+#legend {
+  height: 30px;
+  width: 400px;
+  display: flex;
+  outline: 1px solid black;
+  margin: 1em;
+}
+
+#legend > span {
+  font-size: 14px;
+  line-height: 28px;
+  height: 30px;
+  width: 125px;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  flex: 1;
+}
+
+#legend > span.instock {
+  background-color: $product-instock;
+}
+
+#legend > span.lowstock {
+  background-color: $product-lowstock;
+}
+
+#legend > span.outofstock {
+  background-color: $product-outofstock;
+}
+
+
+ul.product-list {
+  margin: 1em 0 0 2em;
+  width: 240px;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.5em;
+  list-style-type: none;
+}
+
+ul.product-list > li {
+  border-bottom: 1px dotted black;
+  padding: 4px;
+  color: black;
+}
+
+// create three classes that use the variables
+.product-instock {
+  color: black;
+  background-color: $product-instock;
+}
+
+.product-outofstock {
+  color: black;
+  background-color: $product-outofstock;
+}
+
+.product-lowstock {
+  color: black;
+  background-color: $product-lowstock;
+}

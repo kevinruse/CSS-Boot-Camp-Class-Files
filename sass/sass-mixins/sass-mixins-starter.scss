@@ -1,0 +1,61 @@
+// Mixin without a passed value
+
+// Mixin with a passed value
+
+// Styling for the product list
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ul li {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); // Adding a drop shadow
+
+}
+
+// use the mixin here
+li {
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 250px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: sans-serif; // Applying sans-serif font
+}
+
+p {
+  font-family: sans-serif; // Applying sans-serif font
+}
+
+ul ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+ul ul li {
+  margin-bottom: 10px;
+}
+
+ul ul li:before {
+  content: "\2022"; /* Adding bullet point */
+  margin-right: 5px;
+}
+
+p.price {
+  font-weight: bold; // Making the price bold
+}
+
+//productBackground
+
+
+
+
+
+

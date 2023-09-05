@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product List</title>
+    <link rel="stylesheet" href="sass-variables-finished.css">
+</head>
+
+<body>
+<h1>Product List</h1>
+<div id="legend">
+    <span class="instock">in stock</span>
+    <span class="lowstock">low stock</span>
+    <span class="outofstock">out of stock</span>
+</div>
+<input type="checkbox" id="inStock"/>
+<label for="inStock">In Stock at my store?</label>
+<ul id="productList" class="product-list"></ul>
+
+<script>
+    // get DOM Nodes
+    const productList = document.getElementById("productList");
+    const inStockCheckbox = document.getElementById("inStock");
+
+    // create product array
+    let products = [];
+
+    // add event listener
+    inStockCheckbox.addEventListener("change", toggleProductColor);
+
+    // fetch products
+    fetch("data/products-sass.json")
+        .then(response => response.json())
+        .then(data => {
+            products = data;
+            createProductList();
+        })
+        .catch(error => console.log(error));
+
+    // function to create the product list
+    function createProductList() {
+        productList.innerHTML = ""; // Clear the existing list
+        for (let i = 0; i < products.length; i++) {
+            const product = products[i];
+            const listItem = document.createElement("li");
+            listItem.textContent = `${product.size}, ${product.color}, ${product.price}`;
+            productList.appendChild(listItem);
+        }
+    }
+
+    // function to toggle product color based on checkbox state
+    function toggleProductColor() {
+        for (let i = 0; i < products.length; i++) {
+            const listItem = productList.children[i];
+            const product = products[i];
+            if (inStockCheckbox.checked) {
+                if (product.instock === "yes") {
+                    listItem.classList.add("product-instock");
+                } else if (product.instock === "low") {
+                    listItem.classList.add("product-lowstock");
+                } else if (product.instock === "no") {
+                    listItem.classList.add("product-outofstock");
+                }
+            } else {
+                listItem.classList.remove("product-instock");
+                listItem.classList.remove("product-lowstock");
+                listItem.classList.remove("product-outofstock");
+            }
+        }
+    }
+
+</script>
+</body>
+
+</html>

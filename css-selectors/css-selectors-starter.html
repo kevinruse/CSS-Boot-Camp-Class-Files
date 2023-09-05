@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>CSS Selectors-starter</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+		/* type selector */
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0;
+		}
+		/* multiple type selectors */
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0;
+		}
+		/* descendent selector: strong tags that are descendents of p tags */
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0;
+		}
+		/* text selected by the user */
+		/* the only properties supported by this selector are: color, background, and text-shadow */
+		/* to see some cool effects with selected text visit https://ishadeed.com/article/selection-in-css/ */
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0;
+			text-shadow: 2px 2px #0e90d2;
+		}
+		/* prevent the user from selecting text */
+		ADD SELECTOR HERE
+		{
+			user-select: none;
+		}
+
+		/* child selector: strong tags that have a p tag as a parent */
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0;
+		}
+
+		/* Adjacent Sibling selector: strong tags that are immediately preceded by a ul tag */
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0;
+		}
+
+		/* general sibling selector: p tags that follow an h2 */
+		ADD SELECTOR
+		{
+			font-style: italic;
+		}
+		/* id selector: any element with an id equal to "syntax" */
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0;
+		}
+		/* attribute selector: any element with a title attribute */
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0;
+		}
+
+		/* class selector: any element with a class of "hilite" */
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0;
+		}
+		/*	attribute selector: Selects all elements with a title attribute containing the word "red" */
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0000;
+		}
+		/*	attribute selector: Selects all elements with a title attribute that starts with the word "red" */
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0000;
+		}
+		/* attribute selector:  any a element with a target attribute with a value of "_blank" */
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0;
+		}
+		/* universal selector: all elements */
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0;
+		}
+		/* pseudo-selector: h2 elements when the mouse is hovered over them */
+
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0;
+		}
+		/* pseudo-selector: h2 elements when the mouse is pressed down over them */
+
+		ADD SELECTOR HERE
+		{
+			background-color: #00FF00;
+		}
+
+		/* pseudo-selector:  input tags with focus */
+		ADD SELECTOR HERE
+		{
+			background-color: #ccc;
+		}
+
+		/* pseudo-selector: first letter of p elements */
+		ADD SELECTOR HERE
+		{
+			font-size:200%;
+			color:#ff0000;
+		}
+		/* pseudo-selector:  first line of p elements */
+		ADD SELECTOR HERE
+		{
+			background-color:yellow;
+		}
+		/* pseudo-selector:  the li element that is the first child of its parent */
+		ADD SELECTOR HERE
+		{
+			background-color:yellow;
+		}
+		/* first of type selector: first p element of its parent */
+		ADD SELECTOR HERE
+		{
+			background-color: green;
+		}
+
+		/* last of type selector: last p element of its parent */
+		ADD SELECTOR HERE
+		{
+			background-color: green;
+		}
+		/* only of type selector: only a element of its parent */
+		ADD SELECTOR HERE
+		{
+			background-color: green;
+		}
+		/* nth-child selector: 3rd li a element of its parent */
+		/* try:
+			nth-child(odd)
+			nth-child(even)
+			try nth-child(3n+1)
+			    the formula:(an + b). a is a cycle size, n is a counter (starts at 0), b is an offset value.
+		*/
+		ADD SELECTOR HERE
+		{
+			background-color: pink;
+		}
+		/* disabled selector: text inputs that are disabled */
+		ADD SELECTOR HERE
+		{
+			border: 1px solid red;
+		}
+		/* a  matches all required form fields */
+		ADD SELECTOR HERE
+		{
+			background-color: #E8C2C2;
+		}
+
+		/* matches all optional form fields */
+		ADD SELECTOR HERE
+		{
+			background-color: #B6E5B4;
+		}
+
+		/* matches all valid number controls */
+		ADD SELECTOR HERE
+		{
+			border: 2px solid green;
+		}
+
+		/* matches all invalid number controls */
+		ADD SELECTOR HERE
+		{
+			border: 2px solid red;
+		}
+
+		/* elements with a title attribute containing the word ‘Red’ (case-insensitive) vs ‘red (case-sensitive) */
+		ADD SELECTOR HERE
+		{
+			border: 2px solid red;
+		}
+		/* elements that are alterable by the user */
+		ADD SELECTOR HERE
+		{
+			background-color: #FF0;
+		}
+
+
+		/* ********************************************* END OF EXERCISE ******************************** /
+
+	</style>
+</head>
+<body>
+<h1>Cascading Style Sheets</h1>
+<div id="syntax">
+	<h2>Syntax</h2>
+	<p>Each property/value pair is considered a <em>CSS Declaration.</em> <span class="hilite"><em>Multiple declarations</em></span> are separated by semi-colons. The selector defines which elements are affected by the rule.
+	</p>
+	<p>For more information about <span title="red">CSS Syntax</span> see <a href="http://www.w3schools.com/css/css_syntax.asp" target="_blank">w3schools.com</a>. or the <a href="http://www.w3.org/TR/CSS2/selector.html">W3C Specfication</a></p>
+</div>
+<div id="rules">
+	<h2 contenteditable="true">CSS Rules</h2>
+	<p>CSS rules are <strong>statements</strong> that define the style of an element or group of elements.</p>
+	<p>Style rules consist of two parts:</p>
+	<ul>
+		<li>Property</li>
+		<li>Value</li>
+	</ul>
+</div>
+<div id="selectors">
+	<h2>CSS Selectors</h2>
+	<p>The selector defines which elements are <strong>affected by the rule</strong>.</p>
+	<p>Types of Selectors</p>
+	<ul>
+		<li>Type</li>
+		<li class="special">Descendent</li>
+		<li>Child</li>
+		<li>Class</li>
+		<li class="hilite">ID</li>
+		<li title="attributes are red">Attribute</li>
+		<li>Universal</li>
+		<li>
+			<input type="text" required/>
+		</li>
+		<li>
+			<input type="text" disabled />
+		</li>
+	</ul>
+	<strong class="footer">For more information about class and id's see <a href="http://www.w3schools.com/css/css_id_class.asp" target="_self">w3schools.com</a>.</strong>
+
+</body>
+</html>

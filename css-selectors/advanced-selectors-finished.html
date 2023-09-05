@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Selectors-finished</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            border-bottom: 3px solid black
+        }
+        footer {
+            border-top: 3px solid black
+        }
+        ul {
+            line-height: 2em;
+        }
+
+        :where(header,footer) h1, :where(header, footer) h2 {
+            color: red;
+        }
+
+        :where(section) a {
+            background-color: yellow;
+            border: 1px solid black;
+            border-radius: 1em;
+            padding: .5em;
+        }
+
+        :where(header, section) code {
+            font-size: 1.5em;
+        }
+
+        aside:not(body>*)>h2 {
+            color: green;
+            border-bottom: 1px solid #cccccc;
+        }
+
+
+        label[for=cssParts]::before {
+            background-color: yellow;
+            content: '#1: '
+        }
+        body {
+            counter-reset: labelCounter;
+        }
+        label::before {
+            counter-increment: labelCounter;
+            content: "#" counter(labelCounter) ": ";
+        }
+
+        ::marker {
+            color: red;
+            font-size: 1.5em;
+        }
+
+        /* input[type=range]::after {
+           content: "Required";
+        } */
+
+       /* input[type=text]::after {
+            content: "Required";
+        }*/
+    </style>
+</head>
+<body>
+<header>
+    <h1>Welcome to Advanced CSS Selectors</h1>
+    <h2>Write Less Code - Be More Efficient</h2>
+    <p>Stop writing long lists of selectors with <code>:where()</code></p>
+</header>
+<aside>
+    <h2>Sponsors</h2>
+    <p>To learn more about Advanced CSS Selectors visit one of our sponsors.</p>
+    <ul>
+        <li>Sponsor One</li>
+        <li>Sponsor Two</li>
+        <li>Sponsor Three</li>
+    </ul>
+</aside>
+<section>
+    <h2>Check out this list of CSS Selectors and Functions</h2>
+    <ul>
+        <li><code>:where()</code></li>
+        <li><code>focus-visible</code>:</li>
+        <li><code>:any-link</code></li>
+        <li><code>:is()</code></li>
+    </ul>
+    <aside>
+        <h2>Mozilla Developer Network</h2>
+        <p>Learn more at Mozilla Developer Network's Web Docs, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">here</a></p>
+    </aside>
+</section>
+<article>
+    <h1>CSS Selectors</h1>
+    <p>CSS selectors define the elements to which a set of CSS rules apply.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur dicta eveniet possimus reiciendis. Accusantium autem cupiditate deleniti dolore dolores minus, nesciunt nulla odit optio quam quibusdam quod soluta voluptatibus.</p>
+    <aside>
+        <h2>Aside</h2>
+        <p>Here is some content related to the article.</p></aside>
+</article>
+<h2>Questions</h2>
+<p>How much do you know about CSS selectors?</p>
+<input type="range" min="0" max="10">
+<p>How many parts does a CSS rule contain?</p>
+<label for="cssParts">Number: </label><input id="cssParts" type="number">
+<p>What type of punctuation is used to terminate a CSS rule?</p>
+<label for="terminate">Punctuation: </label><input id="terminate" type="text" required>
+<p>What type of punctuation is used to terminate a CSS rule?</p>
+<label for="fun">How fun is CSS? </label><input id="fun" type="text">
+</div>
+<footer>
+    <h2>CSS Advanced Selectors and Functions</h2>
+    <p>Check out the browser support for the <code>:where()</code> function and more at <a href="https://caniuse.com/?search=%3Awhere">caniuse.com</a></p>
+    <p>Check out the W3C working draft of selectors at <a href="https://www.w3.org/TR/selectors-4/">w3.org</a> Selectors Level 4</p>
+</footer>
+</body>
+</html>

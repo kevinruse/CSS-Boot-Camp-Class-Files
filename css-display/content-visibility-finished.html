@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>content-visibility</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		html {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		header {
+			border: 1px solid #0d0d0d;
+			border-radius: 1em;
+			padding: 1.75em;
+			width: 25%;
+		}
+
+		h3 {
+			padding-top: 1em;
+			margin-bottom: .15em;
+		}
+
+		ul, ul+li {
+			margin-top: .15em;
+		}
+		img {
+			float: left;
+			margin-top: 1em;
+		}
+		.bookCover {
+			box-shadow: 4px 4px 4px #999999;
+		}
+		section {
+			visibility: hidden;
+			/*content-visibility: auto;*/
+		}
+		div {
+			margin-left: 10em;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<img src="../assets/images/html5logo.png" alt="html5 logo">
+	<h1>HTML5 Boot Camp</h1>
+	<p>The first course in our front-end web development series</p>
+	<button id="moreInfoBtn">More Info</button>
+	<section id="moreInfoContent">
+		<img src="../assets/images/html5.2-thumbnail.jpg" alt="HTML5 Book" class="bookCover">
+		<div>
+			<h3>Topics include</h3>
+			<ul>
+				<li>Introduction to HTML</li>
+				<li>Syntax</li>
+				<li>Structure</li>
+				<li>Elements</li>
+				<li>Forms</li>
+				<li>Media</li>
+				<li>Canvas</li>
+				<li>Web Components</li>
+			</ul>
+		</div>
+	</section>
+</header>
+<script>
+	let button = document.getElementById('moreInfoBtn');
+	let moreInfo = document.getElementById('moreInfoContent')
+	button.addEventListener('click', ()=> {
+		moreInfo.style.visibility = 'visible';
+	})
+</script>
+</body>
+</html>

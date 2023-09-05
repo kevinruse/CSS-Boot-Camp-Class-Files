@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Simple Grid - finished</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+        width: 100%;
+    }
+section {
+	width: 80%;
+    margin: auto;
+	display: grid;
+    background-color: #B4A9A9;
+	/*step: explicit grid px*/
+   /* grid-template-rows: 120px 120px 120px 120px 120px;
+    grid-template-columns: 120px 120px 120px 120px 120px;*/
+    /* grid row gap */
+    /*grid-row-gap: 25px;*/
+    /* grid column gap */
+	/*grid-column-gap:35px;*/
+    /*grid-gap: 25px 35px;*/
+	/*		step: explicit grid %*/
+	/*grid-template-rows: 25% 25% 25% 25%;*/
+	/*grid-template-columns: 25% 25% 25% 25%;*/
+		/*	step: explicit grid fr*/
+	/*grid-template-rows: 120px 1fr 120px 120px;
+	grid-template-columns: 120px 1fr 120px 120px;*/
+	/*grid-template-rows: 1fr 1fr 2fr 1fr;
+	grid-template-columns: 1fr 1fr 2fr 1fr;*/
+/*	step min/max*/
+/*	grid-template-rows: minmax(100px, auto);*/
+/*	step repeating grid tracks*/
+	grid-template-rows: repeat(4, 120px);
+	grid-template-columns: repeat(4, 120px);
+
+}
+
+#candy5 {
+    grid-column: 1;
+    grid-row: 1;
+}
+    #candy5a {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    #candy5b {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    #candy5c {
+        grid-column: 4;
+        grid-row: 1;
+    }
+    #candy5d {
+        grid-column: 5;
+        grid-row: 1;
+    }
+    #almonds {
+        grid-column: 1/6;
+        grid-row: 3/7;
+    }
+
+
+</style>
+</head>
+
+<body>
+<section id="box">
+    <img src="../assets/images/candy1.png" id="candy1"/>
+    <img src="../assets/images/candy2.png" id="candy2"/>
+    <img src="../assets/images/candy3.png" id="candy3"/>
+    <img src="../assets/images/candy4.png" id="candy4"/>
+    <img src="../assets/images/candy5.png" id="candy5"/>
+    <img src="../assets/images/candy6.png" id="candy6"/>
+    <img src="../assets/images/candy7.png" id="candy7"/>
+    <img src="../assets/images/candy8.png" id="candy8"/>
+    <img src="../assets/images/nuts.png" id="almonds"/>
+    <img src="../assets/images/candy1.png" id="candy1a"/>
+    <img src="../assets/images/candy2.png" id="candy2a"/>
+    <img src="../assets/images/candy3.png" id="candy3a"/>
+    <img src="../assets/images/candy4.png" id="candy4a"/>
+    <img src="../assets/images/candy5.png" id="candy5a"/>
+    <img src="../assets/images/candy6.png" id="candy6a"/>
+    <img src="../assets/images/candy7.png" id="candy7a"/>
+    <img src="../assets/images/candy8.png" id="candy8a"/>
+    <img src="../assets/images/candy1.png" id="candy1b"/>
+    <img src="../assets/images/candy2.png" id="candy2b"/>
+    <img src="../assets/images/candy3.png" id="candy3b"/>
+    <img src="../assets/images/candy4.png" id="candy4b"/>
+    <img src="../assets/images/candy5.png" id="candy5b"/>
+    <img src="../assets/images/candy6.png" id="candy6b"/>
+    <img src="../assets/images/candy7.png" id="candy7b"/>
+    <img src="../assets/images/candy8.png" id="candy8b"/>
+    <img src="../assets/images/candy1.png" id="candy1c"/>
+    <img src="../assets/images/candy2.png" id="candy2c"/>
+    <img src="../assets/images/candy3.png" id="candy3c"/>
+    <img src="../assets/images/candy4.png" id="candy4c"/>
+    <img src="../assets/images/candy5.png" id="candy5c"/>
+    <img src="../assets/images/candy6.png" id="candy6c"/>
+    <img src="../assets/images/candy7.png" id="candy7c"/>
+    <img src="../assets/images/candy8.png" id="candy8c"/>
+    <img src="../assets/images/candy1.png" id="candy1d"/>
+    <img src="../assets/images/candy2.png" id="candy2d"/>
+    <img src="../assets/images/candy3.png" id="candy3d"/>
+    <img src="../assets/images/candy4.png" id="candy4d"/>
+    <img src="../assets/images/candy5.png" id="candy5d"/>
+    <img src="../assets/images/candy6.png" id="candy6d"/>
+    <img src="../assets/images/candy7.png" id="candy7d"/>
+    <img src="../assets/images/candy8.png" id="candy8d"/>
+</section>
+</body>
+</html>

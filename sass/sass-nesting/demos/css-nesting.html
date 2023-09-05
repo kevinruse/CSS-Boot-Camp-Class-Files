@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Nesting</title>
+    <style>
+        ol {
+            border: 3px solid;
+            padding: 2em;
+            font-size: 1.5em;
+            line-height: 3em;
+
+            >li {
+                border-bottom: 1pt solid darkslategrey;
+                padding-left: 1em;
+
+                >span {
+                    text-transform: capitalize;
+                    color: red;
+
+                    >em::before {
+                        color: blue;
+
+                    }
+                }
+    </style>
+</head>
+
+<body>
+<h1>CSS Nesting</h1>
+<p>For more information about CSS nesting visit the following:</p>
+<ol>
+    <li>The Specification: <a href="https://www.w3.org/TR/css-nesting-1/">The W3C Specification Document</a></li>
+    <li>Browser Support Chart: <a href="https://caniuse.com/css-nesting">CanIUse</a></li>
+    <li>Chrome Developer Article: <a href="https://developer.chrome.com/articles/css-nesting/">Chrome article about CSS Nesting</a></li>
+</ol>
+    <ol>
+        <li>This is step number one. <span><em>Emphasis text here.</em></span></li>
+        <li>This is step number two. <span><em>Emphasis text here.</em></span></li>
+        <li>This is step number three. <span><em>Emphasis text here.</em></span></li>
+        <li>This is step number four. <span><em>Emphasis text here.</em></span></li>
+        <li>This is step number five. <span><em>Emphasis text here.</em></span></li>
+        <li>This is step number six. <span><em>Emphasis text here.</em></span></li>
+    </ol>
+</body>
+
+</html>

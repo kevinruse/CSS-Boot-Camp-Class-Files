@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dialog - Demo</title>
+    <style>
+        dialog {
+            width: 400px;
+            font-family: "Arial", sans-serif;
+        }
+
+        dialog > div > * {
+            padding: .25em;
+        }
+
+        dialog > label {
+            font-family: "Arial", sans-serif;
+            font-size: 1.2em;
+        }
+
+        dialog > input {
+            display: block;
+            height: 1.75em;
+        }
+
+        dialog::backdrop {
+            backdrop-filter: blur(4px);
+        }
+
+    </style>
+</head>
+
+<body>
+<h1>Take our Survey</h1>
+<p>Survey Questions are based on:</p>
+<ul>
+    <li>Objective One</li>
+    <li>Objective Two</li>
+    <li>Objective Three</li>
+    <li>Objective Four</li>
+    <li>Objective Five</li>
+    <li>Objective Six</li>
+</ul>
+<div>
+    <button id="survey" onclick>Take Survey</button>
+</div>
+<dialog id="surveyQuestion">
+    <h1>Survey</h1>
+    <label for="commitLevel">How committed are you to meeting the daily food plate requirements?</label>
+    <div class="commitLevel">
+        <p><strong>0=not committed at all and 10=very committed</strong></p>
+        <input id="commitLevel" type="number" min="0" max="10" step="1" value="10">
+        <input type="button" value="Submit Your Response">
+        <input id="closeDialog" type="button" value="Close Survey">
+    </div>
+</dialog>
+
+<script>
+    const survey = document.getElementById('surveyQuestion');
+    const closePopup = document.getElementById('closeDialog');
+    const triggerPopup = document.getElementById('survey');
+
+    triggerPopup.addEventListener('click', showSurvey);
+
+    function showSurvey() {
+        survey.showModal();
+    }
+
+    closePopup.addEventListener('click', function () {
+        survey.close()
+    });
+
+</script>
+</body>
+
+</html>

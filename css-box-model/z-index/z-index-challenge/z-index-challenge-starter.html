@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Z-Index Challenge</title>
+    <style>
+        html {
+            font-family: "Arial", sans-serif;
+        }
+
+        main {
+            width: 1200px;
+        }
+
+        h1 {
+            margin-top: 1em;
+        }
+
+        p {
+            font-family: "Arial", sans-serif;
+            font-weight: 200;
+            line-height: 1.15em;
+            max-width: clamp(40%, 50% 40% );
+            height: 80%;
+            margin-top: 2em;
+            font-size: clamp(20px, 2vw, 2rem);
+        }
+
+        section {
+            width: 75%;
+            height: 40%;
+            padding: 1em;
+            border: 4px solid black;
+            border-radius: 1em;
+            background-color: white;
+            position: absolute;
+            left: 30px;
+            top: 150px;
+        }
+
+        #plate {
+        }
+
+        #dinnerPlate {
+            margin: 10px;
+            position: absolute;
+            top: -100px;
+            left: 380px;
+            z-index: 8;
+        }
+
+        #carrots {
+            position: absolute;
+            top: 80px;
+            left: 540px;
+            z-index: 10;
+        }
+
+        img:nth-child(1) {
+            transform: rotate(-45deg);
+        }
+
+        img:nth-child(3) {
+            z-index: 5;
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+<main>
+    <img src="../../../../new-class-files/images/romaine.png">
+    <section id="vegetables">
+        <h1>Eat Your Vegetables! </h1>
+        <p>Any vegetable or 100% vegetable juice counts as a member of the Vegetable Group. Vegetables may be raw or
+            cooked; fresh, frozen, canned, or dried/dehydrated; and may be whole, cut-up, or mashed.
+        </p>
+        <div id="plate">
+            <img id="dinnerPlate" src="../../../assets/images/dinnerplate.png">
+            <img id="carrots" src="../../../assets/images/carrots.png">
+        </div>
+    </section>
+    <img src="../../../assets/images/romaine.png">
+</main>
+</body>
+</html>

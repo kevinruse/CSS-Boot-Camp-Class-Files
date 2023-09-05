@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>OO-CSS</title>
+<style>
+	div {
+		margin: 8px;	
+	}
+	#div1 section {
+		border: 1px solid #000;
+		border-radius: 18px;
+		background-color: #f00;
+		font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	#div2 section {
+		border: 1px solid #000;
+		border-radius: 32px;
+		background-color: #0f0;
+		font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	
+/* OBJECT-ORIENTED CSS ********************************************************************* */
+
+
+	.warning {
+		border: 1px solid #000;
+		border-radius: 18px;
+		background-color: #f00;
+	}	
+	.roundLargeCorners {
+		border-radius: 32px;
+		border: 1px solid #000;	
+	}	
+	.roundedSmallCorners {
+		border-radius: 18px;
+		border: 1px solid #000;		
+	}
+	
+	.brandFonts {
+		font-family: sans-serif;
+	}
+	
+	.warningColor {
+		background-color: #f00;	
+	}
+	
+
+
+</style>
+</head>
+
+<body>
+<div id="div1">
+	<section>
+    	<h1>HTML5</h1>
+    </section>
+</div>
+
+<div id="div2">
+	<section>
+    	<h1>CSS</h1>
+    </section>
+</div>
+
+<div class="roundLargeCorners brandFonts">
+	<h1>Kevin Ruse</h1>
+</div>
+
+<div class="roundSmallCorners brandFonts warningColor">
+	<h1>Kevin Ruse</h1>
+</div>
+
+
+</body>
+</html>

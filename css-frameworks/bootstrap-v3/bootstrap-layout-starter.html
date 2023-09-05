@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Layout - starter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .brandBanner {
+            border: 1px solid #666;
+            background: linear-gradient(#1c2a16, #993,#1c2a16 );
+            background: -webkit-linear-gradient(top, #1c2a16 0%,#999933 50%,#1c2a16 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #1c2a16 0%,#999933 50%,#1c2a16 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            padding: 1em;
+            padding-bottom: 1.5em;
+        }
+        #helpSearch {
+            padding: 2em;
+        }
+        main {
+            padding-bottom: 1em;
+        }
+        ul li a {
+            border-right: 1px solid #fff;
+            padding-right: .65em;
+        }
+        ul li:last-child a {
+            border-right:none;
+        }
+        /* utility classes ******************************************************* */
+        .no-margin {
+            padding-top: 1.5em;
+        }
+        .min-size {
+            min-width: 226px;
+        }
+        /* ***************************************** colors */
+        .white {
+            color: #fff;
+        }
+        .fruit {
+            background-color: #e2232a;
+        }
+        .protein {
+            background-color: #685293;
+        }
+        .grains {
+            background-color: #d26b1e;
+        }
+        .dairy {
+            background-color: #448bc9;
+        }
+        .bgGradient {
+            background-image: -moz-linear-gradient(left, rgba(125,185,232,0) 0%, rgba(95,154,207,0.7) 62%, rgba(89,148,202,1) 88%, rgba(30,87,153,1) 100%); /* FF3.6-15 */
+            background-image: -webkit-linear-gradient(left, rgba(125,185,232,0) 0%,rgba(95,154,207,0.7) 62%,rgba(89,148,202,1) 88%,rgba(30,87,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background-image: linear-gradient(to right, rgba(125,185,232,0) 0%,rgba(95,154,207,0.7) 62%,rgba(89,148,202,1) 88%,rgba(30,87,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#1e5799',GradientType=1 ); /* IE6-9 */
+        }
+        /* Bootstrap overrides ******************************** */
+        .navbar-default .navbar-nav>li>a {
+            color: #fff;
+        }
+        @media (max-width: 767px) {
+            .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+                color: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div class="brandBanner">
+        <div>
+            <img id="logo" src="../../assets/images/MyFoodPlate_logo.png" alt="Food Plate Logo" />
+        </div>
+        <nav id="helpSearch">
+            <ul>
+                <li><a href="#" class="white">Help</a></li>
+                <li><a href="#" class="white">Search Tips</a>
+
+                </li>
+            </ul>
+            <form id="searchForm">
+                <input id="search" type="search" placeholder="search" />
+            </form>
+        </nav>
+    </div>
+    <div>
+        <nav>
+            <div>
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--<a class="navbar-brand" href="#"><img src="../../assets/images/icons/favicon.png" alt="Food Plate"></a>-->
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">My Food Plate</a></li>
+                        <li class="dropdown fruit">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Food Groups <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Fruits</a></li>
+                                <li><a href="#">Vegetables</a></li>
+                                <li><a href="#">Protein</a></li>
+                                <li><a href="#">Dairy</a></li>
+                                <li><a href="#">Grains</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown protein">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weight Mgmt.<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Diet</a></li>
+                                <li><a href="#">Calisthenics</a></li>
+                                <li><a href="#">Aerobics Training</a></li>
+                                <li><a href="#">Resistance Training</a></li>
+                                <li><a href="#">Yoga</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dairy">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">The Food Plate</a></li>
+                                <li><a href="#">The USDA</a></li>
+                                <li><a href="#">Fitness Council</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown grains">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Us <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Email</a></li>
+                                <li><a href="#">Phone</a></li>
+                                <li><a href="#">Fax</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left hidden-lg hidden-md hidden-sm" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+    <div class="bgGradient">
+        <main class="mainContent">
+            <h2><strong>My Food Plate</strong></h2>
+            <p>MyPlate is a reminder to find your healthy eating style and build it throughout your lifetime. Everything you eat and drink matters. The right mix can help you be healthier now and in the future. This means:</p>
+            <ul>
+                <li>Focus on variety, amount, and nutrition.</li>
+                <li>Choose foods and beverages with less saturated fat, sodium, and added sugars.</li>
+                <li>Start with small changes to build healthier eating styles.</li>
+                <li>Support healthy eating for everyone.</li>
+            </ul>
+            <p>  Eating healthy is a journey shaped by many factors, including our stage of life, situations, preferences, access to food, culture, traditions, and the personal decisions we make over time. All your food and beverage choices count. MyPlate offers ideas and tips to help you create a healthier eating style that meets your individual needs and improves your health.</p>
+            <a href="http://www.choosemyplate.gov/MyPlate#sthash.TOpnkyE4.dpuf">Read More at ChooseMyPlate.gov</a>
+        </main>
+        <div>
+            <img src="../../assets/images/backgroundImages/mainContentGraphic-transparent.png">
+        </div>
+            <!-- <div class="no-margin">
+                 <table>
+                     <tr>
+                         <th colspan="3">Example of Daily Fruit Recommendations</th>
+                     </tr>
+                     <tr>
+                         <td>Children</td>
+                         <td>2-3<br>
+                             4-8</td>
+                         <td>1 cup<br>
+                             1 to 1 1/2 cups</td>
+                     </tr>
+                     <tr>
+                         <td>Girls</td>
+                         <td>9-13<br>
+                             14-18</td>
+                         <td>1 1/2 cups<br>
+                             1 1/2 cups</td>
+                     </tr>
+                     <tr>
+                         <td>Boys</td>
+                         <td>9-13<br>
+                             14-18</td>
+                         <td>1 1/2 cups<br>
+                             2 cups</td>
+                     </tr>
+                     <tr>
+                         <td>Women</td>
+                         <td>19-30<br>
+                             31-50<br>
+                             51+</td>
+                         <td>2 cups<br>
+                             1 1/2 cups<br>
+                             1 1/2 cups</td>
+                     </tr>
+                     <tr>
+                         <td>Men</td>
+                         <td>19-30<br>
+                             31-50<br>
+                             51+</td>
+                         <td>2 cups<br>
+                             2 cups<br>
+                             2 cups</td>
+                     </tr>
+                 </table>
+             </div>-->
+        <div>
+            <footer>
+                <h4>Resources for Nutrition and Health</h4>
+            </footer>
+            <section id="foodGroups">
+                <h4><strong>Food Groups</strong></h4>
+                <ul>
+                    <li>Fruits</li>
+                    <li>Vegetables</li>
+                    <li>Grains</li>
+                    <li>Protein Foods</li>
+                    <li>Dairy</li>
+                    <li>Oils</li>
+                    <li>Empty Calories</li>
+                </ul>
+            </section>
+            <section id="printedMaterials">
+                <h4><strong>Printed Materials & Ordering</strong></h4>
+                <ul>
+                    <li>My Plate Mini Poster</li>
+                    <li>Coloring Sheets</li>
+                    <li>My Plate Images</li>
+                    <li>Printable Materials</li>
+                    <li>Ordering Materials</li>
+                </ul>
+            </section>
+            <section id="relatedResources">
+                <h4><strong>Related Resources</strong></h4>
+                <ul>
+                    <li>Dietary Guidelines</li>
+                    <li>Food Safety</li>
+                    <li>Food and Nutrition Data</li>
+                    <li>The USDA</li>
+                    <li>Policy and Promotion</li>
+                </ul>
+            </section>
+            <section id="addlInfo">
+                <h4><strong>Additional Information</strong></h4>
+                <ul>
+                    <li>Nutrition.gov</li>
+                    <li>Fruits & Veggies</li>
+                    <li>Weight Control</li>
+                    <li>Diabetes</li>
+                    <li>Heart Disease</li>
+                    <li>More Links</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
